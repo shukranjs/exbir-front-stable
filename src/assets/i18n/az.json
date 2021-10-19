@@ -1,0 +1,263 @@
+{
+  "article": {
+    "share_us": "Bizi sosial şəbəkələrdən izləməyi unutmayın"
+  },
+  "articles": {
+    "heading": "Xəbərlər"
+  },
+  "commercial": {
+    "form": {
+      "address": "Ünvan",
+      "description": "Məzmun",
+      "email_address": "Elektron ünvan",
+      "from": "Haradan",
+      "full_name": "Ad & Soyad",
+      "phone_number": "Əlaqə nömrəsi",
+      "subject": "Mövzu",
+      "submit": "Göndər",
+      "to": "Haraya",
+      "type_of_services": {
+        "air_freight": "Hava daşınmaları",
+        "fast_delivery": "Sürətli çatdırılma",
+        "rail_freight": "Dəmir yolu daşınmaları",
+        "road_freight": "Avtomobil daşınmalar",
+        "sea_freight": "Dəniz daşınmaları"
+      }
+    },
+    "heading": "Təklif İstə"
+  },
+  "contact": {
+    "detail": {
+      "address": "Ünvan",
+      "email_address": "Elektron poçt ünvanı",
+      "phone_number": "Əlaqə nömrəsi",
+      "working_hours": "İş vaxtı",
+      "street_num": "Xətai Rayonu, Sabit Orucov Küçəsi 18, Ofis 29"
+
+    },
+    "form": {
+      "content": "Məzmun",
+      "email_address": "Elektron ünvan",
+      "full_name": "Ad & Soyad",
+      "subject": "Mövzu",
+      "submit": "Göndər"
+    },
+    "heading": "Əlaqə"
+  },
+  "footer": {
+    "about_us": "Haqqımızda",
+    "air_freight": "Hava daşınmaları",
+    "courier_service": "Kuryer xidməti",
+    "description": "EXBİR LOGİSTİCS MMC Azərbaycan Respublikasının qanunvericiliyinə uyğun olaraq əldə etdiyi lisenziya ilə ölkədaxili, eyni zamanda beynəlxalq poçt bağlamalarının daşınmasını və daşınma ilə bağlı bütün daşınmaları həyata keçirir. Şirkətimiz hal-hazırda Azərbaycan Respublikasında və Türkiyə Cumhuriyyətində qeydiyyatdan keçmiş və hər iki ölkədə özünəməxsus ofislərində fəaliyyət göstərir.",
+    "external_storage": "Xarici anbar",
+    "heading": "Haqqımızda",
+    "our_services": "Xidmətlərimiz",
+    "rail_freight": "Dəmir yolu daşınmaları",
+    "road_freight": "Avtomobil daşınmalar",
+    "rules": "Qaydalar",
+    "sea_freight": "Dəniz daşınmaları",
+    "shipping": "Daşınma",
+    "subscribe_content": "Yeniliklərdən daima xəbərdar olmaq üçün bizi sosial şəbəkələrdən izləməyi və qeydiyyatlı, qeydiyyatsız istifadəçələr elektron poçt ünvanınızı bizə göndərməyi unutmayın..",
+    "subscribe_email": "Elektron poçt ünvanı",
+    "subscribe_heading": "YENİLİKLƏRDƏN DAİMA XƏBƏRDAR OLUN",
+    "subscribe_submit": "Göndər",
+    "other_services": "Digər xidmətlərimiz"
+  },
+  "home": {
+    "articles": {
+      "heading": "Xəbərlər"
+    },
+    "calculator": {
+      "form": {
+        "height": "Hündürlük",
+        "kgorg": {
+          "g": "Qram",
+          "kg": "Kq"
+        },
+        "length": "Genişlik",
+        "submit": "Hesablamaq",
+        "total": "Ümumi:",
+        "type": {
+          "general": "Ümumi",
+          "liquid": "Maye"
+        },
+        "weight": "Çəki",
+        "width": "Uzunluq"
+      },
+      "heading": "Kalkulyator"
+    },
+    "how_is_working": {
+      "deliver": {
+        "description": "3. Exbir Logistics MMC sizin sifarişlərinizi 7-10 gündən gec olmayaraq Bakıya çatdıracaq. Əgər istəyirsinizsə, bizim daxili göndərmə xidmətimizdən də istifadə edə bilərsiniz.",
+        "heading": "Biz çatdırırıq"
+      },
+      "external_storage": {
+        "description": "1. exbir.az saytında qeydiyyatdan keçməklə Türkiyədəki ofisimizin ünvanını alacaqsınız. İnternetdə alış-veriş edərkən bu ünvanı istifadə etməlisiniz.",
+        "heading": "Xaricdə ünvanımız"
+      },
+      "heading": "E-ticarət daşınması Necə işləyir?",
+      "sign_in": {
+        "description": "2. Bundan sonra, istənilən onlayn alış-veriş səhifəsində sifariş verərkən saytımızdan alınan ünvanı \"ünvan\" xanasına daxil edərək sifarişi tamamlayırsınız.",
+        "heading": "Giriş"
+      }
+    },
+    "package_states_modal": {
+      "body": {
+        "created_date": "Yaranma tarixi",
+        "package": "Bağlama",
+        "table": {
+          "caption": "Bağlamalar statuslarının siyahısı",
+          "heads": {
+            "barcode": "Barkod",
+            "current_state": "Hazırkı vəziyyət",
+            "date": "Tarix",
+            "from": "Kimə",
+            "to": "Kimə"
+          }
+        },
+        "tracking_number": "İzləmə nömrəsi"
+      },
+      "footer": {
+        "buttons": {
+          "close": "Bağla"
+        }
+      },
+      "heading": "Dövlət paketi"
+    },
+    "search_package": {
+      "button": "YOXLAYIN",
+      "description": "YÜKLƏRİN İZLƏNMƏSİ.",
+      "placeholder": "İzləmə nömrəniz"
+    }
+  },
+  "login": {
+    "email_address": "Email",
+    "forgot_password": "Şifrənin bərpası",
+    "heading": "Daxil ol",
+    "password": "Şifrə",
+    "required": "Məcburi sahə",
+    "submit": "Təsdiqlə"
+  },
+  "navbar": {
+    "dashboard": "İstifadəçi paneli",
+    "email": "Elektron ünvan",
+    "languages": {
+      "heading": "Dil",
+      "ru": "RUS",
+      "uk": "Ukrayn",
+      "az": "AZE",
+      "en": "ENG"
+    },
+    "menu": "Menu",
+    "navigation": {
+      "about_us": "Haqqımızda",
+      "articles": "Xəbərlər",
+      "commercial": "Təklif-istə",
+      "contact": "Əlaqə",
+      "external_storage": "Xarici ünvan",
+      "home_page": "Ana Səhifə",
+      "our_services": "Xidmətlərimiz",
+      "rules": "Qaydalar",
+      "shipping": "Daşınma",
+      "shops": "E-Mağazalar",
+      "mission": "Missiyamız"
+    },
+    "order": "Videonu izlə",
+    "sign_in": "Daxil ol",
+    "sign_out": "Çıxış",
+    "sign_up": "Qeydiyyat",
+    "working_hours": "İş saatları"
+  },
+  "our_services": {
+    "air_freight": {
+      "description": "Bizim hava ilə daşınma təcrübəmiz, sadəcə daşınma ilə bitmir. Bura digər işlərdə əlavətəklif olunur – gömrük rəsmiləşdirilməsi, qablaşdırma, sığorta. Exbir Logistics MMC avia daşınma sahəsində güclü reputasiya əldə edərək, problemlərin genişvə sıx həlli ilə müştərilərə yüksək səviyyədə servis təklif edir. Dünyadakı əksər böyük şəhərlərdəki şəbəkələrin köməkliyi ilə , Exbir Logistic MMC şirkətiglobal radiusda əlaqələr təklif edir. Bizim profesional və peşəkar yanaşmamız yükünüzün təhlükəsiz etibarlı və rəqabətli qiymətlə daşınmasını təmin edir. Bizim individual servisimiz özündə birləşdirir: yükün yığılması, transfer və çatdırılma, gömrük sənədləşməsi və yüklərin bölünməsi.",
+      "heading": "Hava daşınmaları"
+    },
+    "courier_service": {
+      "description": "Hazırda Türkiyə e-shop saytlarından bağlamaları düzgün,  qənaətli və sürətli şəkildə Azərbaycana  çatdırılması xidmətini təmin etməkdir. E-shop mağazalarından geyim və digər məhsullarınızı rahat şəkildə Bakı ( rayonlarda əlavə əhatə oluna bilər) şəhərinə təslim edirik. Çatdırılan məhsulları ofisimizə yaxınlaşaraq ala bilərsiniz. Exbir Logistics MMC eyni zamanda yaxın müddətdə Çin, Amerika, Britaniya və s. kimi ölkələrdəndə bu xidməti sizin üçün göstərəcəyinə söz verir. Bundan əlavə, biz Azəbaycandan dünyanın 100 dən cox  ölkəsinə məktub və kiçk bağlamaların “qapıdan-qapıya” çatdırılmasını ən sərfəli qiymətlə təmin edirik.",
+      "heading": "E-Commerce və Kuryer"
+    },
+    "express_delivery": {
+      "description": "Xidmətin əsas məqsədi müştərilərə tək gömrük fəaliyyətinə dair əməliyyatların aparılmasında  yardımçı  olmaq deyil, həmçinin əsas fəaliyyət istiqamətindən fərqli olaraq bir sıra yeni fəaliyyət növlərini yüksək peşəkarlıqla müştərilərinə təqdim etməkdən ibarətdir. “Exbir Logistics” MMC gömrük təmsilçiliyinin apardığı uğurlu kadr siyasəti nəticəsində beynəlxalq daşımaların rəsmiləşdirilməsi sahəsində zəngin təcrübəyə malik əməkdaşları öz sıralarına cəlb etməyə nail olmuşdur və bu öz növbəsində sözü gedən sahədə müştərilərimizə  tam  xidmətlər paketini  təklif etməyə zəmin yaratmışdır.",
+      "heading": "Gömrük-Broker"
+    },
+    "heading": "Xidmətlər",
+    "rail_freight": {
+      "description": "Azərbaycan üzərində dəmir yolu tranzit daşımalarına ən münasib qiymətlər təklif edirik. İstənilən dəmiryolu daşınmasını sizə təklif edə bilərik. Müasir dəmiryolu daşımaları ən sərfəli daşınma növü sayılmaqda davam edir. Dəmiryolu daşımaları sərfəli qiymət və tranzit daşınma vaxtı öz uyğunluğunu göstərir. Bu növ daşınmalar həmçinin ən etibarlı daşınma növü hesab edilir.",
+      "heading": "Dəmir yolu daşınmaları"
+    },
+    "road_freight": {
+      "description": "Exbir Logistics MMC şirkəti sürətli çatdırılmada qeyd etdiyimiz xidmətimizdən əlavə olaraq daşıma ilə bağlı bütün avtomobil, hava, dəniz və s. xidmətləri yerinə yetirir. Sizi bu xidmətlərimizlə tanış edirik. Bizim şirkət istənilən nəqliyyat vasitəsi ilə yüklərin daşınmasını təklif edir. İtaliya , Almaniyadan , Ukraynadan həftəlik qrupaj daşımalarımız yüklərin ən tez bir zamanda Azərbaycana çatdırılmasını təmin edir. Şirkətə məxsus avtomobillər və şirkətin təcrübəli əməkdaşları sizə etibarlı servis təklif edir. Biz sizin yükünüzü dəqiq vaxtında siz istədiyiniz yerə çatdırarıq. Biz sizə yerli və beynəlxalq kuryer xidməti və yükün götürülməsi və lazım olan temperaturda çatdırılması xidməti təklif edirik.",
+      "heading": "Avtomobil daşınmalar"
+    },
+    "sea_freight": {
+      "description": "Bizim şirkət dəniz yolu ilə konteyner və açıq yüklərin daşınmasını təklif edir. LCL/dəniz qrupaj yüklərin istənilən portdan ( əsasən Şanxay ) Azərbaycana daşınması, bizi yerli daşınma bazarında lider edir. Biz həmçinin konteynerlərin satışını və icərəsini təklif edirik. Dəniz daşımaları öz spesifik tələblərini ortaya qoyur. Bu qəbildən, müstəqil nəqliyyat şirkəti olaraq biz düzgün həll yollarını tapmağa çalışırıq. Birbaşa gəmiçilik şirkətlətləri ilə əlaqələrimizi nəzərə alaraq, biz sizə xüsusi və çevik servis təklif edə bilərik.",
+      "heading": "Dəniz daşınmaları"
+    }
+  },
+  "our_services_sub": {
+    "about_us": {
+      "description": "ExBir Logistics MMC şirkəti olaraq, müştərilərimizə məktub və kiçik bağlamalardan tutmuş ən iri yüklərinin daşınmasını təmin edirik. Bizim müvafiq daşınma şöbələrimizdə çalışan peşəkar komandamız sizin logistik sorğularınızı hər an cavablandırmağa hazırdırlar.  Beynəlxalq  nəqliyyat-ekspeditor assosiasiyası olan CTN Freight Network ( ctngroup.com ) və Rusiyanın DİMEX expres-poçt şirkəti ( dimex.ws ) Azərbaycan nümayədəliyini bizə etibar etmişlər. Bununlada bizim dünya daşınma şəbəkəsinə daxil olmamız təmin olunmuşdur. Bizim logistika, expres-poçt, e-ticarət üzrə servis imkanlarımız nəhəng bir sistem təşkil edir. Bizim Missiyamız Logistika ximətlərində keyfiyyət və dəyər əmsalını ən yüksək səviyədə yerli bazara təklif etmək. Dəyişikləri daimə izləmək və innovativ daşınma proseslərində lider olmaq.<br><br>EXBİR LOGİSTİCS MMC Azərbaycan Respublikasının qanunvericiliyinə uyğun olaraq əldə etdiyi lisenziya ilə ölkədaxili, eyni zamanda beynəlxalq poçt bağlamalarının daşınmasını və daşınma ilə bağlı bütün prosesləri həyata keçirir. Şirkətimiz hal-hazırda Azərbaycan Respublikasında və Türkiyə Cumhuriyyətində qeydiyyatdan keçmiş və hər iki ölkədə özünəməxsus ofislərində fəaliyyət göstərir.<br><br>Əlavə olaraq onuda qeyd etmək istərdik ki, Exbir Logistic MMC, beynəlxalq əlaqəli, 2005-ci ildə yaradılmış nəqliyyat – ekspeditor şirkətidir. Bizim 150-dən çox ölkədə yerləşən şirkətlərlə agent və nümayəndəlik razılaşmamız var. İşçilərimiz 15 ildən çox nəqliyyat – daşıma sferasındə təcürbəyə malikdir. Biz müştərilərimizə hava, dəniz (LCL/FCL), yol, kuryer daşınmalarını və gömrük rəsmiləşdirilməsi servisini təklif edirik. Bizim həmkar şəbəkəmiz bütün 5 qitəni əhatə edir. Şirkətimiz həmçinin ambar, sığorta, sertifikasiya işlərində sizə yardım ola bilər.<br><br>Ünvan: Xətai Rayonu, Sabit Orucov Küçəsi 18, Ofis 29<br>Telefon: +994 12 490 38 39",
+      "heading": "Haqqımızda"
+    },
+    "external_storage": {
+      "description": "Türk ünvanı: Şumer məhəlləsi, 7-ci küçə, No: 35-37B Zeytinburnu / İstanbul Tel: +90 542 501 59 60",
+      "heading": "Xarici anbar"
+    },
+    "navigation": {
+      "about_us": "Haqqımızda",
+      "external_storage": "Xarici anbar",
+      "rules": "Qaydalar",
+      "shipping": "Daşınma",
+      "mission": "Missiyamız"
+    },
+    "rules": {
+      "description": "İstifadəçi Qaydaları<br><br>1.İstifadəçi sistemdə qeydiyyatdan keçməklə, şəxsi məlumatlarını tələb olunan qaydada qeyd etməlidir.<br>2.İstifadəçi qeydiyyatdan keçmək üçün daxil etdiyi məlumatların doğruluğuna görə məsuliyyət daşıyır.<br>3.Sonradan qeyd olunmuş məlumatlarda dəyişikliklər olarsa, bununla bağlı sistemə məlumatların yenilənməsi üçün bildiriş göndərmək istifadəçinin öhdəliyidir.<br>4.Qadağan olunmuş məhsullar sifariş verilərsə, xidmət həmin istifadəçi üçün bloklana bilər.<br>5.Sistemin tələb etdiyi qaydada ödəmə etmək istifadəçinin öhdəliyidir.<br>6.Öz şifrə və məlumatlarını digər şəxslərlə paylaşmamalıdır. Belə hallar baş verərsə borclanmaya və sifarişin statusunun dəyişməsinə görə, şəxsözü cavabdehdir.<br>7.İstifadəçi ay ərzində dəyəri 300 ABŞ dolları məbləğinədək əşya sifariş etdikdə, istifadəçidən gömrük rüsumu tutulmur.<br>8.Sifarişin dəyəri bir ay ərzində 300 ABŞ dolları məbləğindən artıq olarsa, İstifadəçi sifarişin ümumi dəyərinin 36%-i (otuz altı faiz) miqdarında gömrük orqanlarına gömrük rüsumu ödəmək öhdəliyini öz üzərinə götürür.<br>9.Daşıyıcı bütün sifarişlərin daşımasını həyata keçirərkən yalnız 300 ABŞ dollarınadək sifariş olduqda gömrük sənədləşmələrini öz üzərinə götürür.<br>10.Dəyəri daha yüksək məbləğdə sifariş verilərsə, daşıyıcı malı Gömrük terminalınadək gətirməyi, istifadəçi isə digər sənədləşmə və malın terminaldan təhvil götürülməsini öz üzərinə götürür.<br>11.Daşınan bağlamanın çatdırılma üçün xidmət haqqı iki meyar üzrə, çəki və həcmə görə hesablanır. İstifadəçi bu meyarlar üzrə hesablanmış daşıma haqqının daha çox olanı üzrə ödəniş aparmalıdır.<br>12.İstifadəçi bağlamalarını ofisi tərk etmədən yoxlamalı, hər hansı bir zədə və ya çatışmamazlıq olduğu təqdirdə şirkəti məlumatlandırmalıdır. Əks təqdirdə zədələnmiş bağlamalara görə şirkət məsuliyyət daşımır!<br>13.Dünya üzrə daşınmalar əsasən müəyyən olunmuş beynəlxalq qaydalarla tənzimlənir. Misal üçün İNCOTERMS, CARNER-TİR və bir sıra oxşar və dövlətlər tərəfindən qəbul olunan qaydalar. Bu qəbildən poçt və e-commerce daşınmasında qəbul olunmuş həcm formulunu (\"6000\" düsturunu) sizin nəzərinizə çatdırırıq. Misal üçün, sizin daşınma üçün 2 kg qu tükündən yastığınız var. Ölçüləri 40x40x25 sm dir. Daşınma zamanı çəki və həcm uyğunluğunu hesablamaq üçün (santimetirlə) bu düstur tətbiq olunur - 40x40x25cm/6000 = 5.3 kg. Göründüyü kimi real çəki həcm çəkisindən azdır və daşınma zamanı çəki 6.4 kg kimi hesablanacaq. Həcm düsturunun nəticəsi real çəkidən az olduğu halda isə, real çəki hesablanır.<br><br>Daşıma və çatdırılma qaydaları<br><br>Sifarişçi - Hər hansı bir məhsulu xarici və ya daxili istehsalçının satış məntəqəsindən alış məqsədi ilə dəyərini öncədən ödəməklə sifariş edən şəxs.<br><br>Daşıyıcı - Sifarişçinin sifarişi əsasında malı istehsalçının satış məntəqəsindən alaraq, özünə məxsusanbara kimi çatdırmanı həyata keçirən karqo şirkəti.<br><br>Anbar - Daşıyıcıya məxsus,<br><br>- Daşıyıcı istehsalçı deyil və heçbir satış xidməti göstərmir. Sifarişçi ödənişini şəxsi hesabından daşıyıcının əməkdaşlıq etdiyi xarici şirkətin bank hesabına köçürür. Sifariş verilmə prosesi üçün 5% ödəmə (bank) komissiyası nəzərdə tutulmuşdur.<br>- Sifarişçinin ünvanında ödəməkşərti ilə göndərilən sifarişlər qəbul olunmur.<br>- Daşıyıcı, istehsalçının səhvinə, satıcı firmanın göndərdiyi məhsulun keyfiyyətinə, tamlığına,tərkibinə, ölçü və formasına, satış anbarında tükənməsinə görə və ya sifarişinsatıcı tərəfindən ləğv olunmasına görə məsuliyyət daşımır.<br>- Daşıyıcı satıcı firma tərəfindən malın onun anbarına çatdırılması vaxtına görə heç bir məsuliyyət daşımır.<br>- Daşıyıcı sifariş verildikdən sonra sifariş üzərində heç bir əməliyyat aparmır. (Məhsulun ləğv olunması, rəng və ya ölçünün dəyişməsi və s dəyişikliklər.)<br>- Daşıyıcı sifarişçinin sifariş etdiyi online ünvanın etibarlılığı, ödəmə şərtləri ilə bağlı heç bir məsuliyyət daşımır.<br>- Sifariş prosesində hər hansı problem yarandıqda (məhsulun bitməsi, sifariş olunan ölçünün bitməsi, kampaniyanın başa çatması, ödəmə problemi və s.) istifadəçinin ödədiyi məbləğ xarici şirkət tərəfindən kartına geri qaytarılır.<br>- Ödəniş, sifariş olunan xarici ölkənin valyutası ilə aparılır, əlavə bank komissiyalarına görə Daşıyıcı heçbir məsuliyyət daşımır.<br>- Sifariş olunmuş məhsulun ödənişihər hansı səbəbdən geri qaytarılarsa, 5% komissiya geri qaytarılmır.<br>- Sifariş ilə bağlı yaşanmış hər hansı problem zamanı istifadəçiyə telefon və ya email vasitəsi ilə məlumat verilir. Sifarişin tamamlanması ilə bağlı problem yarana bilər.<br>- Sifariş olunmuş məhsulun ödənişi aşağıdakı hallarda müştəriyə geri qaytarılır:<br>a) Məhsul satıcı firmanın balansında tükəndikdə;<br>b) Müştəri yanlışlıql abalansına vəsait daxil etdikdə;<br>c) Müştəri sifarişdən imtina etdikdə;<br>d) Satıcı firma tərəfindən sifariş ləğv edildikdə.<br>- Sifariş olunmuş malın daşıyıcının anbarına daxil olması barədə sifarişçiyə məlumat verildikdən 15 gün ərzində mal təhvil götürülməzsə, anbarda qaldığı hər günə görə Sifarişçi 0.4 manat dəyərində Daşıyıcıya cərimə ödəməyi öhdəsinə götürür.<br>- Səbətdə malın saxlama müddəti maksimum 15 gündür. Bu müddətdə mal sifarişçi tərəfindən qəbul edilmədikdə bu sifarişçinin maldan imtina etməsi kimi qəbul olunur.<br>- Malın qəbulundan imtina edilməsi zamanı sifarişçiyə heç bir məbləğ ödənilmir, sifarişçi 15 günlük cərimə məbləğini daşıyıcıya ödəmədiyi təqdirdə yeni sifariş üçün xidmətdən yararlana bilməyəcək.<br>- Ödənişlərin karta geri qaytarılması 15 iş günü müddətində icra olunur, bəzi hallarda bu müddətə bir neçə gün banklardan asılı olaraq əlavə ola bilər.<br>- Tərkibində maye, tez alışan maddələr, batareya və Azərbaycan qanun vericiliyinə qadağan olunmuş məhsullar olan sifarişlər qəbul olunmur.<br>- Çatdırılma haqqı hər bağlamanın çəkisinə görə hesablanır.<br>- Bu qaydalarla tanış olduqdan sonra Sifarişçi olaraq qeydiyyatdan keçən şəxs bildirmiş olur ki, qaydalarda qeyd olunan hallarla bağlı yaranan istənilən problemə görə Daşıyıcının məsuliyyət daşımadığını qəbul edir.<br>- Qaydalara riayət etməyən və qadağan olunmuş malların daşınmasını sifariş verən sifarişçinin qeydiyyatı məlumatlandırmadan sonra davam edəcəyi təqdirdə bloklanacaq.<br><br>Necə sifariş etməli?<br><br>Əgər sizin kartınız alış-veriş etmək istədiyiniz saytda qəbul olunmursa, o zaman biz sizə Sifariş et xidməti təklif edirik.<br><br>1. Əvvəlcə bizim saytda qeydiyyatdan keçirsiniz.<br>2. Qeydiyyatdan dərhal sonra yaranmış Profilim bölməsinə daxi lolursunuz və Sifariş et bölməsindən bəyəndiyiniz məhsulun linkini seçib əlavə edirsiniz. Sistem Sizə məhsulun qiymətini, ölçüsünü, sifariş etdiyiniz ölkədaxili karqo qiymətini və bizim sizin üçün etdiyimiz sifarişdəki +5 faizlik xərcləri əlavə etməklə yekun məbləği təqdim edəcək. ( Bu məlumatlardan hər hansı biri olmadıqda, onu özünüz əlavə edirsiniz)<br>3. Linkləri saytımıza göndərdikdən sonra bizim hesabımıza yekun məbləği ödəyirsiniz və biz həmin məhsulu sizin üçün alırıq. Belə olan halda Invoice də bizim əməkdaşlar tərəfindən əlavə edilir.<br>İstifadəçi sistemdə qeydiyyatdan keçməklə, şəxsi məlumatlarını tələb olunan qaydada qeyd etməlidir.<br>İstifadəçi qeydiyyatdan keçmək üçün daxil etdiyi məlumatların doğruluğuna görə məsuliyyət daşıyır.<br>-Sonradan qeyd olunmuş məlumatlarda dəyişikliklər olarsa, bununla bağlı sistemə məlumatların yenilənməsi üçün bildiriş göndərmək istifadəçinin öhdəliyidir.<br>Qadağan olunmuş məhsullar sifariş verilərsə, xidmət həmin istifadəçi üçün bloklana bilər.<br>-Sistemin tələb etdiyi qaydada ödəmə etmək istifadəçinin öhdəliyidir.<br>-Öz şifrə və məlumatlarını digər şəxslərlə paylaşmamalıdır. Belə hallar baş verərsə borclanmaya və sifarişin statusunun dəyişməsinə görə, şəxs özü cavabdehdir.<br>İstifadəçi ay ərzindədəyəri 300 ABŞ dolları məbləğinədək əşya sifariş etdikdə, istifadəçidən gömrük rüsumu tutulmur.<br>-Sifarişin dəyəri bir ay ərzində 300 ABŞ dolları məbləğindən artıq olarsa, İstifadəçi sifarişin ümumi dəyərinin 36%-i (otuz altı faiz) miqdarında gömrük orqanlarına gömrük rüsumu ödəmək öhdəliyini öz üzərinə götürür.<br>-Daşıyıcı bütün sifarişlərin daşımasını həyata keçirərkən yalnız 300 ABŞ dollarınadək sifariş olduqda gömrük sənədləşmələrini öz üzərinə götürür. Dəyəri daha yüksək məbləğdək sifariş verilərsə, daşıyıcı malı Gömrük terminalınadək gətirməyi, istifadəçi isə digər sənədləşmə və malın terminaldan təhvil götürülməsini öz üzərinə götürür.<br>-Daşınan bağlamanın çatdırılma üçün xidmət haqqı iki meyar üzrə, çəki və həcmə görə hesablanır. İstifadəçi bu meyarlar üzrə hesablanmış daşıma haqqının daha çox olanı üzrə ödəniş aparmalıdır. İstifadəçi bağlamalarını ExBir Logistics MMC ofisini tərk etmədən yoxlamalı, hər hansı bir zədə və ya çatışmazlıq olduğu təqdirdə şirkəti məlumatlandırmalıdır. Əks təqdirdə zədələnmiş bağlamalara görə şirkət məsuliyyət daşımır!<br>-Sifarişçi tərəfindən sifariş olunan malların alınaraq toplandığı saxlanma yeri, malların sifarişçi tərəfindən qəbul edildiyi yerdir.",
+
+      "heading": "Qaydalar"
+    },
+    "shipping": {
+      "description": "Məlumat üçün Sifarişçinin diqqətinə çatdırılır ki, verilən sifariş dəyəri 30 təqvim günü ərzində 300 ABŞ dolları dəyərinədək olduğu təqdirdə, heç bir gömrük rüsumuna CƏLB OLUNMUR. Sifarişin ümumi dəyəri 30 təqvim günü müddətində 300 ABŞ dolları dəyərindən ARTIQ OLDUQDA isə, Sifarişçinin sifariş keçdiyi məhsulun ümümi dəyərinin 36% (otuz altı faiz) miqdarında Azərbaycanın gömrük orqanlarına gömrük rüsumu ödəməyi lazım gələcəkdir.<br><br>Sifariş verilən məhsullar Daşıyıcı şirkəti tərəfindən sığortalanmır və zərər görmüş məhsullara görə heç bir məsuliyyət daşımır lakin, Sifarişçinin istəyinə görə, əlavə ödəniş etmək şərti ilə məhsulların sığortalanmasını həyata keçirtmək mümkündür.<br><br>Sifariş olunmuş bağlamanın, daşıyıcının anbarına daxil olması barədə məlumat (Mail) vasitəsi ilə Sifarişçiyə veriləcəkdir. Məlumat verildiyi gündən etibarən 12 (on iki) təqvim günü ərzində Sifarişçi bağlamanı təhvil almalıdır. Əks təqdirdə hər gün üçün əlavə olaraq 0,40 AZN saxlamaq haqqı ödənməlidir. Bütün ödəmələr tamamlandıqdan sonra Sifarişçi bağlamanı təhvil ala biləcəkdir.<br><br>Bağlamaların, Daşıyıcıdan asılı olmayan səbəblərdən gecikməsinə görə (Gömrük yoxlaması və.s) Daşıyıcı şirkət heç bir məsuliyyət daşımır və belə yaranan vəziyyət sifarişdən imtina üçün səbəb sayıla bilməz. Təhvil alınan bağlamaların, təhvil alınan yerdə yoxlanması məsləhət görülür. Əks halda, sonradan ortaya çıxan hər hansı bir çatışmamazlığa görə Daşıyıcı məsuliyyət daşımır.<br><br>Bağlamadan narazı qaldığınız təqdirdə (material,ölçü və.s), dəyişdirmə Daşıyıcı tərəfindən həyata keçirilmir. Sifariş olunan məhsulun online səhivəsində dəyişmə və ya geri qayıtma şərtləri ilə tanış olub, sifarişi qəbzi ilə bərabər bizim Türkiyədə ki, anbarımıza göndərilməsi Sifarişçinin məsuliyyəti altındadır.",
+      "heading": "Daşınma"
+    },
+    "mission": {
+      "heading": "Missiyamız",
+      "description": "Logistika xidmətlərində keyfiyyət və dəyər əmsalını ən yüksək səviyyədə yerli bazara təklif etmək. Dəyişiklikləri daimə izləmək və innovativ daşınma proseslərində lider olmaq."
+    }
+  },
+  "register": {
+    "call_us": "Xahiş edirik nəzərə alasız ki, qeydiyyat forması YALNIZ İngilis dilində doldurulmalıdır və Google Choremedən istifadə olunmalıdır. Bizimlə əlaqə",
+    "form": {
+      "confirm_text": "Şifrə uyğunsuzluğu",
+      "fields": {
+        "address": "Ünvan",
+        "birthday": "Doğum günü",
+        "confirm": "Şifrəni təsdiqləyin",
+        "email_address": "Elektron ünvan",
+        "first_name": "Ad",
+        "identity1": "Şəxsiyyət No",
+        "identity2": "Fin",
+        "last_name": "Soyad",
+        "password": "Şifrə",
+        "phone_number": "Əlaqə nömrəsi"
+      },
+      "required": "Məcburi sahə",
+      "submit": "Daxil ol",
+      "register": "Qeydiyyatdan keç"
+    },
+    "heading": "Qeydiyyat",
+    "rules": "Qaydalar"
+  },
+  "reset_password": {
+    "confirm": "Şifrəni təsdiqləyin",
+    "confirm_text": "Şifrə uyğunsuzluğu",
+    "email_address": "Elektron məktub",
+    "heading": "Şifrə sıfırlama",
+    "password": "Şifrə",
+    "required": "Məcburi sahə",
+    "submit": "Daxil ol"
+  },
+  "shops": {
+    "heading": "Mağazalar"
+  }
+}

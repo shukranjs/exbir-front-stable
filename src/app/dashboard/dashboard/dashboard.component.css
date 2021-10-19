@@ -1,0 +1,66 @@
+* {
+  font-family: "proxima-nova", sans-serif;
+}
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+app-sidebar {
+  background-color: #2C3E50;
+}
+
+@media only screen and (max-width: 1199px) {
+  .comp {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1199px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.modal-footer {
+  justify-content: flex-start !important;
+}
+
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+}
+.text-primary{
+  color: #2C3E50 !important;
+}
+.alert-primary {
+  background-color: #2C3E50 !important;
+  color: #FFF !important;
+}
+.btn-primary {
+  background-color: #2C3E50 !important;
+}
+.border-left-primary {
+  border-left: .25rem solid #2C3E50 !important;
+}
+
+.border-left-warning {
+  border-left: .25rem solid #2C3E50 !important;
+}
+
+.border-left-info {
+  border-left: .25rem solid #2C3E50 !important;
+}
+
+.border-left-success {
+  border-left: .25rem solid #2C3E50 !important;
+}
+
+.pay {
+  position: absolute;
+  right: -1px;
+  top: 0;
+  border-radius: 5px;
+}

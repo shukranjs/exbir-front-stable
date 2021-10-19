@@ -1,0 +1,254 @@
+{
+  "article": {
+    "share_us": "Follow us in social media"
+  },
+  "articles": {
+    "heading": "News"
+  },
+  "commercial": {
+    "form": {
+      "address": "Address",
+      "description": "Description",
+      "email_address": "Email",
+      "from": "From",
+      "full_name": "Full name",
+      "phone_number": "Phone Number",
+      "subject": "Subject",
+      "submit": "Send",
+      "to": "To",
+      "type_of_services": {
+        "air_freight": "Air freight",
+        "fast_delivery": "Fast delivery",
+        "rail_freight": "Railway freight",
+        "road_freight": "Road freight",
+        "sea_freight": "Sea freight"
+      }
+    },
+    "heading": "Request an offer"
+  },
+  "contact": {
+    "detail": {
+      "address": "Address",
+      "email_address": "E-mail address",
+      "phone_number": "Phone Number",
+      "working_hours": "Working hours",
+      "street_num": "Xetai district, Sabit Orudjov Street 18, apt 29"
+    },
+    "form": {
+      "content": "Content",
+      "email_address": "Email address",
+      "full_name": "Full name",
+      "subject": "Subject",
+      "submit": "Send"
+    },
+    "heading": "Contact"
+  },
+  "footer": {
+    "about_us": "About us",
+    "air_freight": "Air freight",
+    "courier_service": "Delivery service",
+    "description": "LLC Exbir Logistics carries out domestic and international postal parcels and all transportation related to transportation with a license obtained in accordance with the legislation of the Republic of Azerbaijan. Our company is currently registered in the Republic of Azerbaijan and the Republic of Turkey and has its own offices in both countries.",
+    "external_storage": "Foreign warehouse",
+    "heading": "About us",
+    "our_services": "Our Services",
+    "rail_freight": "Railway freight",
+    "road_freight": "Road freight",
+    "rules": "Rules",
+    "sea_freight": "Sea freight",
+    "shipping": "Delivery",
+    "subscribe_content": "Don't forget to subscribe to us on social networks and send us your email address for registered and unregistered users to stay up to date.",
+    "subscribe_email": "Email address",
+    "subscribe_heading": "Always keep up to date with the news",
+    "subscribe_submit": "Send",
+    "other_services": "Other Services"
+  },
+  "home": {
+    "articles": {
+      "heading": "News"
+    },
+    "calculator": {
+      "form": {
+        "height": "Height",
+        "kgorg": {
+          "g": "Gram",
+          "kg": "kg"
+        },
+        "length": "Width",
+        "submit": "Count",
+        "total": "Total:",
+        "type": {
+          "general": "General",
+          "liquid": "Liquid"
+        },
+        "weight": "Weight",
+        "width": "Length"
+      },
+      "heading": "Calculator"
+    },
+    "how_is_working": {
+      "deliver": {
+        "description": "3. Exbir Logistics LLC will deliver your orders to Baku no later than 10 days in advance. If you want, you can also use our domestic delivery service.",
+        "heading": "Wе deliver"
+      },
+      "external_storage": {
+        "description": "1. By registering on exbir.az, you will receive the address of our office in Turkey. You must use this address when shopping online.",
+        "heading": "Foreign address"
+      },
+      "heading": "How it works?",
+      "sign_in": {
+        "description": "2. After that, when placing an order on any online shopping page, you complete the order by entering the address received from our website in the address field.",
+        "heading": "Еnter"
+      }
+    },
+    "package_states_modal": {
+      "body": {
+        "created_date": "Creation date",
+        "package": "Package",
+        "table": {
+          "caption": "Package status list",
+          "heads": {
+            "barcode": "Barcode",
+            "current_state": "Current State",
+            "date": "Date",
+            "from": "From",
+            "to": "To"
+          }
+        },
+        "tracking_number": "Tracking number"
+      },
+      "footer": {
+        "buttons": {
+          "close": "Close"
+        }
+      },
+      "heading": "State package"
+    },
+    "search_package": {
+      "button": "Follow",
+      "description": "With our new web-site everything became easy and convenient",
+      "placeholder": "Your tracking number"
+    }
+  },
+  "login": {
+    "email_address": "Email",
+    "forgot_password": "Forgot your password?",
+    "heading": "Sign in",
+    "password": "Password",
+    "required": "Required",
+    "submit": "Submit"
+  },
+  "navbar": {
+    "dashboard": "Toolbar",
+    "email": "Email",
+    "languages": {
+      "heading": "Language",
+      "ru": "Russian",
+      "uk": "Ukrainian",
+      "az": "Azerbaijan",
+      "en": "English"
+    },
+    "menu": "Menu",
+    "navigation": {
+      "about_us": "About us",
+      "articles": "News",
+      "commercial": "Offers",
+      "contact": "Contacts",
+      "external_storage": "Foreign address",
+      "home_page": "Home",
+      "our_services": "Services",
+      "rules": "Rules",
+      "shipping": "Shipping",
+      "shops": "The shops"
+    },
+    "order": "Order now",
+    "sign_in": "Sign in",
+    "sign_out": "Quit",
+    "sign_up": "Sign up",
+    "working_hours": "Working hours"
+  },
+  "our_services": {
+    "air_freight": {
+      "description": "Our experience in transportation does not end with air transportation. We also offer such services as customs clearance, packaging, and insurance. Silk way Express Ltd has a strong reputation in the field of customs clearance, packaging and insurance, as well as air transportation, offering customers a high level of service with a wide range of solutions. With networks in most major cities around the world, Silk way Express LLC offers connections in a global radius. Our professional and experienced approach ensures that your cargo will be delivered safely, reliably and at an affordable price. Our customized services include: collection, forwarding and delivery, customs clearance and distribution of goods.",
+      "heading": "Air freight"
+    },
+    "courier_service": {
+      "description": "Silk Road-Express Ltd. official representative of \"Exbir\" in Ukraine with an official representative office in Rostov-on-don. It is a company that offers courier services for cargo transportation by any type of transport, as well as mail delivery to the Republic of Ukraine and anywhere in the world. We provide Express delivery of mail and cargo within the Republic of Ukraine and to more than 150 countries of the world on the\"door-to-door\" principle.",
+      "heading": "Delivery service"
+    },
+    "express_delivery": {
+      "description": "The main goal of our website is to simplify the import of goods from Turkey that are not available in Ukraine and to deliver parcels there in an accurate and fast way. Silk way Express LLC conveniently delivers clothing and other goods from well-known Turkish stores in Baku (on request in the regions). You can take away the delivered products by contacting our office. Silk way Express LLC also plans to expand its operations in China, America, the United Kingdom and other countries in the near future.",
+      "heading": "Express delivery"
+    },
+    "heading": "Services",
+    "rail_freight": {
+      "description": "We offer the best prices for rail transit through Ukraine. Delivery of cargo by rail is considered the most economical. Oversized and heavy loads are more convenient to transport by rail. We can offer you any freight trains. Railway transport provides services at an affordable price, quickly overcomes any distance and allows you to deliver the goods safely.",
+      "heading": "Railway freight"
+    },
+    "road_freight": {
+      "description": "In addition to our fast delivery services, silk way Express provides road, air, sea and other cargo transportation. We will introduce you to our services. Our company offers cargo transportation with any type of transport. Our weekly group transportations from Italy, Germany and Ukraine ensure delivery of goods to Ukraine in the shortest possible time. The company's cars and experienced employees offer you a reliable service. Your cargo will be delivered to the right place on time. We offer you local and international courier services, as well as services for receiving and delivering goods at the required temperature.",
+      "heading": "Road freight"
+    },
+    "sea_freight": {
+      "description": "Our company offers transportation of container and open cargo by sea. Shipping by sea LCL / LTD from any port (mainly Shanghai) to Ukraine makes us a leader in the local transportation market. We also offer container sales and rentals. Delivery has its own specific requirements. Thus, as an independent transport company, we try to find the right solutions. Given our direct relationship with transport companies, we can offer you a special and flexible service.",
+      "heading": "Sea freight"
+    }
+  },
+  "our_services_sub": {
+    "about_us": {
+      "description": "Delivery cost from Turkey:\n\nExbir Logistics LLC offers you affordable delivery at prices from 1.8 to 5.5 dollars, depending on the weight of your parcels. The cost of delivery of the ordered package is calculated by weight.                                                             1 USD - from 0 to 0.1 kg\n1.8 USD - from 0.11 kg to 0.25 kg\n3 USD - from 0.25 kg to 0.50 kg\n4.5 USD - from 0.501 kg to 0.75 kg\n5.5 USD - from 0.751 kg to 1 kg\n\nSilkway Express LLC carries out transportation of domestic and international mail and all processes related to transportation with a license obtained in accordance with the legislation of the Republic of Ukraine. Our company is currently registered in the Republic of Ukraine and the Republic of Turkey and has its own offices in both countries.\n\nIn addition, we would like to note that Silkway Express LLC is an international freight forwarding company founded in 2005. We have Agency agreements with companies in more than 150 countries. Our employees have more than 15 years of experience in the field of transport. We offer our clients air, sea (LCL / FCL), automobile, courier and customs services. Our partner network covers all 5 continents. Our company can also help you with warehousing, insurance, and certification.\n\nAddress: Xetai region, Sabit Orujov street 18, Office 29\nPhone number: +994 12 490 38 39",
+      "heading": "About us"
+    },
+    "external_storage": {
+      "description": "Turkish address: Sumerian quarter, 7th street, No: 35-37B Zeytinburnu / İstanbul Tel: +90 542 501 59 60",
+      "heading": "Foreign warehouse"
+    },
+    "navigation": {
+      "about_us": "About us",
+      "external_storage": "Foreign warehouse",
+      "rules": "Rules",
+      "shipping": "Delivery"
+    },
+    "rules": {
+      "description": "User Rules\n\n1. the User must register their personal information in accordance with the established procedure.\n2. the User is responsible for the accuracy of the information entered for registration.\n3.if any changes are made to the information, the user is responsible for sending a notification to the system to update the information.\n4. If you ordered products banned, the service can be blocked for this user.\n5. The user is responsible for payment in accordance with the requirements of the system.\n6. Do not share your password and information with other people. If this happens, the person is personally responsible for the debt and changing the order status.\n7. If the user orders a product worth up to 1000 (one thousand) us dollars per month, the user will not be charged customs duty.\n8. If the cost of the order exceeds 1000 (one thousand) us dollars per month, the user undertakes to pay customs duties to the customs authorities in the amount of 36% (thirty-six percent) of the total cost of the order.\n9. the Carrier undertakes customs documentation for all orders only if there is an order up to 1000 us dollars.\n10. When ordering goods with a higher cost, the carrier must deliver the goods to the customs terminal, and the user must order other documentation and delivery of the goods from the terminal.\n11. The service fee for the delivery of portable packaging is calculated according to two criteria: weight and volume. The user must pay a higher delivery cost calculated in accordance with these criteria.\n12. the User is obliged to check the packages without leaving the office, and in case of any damage or defects, inform the company. Otherwise, the company is not responsible for damaged goods!\n\nRules for cargo transportation and delivery\n\nCustomer-a person who orders any product from a point of sale of a foreign or domestic manufacturer with an advance payment.\n\nA carrier is a cargo company that takes goods from a manufacturer's point of sale based on a customer's order and delivers them to its own warehouse.\n\nWarehouse-carrier-owner.\n\n- The carrier is not a manufacturer and does not provide any sales services. The customer transfers the payment from their account to the Bank account of the foreign company that the carrier cooperates with. When placing an order, there is a Commission of 5% of the payment amount (Bank Commission).\n- Orders sent to the customer's address subject to payment will not be accepted.\n- The carrier is not responsible for the quality, completeness, composition, size and shape of the goods sent by the company, depletion of stock in the warehouse or for the cancellation of the order by the seller.\n- The carrier is not responsible for the time of delivery of the goods to its warehouse by the selling company.\n- The carrier does not perform any operations on the order after placing the order. (Product cancellation, color or size change, etc.)\n- The carrier is not responsible for the accuracy of the online address ordered by the customer, the payment terms.\n- In case of any problems during the order processing (expiration of the product, end of the promotion, payment problem, etc.), the amount paid by the user is returned to the card by a foreign company.\n- Payment is made in the currency of the ordered foreign country, the carrier is not responsible for additional Bank fees.\n- If the payment for the ordered product is returned for any reason, the Commission of 5% is not refunded\n- In case of any problems with the order, the user is notified by phone or email. - Payment for the ordered product is returned to the customer in the following cases:\na) when the seller's product is exhausted;\nB) when the customer deposits funds to the wrong balance;\nC) when the customer refuses the order;\nd)when the order is canceled by the seller.\n- If the customer, after informing about the arrival of the order, does not pick up the goods within 15 days, he / she undertakes to pay the carrier a fine of 0.4 manat for each day of stay in the warehouse. - The maximum storage period of the product in the basket is 15 days. If the product is not accepted by the customer within this period, it is considered a rejection of the product by the customer.\n- If the customer refuses to accept the product, no amount is paid to the customer. If the customer does not pay the fine amount to the carrier, they will not be able to use the new order service within 15 days.\n- Payments are returned to the card within 15 business days. in some cases, this period may be extended by several days, depending on the Bank.\n- Orders containing liquids, flammable substances, batteries and products prohibited by the legislation of Azerbaijan are not accepted.\n- The delivery cost is calculated based on the weight of each parcel.\n- After reading these Rules, the person registered as a customer declares that in connection with the cases specified in the rules, agrees that the \"carrier\" is not responsible for any problems.\n- Registration of a customer who did not follow the rules and ordered the transportation of prohibited goods will be blocked.\n\nHow do I place an order?\n\nYou can order a product using your credit card. to do this, you must:\n1. First of all, sign up on our website.\n2. Immediately after registration, you enter the \"Profile\" section and the address in the \"My addresses abroad\" section, where you ordered the product, in the required website address section.\n3. you add an invoice sent to your email address from the site where you make purchases in the\" Add invoice \"section of the\" add invoice\" section. www.aparex.az-да.\n\nIf your card is not accepted on the site where you want to make purchases, we offer you the \"order\"service.\n\n1. First you register on our site.\n2. Immediately after registration, go to the \"Profile\" section, select a link to your favorite product from the\" order \" section and add it. The system gives you the product price, size, price of the internal cargo you ordered, and +5% in the order we made for you. As a result, the final amount will be presented by adding interest expenses. (If any of this information is missing, you can add it yourself.)\n3. After sending a link to our site, you Deposit the final amount to our account, and we buy the product for you. The invoice is also added by our employees.\n-The user must register in the system and enter their personal data in the required order.\n-The user is responsible for the accuracy of the information entered for registration.\n-If any changes are made to the specified information later, the user must indicate in the system that this information has been updated.\n-If prohibited products are ordered, the service may be blocked for this user.\n-The user is responsible for paying in accordance with the system requirements.\n-Do not share your password and information with other people. If this happens, the person is responsible for borrowing and changing the order status.\nIf the user orders a product worth up to 1000 (one thousand) us dollars within a month, the user will not be charged customs duty.\n-If the cost of the order exceeds 1000 (one thousand) us dollars per month, the user undertakes to pay customs duties to the customs authorities in the amount of 36% (thirty-six percent) of the total cost of the order. - The carrier takes over the customs documentation for all orders only if there is an order up to 1000 us dollars.\n- The service fee for the delivery of a parcel is calculated based on two criteria: weight and volume. The user must pay a higher delivery cost calculated in accordance with these criteria.\nThe user is obliged to check the packages without leaving the office, and in case of any damage or defects, inform the company. Otherwise, the company is not responsible for damaged goods!\n- The place of storage where goods ordered by the customer are received and collected is the place where the customer receives the goods.",
+      "heading": "Rules"
+    },
+    "shipping": {
+      "description": "The customer is informed that if they place an order for an amount not exceeding 1000 us dollars (one thousand)per month, it is not required to pay the fee. If the total cost of the order within 30 calendar days exceeds 1000 us dollars (one thousand), then during the process, the goods are subject to payment of customs duty to the customs authorities of Ukraine in the amount of 36% (thirty-six percent) of the total cost of the goods.\n\nThe ordered products are not insured by the carrier and no one is responsible for damaged products, but at the request of the customer, subject to additional payment,you can pass insurance.\n\nInformation about the receipt of the ordered parcel at the carrier's warehouse (mail) will be transmitted to the customer via the Internet. Within 12 (twelve) calendar days from the date of notification, the customer must pick up the parcel. Otherwise, an additional storage fee of 0.40 AZN will be charged per day. After paying all payments, the client can receive a package of services.\nIn connection with delays in shipments for reasons beyond the control of the\" carrier \" (customs inspection, etc.), no shipping company is responsible and such a situation can not be considered a reason for refusing an order. We recommend checking received parcels at the place of delivery. Otherwise, the shipping company is not responsible for any damage or defects to the goods that occur later.\nIf you are not satisfied with the packaging (material, size, etc.), the replacement or return of the product is not made by the carrier. To do this, read the terms of change or refund on the online page of the ordered product. The customer is responsible for sending it to our warehouse in Turkey.",
+      "heading": "Delivery"
+    }
+  },
+  "register": {
+    "call_us": "Contact us",
+    "form": {
+      "confirm_text": "Passwords do not match",
+      "fields": {
+        "address": "Address",
+        "birthday": "Birthday",
+        "confirm": "Confirm the password",
+        "email_address": "Email",
+        "first_name": "Name",
+        "identity1": "Identity No",
+        "identity2": "Pin code",
+        "last_name": "Surname",
+        "password": "Password",
+        "phone_number": "Phone Number"
+      },
+      "required": "Required",
+      "submit": "Enter"
+    },
+    "heading": "Sign up",
+    "rules": "Rules"
+  },
+  "reset_password": {
+    "confirm": "Confirm the password",
+    "confirm_text": "Passwords do not match",
+    "email_address": "Email message",
+    "heading": "Reset password",
+    "password": "Password",
+    "required": "Required",
+    "submit": "Enter"
+  },
+  "shops": {
+    "heading": "Shops"
+  }
+}

@@ -1,0 +1,121 @@
+<section class="block grayish">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading mt-md-0 mt-3">
+          <h2 translate>commercial.heading</h2>
+        </div>
+        <div class="booking-page">
+          <div class="row">
+            <div class="col-md-4 visible-lg">
+              <img alt="Exbir Logistics"
+                   src="assets/images/order.jpg"/>
+            </div>
+            <div class="col-md-7 offset-md-1">
+              <div class="booking">
+                <div class="booking-form">
+                  <form #commercialEmailForm="ngForm" (ngSubmit)="sendEmail(commercialEmailForm)">
+                    <div class="form-group">
+                      <select [(ngModel)]="emailData.type_of_service"
+                              class="mb-3"
+                              id="type_of_service"
+                              name="type_of_service"
+                              required>
+                        <option translate value="Fast delivery">commercial.form.type_of_services.fast_delivery</option>
+                        <option translate value="Road freight">commercial.form.type_of_services.road_freight</option>
+                        <option translate value="Air freight">commercial.form.type_of_services.air_freight</option>
+                        <option translate value="Sea freight">commercial.form.type_of_services.sea_freight</option>
+                        <option translate value="Rail freight">commercial.form.type_of_services.rail_freight</option>
+                      </select>
+                    </div>
+                    <div class="form-row mb-3">
+                      <div class="col-md-6">
+                        <label>
+                          <input [(ngModel)]="emailData.from" class="text-field"
+                                 id="from"
+                                 name="from" placeholder="{{'commercial.form.from' | translate}}" required
+                                 type="text">
+                        </label>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label>
+                          <input [(ngModel)]="emailData.to" class="text-field"
+                                 id="to"
+                                 name="to" placeholder="{{'commercial.form.to' | translate}}" required
+                                 type="text">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label style="margin-bottom: 15px;"><input [(ngModel)]="emailData.subject"
+                                                                 class="text-field" id="subject"
+                                                                 name="subject"
+                                                                 placeholder="{{'commercial.form.subject' | translate}}"
+                                                                 required
+                                                                 type="text"/></label>
+                    </div>
+                    <div class="form-group">
+                      <label style="margin-bottom: 15px;"><input [(ngModel)]="emailData.full_name" class="text-field mb-3"
+                                                                 id="full_name"
+                                                                 name="full_name" placeholder="{{'commercial.form.full_name' | translate}}"
+                                                                 required
+                                                                 type="text"/>
+                      </label>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-6">
+                        <label style="margin-bottom: 15px;"><i class="fa fa-envelope"></i>
+                          <input [(ngModel)]="emailData.email_address"
+                                 class="text-field"
+                                 id="email_address"
+                                 name="email_address"
+                                 placeholder="{{'commercial.form.email_address' | translate}}"
+                                 required
+                                 type="email"/></label>
+                      </div>
+                      <div class="col-md-6">
+                        <label style="margin-bottom: 15px;"><i class="fa fa-phone"></i>
+                          <input [(ngModel)]="emailData.mobile_number"
+                                 class="text-field"
+                                 id="mobile_number"
+                                 name="mobile_number"
+                                 placeholder="{{'commercial.form.phone_number' | translate}}"
+                                 required
+                                 type="text"/></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label style="margin-bottom: 15px;">
+                        <input [(ngModel)]="emailData.address" class="text-field"
+                               id="address" name="address"
+                               placeholder="{{'commercial.form.address' | translate}}"
+                               required
+                               type="text"/></label>
+                    </div>
+                    <div class="form-group">
+                      <textarea [(ngModel)]="emailData.content"
+                                class="text-field" i18n-placeholder="@@commerical_email_content"
+                                id="content"
+                                name="content"
+                                placeholder="{{'commercial.form.description' | translate}}"
+                                required></textarea>
+                    </div>
+                    <div class="col-md-12">
+                      <button [disabled]="commercialEmailForm.invalid" class="theme-btn"
+                              i18n="@@commerical_email_submit_button"
+                              type="submit"><i
+                        class="fa fa-paper-plane"></i>
+                        <span translate>commercial.form.submit</span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

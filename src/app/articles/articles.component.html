@@ -1,0 +1,34 @@
+<section class="block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading mt-md-0 mt-3">
+          <h2 translate>home.articles.heading</h2>
+        </div>
+        <div class="top-margin">
+          <div class="row">
+            <div *ngFor="let article of articles" class="col-md-4">
+              <div class="news-box">
+                <div class="news-thumb">
+                  <a itemprop="url" routerLink="/article/{{article.id}}">
+                    <img alt="Exbir Logistics" itemprop="image" src="{{article.image_path}}" /></a>
+                  <div class="date">
+                    <strong>{{article.created_date | date: 'dd'}}</strong>
+                    <span>{{article.created_date | date: 'MMMM'}}</span>
+                  </div>
+                </div>
+                <div class="news-detail">
+                  <h2 itemprop="headline"><a itemprop="url" routerLink="/article/{{article.id}}">
+                      {{article.subject}}</a></h2>
+                  <p [innerHtml]="article.text | slice: 0:100" itemprop="description"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-partners></app-partners>

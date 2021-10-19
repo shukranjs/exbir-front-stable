@@ -1,0 +1,31 @@
+* {
+  font-family: "proxima-nova", sans-serif;
+}
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.border-left-primary {
+  border-left: .25rem solid #2C3E50 !important;
+}
+
+.heading {
+  font-size: 30px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
+  /*border: 1px solid #2C3E50;*/
+  /*border-left: 5px solid #2C3E50;*/
+  border-radius: 10px;
+  padding: 10px;
+}
+.text-primary{
+  color: #2C3E50 !important;
+}
+.alert-primary {
+  background-color: #2C3E50 !important;
+  color: #FFF !important;
+}
+.btn-primary {
+  background-color: #2C3E50 !important;
+}

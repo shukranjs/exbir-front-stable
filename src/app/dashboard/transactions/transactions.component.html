@@ -1,0 +1,273 @@
+<div id="wrapper">
+  <app-sidebar></app-sidebar>
+  <div class="d-flex flex-column" id="content-wrapper">
+    <!-- Main Content -->
+    <div id="content">
+      <app-dashboard-nav></app-dashboard-nav>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="card-body">
+            <hr/>
+            <div class="row">
+              <div class="col-lg-3 align-self-start mt-2">
+                <div class="card border-left-primary shadow h-100 pb-0 user-card">
+                  <form #paymentForm="ngForm" (ngSubmit)="createPayment(paymentForm)">
+                    <div class="card-header">
+                      <h6 class="m-0 font-weight-bold text-primary">
+                        Balans artır
+                      </h6>
+                      <div style="position: absolute; right: 20px; top: 10px;">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input [(ngModel)]="paymentToSend.currency" class="custom-control-input" id="usd"
+                                 name="currency"
+                                 type="radio"
+                                 value="USD">
+                          <label class="custom-control-label" for="usd">USD</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input [(ngModel)]="paymentToSend.currency" class="custom-control-input" id="try"
+                                 name="currency"
+                                 type="radio"
+                                 value="TRY">
+                          <label class="custom-control-label" for="try">TRY</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-body">
+                      <div class="form-row">
+                        <div class="col-9">
+                          <div class="form-group">
+                            <label for="amount">Məbləğ</label>
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">{{paymentToSend.currency}}</span>
+                              </div>
+                              <input #amount="ngModel"
+                                     [(ngModel)]="paymentToSend.amount"
+                                     aria-label="Amount (to the nearest dollar)"
+                                     class="form-control form-control-sm payment-processor-input font-weight-bold"
+                                     id="amount"
+                                     name="amount"
+                                     required
+                                     type="number">
+                              <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                              </div>
+                            </div>
+                            <small *ngIf="amount.invalid && (amount.dirty || amount.touched)"
+                                   class="text-danger">Məbləği düzgün qeyd
+                              edin</small>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <img *ngIf="isVisa"
+                               alt="Credit Card Logos"
+                               class="card-number-image"
+                               src="../../../assets/img/visa.gif" title="Credit Card Logos"/>
+                          <img *ngIf="isMastercard"
+                               alt="Credit Card Logos"
+                               class="card-number-image"
+                               src="../../../assets/img/mastercard.gif" title="Credit Card Logos"/>
+                        </div>
+                      </div>
+<!--                      <div class="form-group">-->
+<!--                        <label for="card_number_1">Kart nömrəsi</label>-->
+<!--                        <div class="form-row">-->
+<!--                          <div class="col-3">-->
+<!--                            <input #card_number_1="ngModel"-->
+<!--                                   (keyup)="cardNumber2Focus()"-->
+<!--                                   [(ngModel)]="paymentToSend.card_number_1"-->
+<!--                                   class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                                   id="card_number_1"-->
+<!--                                   maxlength="4"-->
+<!--                                   minlength="4"-->
+<!--                                   name="card_number_1"-->
+<!--                                   required>-->
+<!--                          </div>-->
+<!--                          <div class="col-3">-->
+<!--                            <input #card_number_2="ngModel"-->
+<!--                                   (keyup)="cardNumber3Focus()"-->
+<!--                                   [(ngModel)]="paymentToSend.card_number_2"-->
+<!--                                   class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                                   id="card_number_2"-->
+<!--                                   maxlength="4"-->
+<!--                                   minlength="4"-->
+<!--                                   name="card_number_2"-->
+<!--                                   required>-->
+<!--                          </div>-->
+<!--                          <div class="col-3">-->
+<!--                            <input #card_number_3="ngModel"-->
+<!--                                   (keyup)="cardNumber4Focus()"-->
+<!--                                   [(ngModel)]="paymentToSend.card_number_3"-->
+<!--                                   class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                                   id="card_number_3"-->
+<!--                                   maxlength="4"-->
+<!--                                   minlength="4"-->
+<!--                                   name="card_number_3"-->
+<!--                                   required>-->
+<!--                          </div>-->
+<!--                          <div class="col-3">-->
+<!--                            <input #card_number_4="ngModel"-->
+<!--                                   [(ngModel)]="paymentToSend.card_number_4"-->
+<!--                                   class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                                   id="card_number_4"-->
+<!--                                   maxlength="4"-->
+<!--                                   minlength="4"-->
+<!--                                   name="card_number_4"-->
+<!--                                   required>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                        <small *ngIf="-->
+<!--                        (card_number_1.invalid && (card_number_1.dirty || card_number_1.touched)) ||-->
+<!--                        (card_number_2.invalid && (card_number_2.dirty || card_number_2.touched)) ||-->
+<!--                        (card_number_3.invalid && (card_number_3.dirty || card_number_3.touched)) ||-->
+<!--                        (card_number_4.invalid && (card_number_4.dirty || card_number_4.touched))"-->
+<!--                               class="text-danger">-->
+<!--                          Kart nömrəsini düzgün qeyd edin-->
+<!--                        </small>-->
+<!--                      </div>-->
+<!--                      <div class="form-group mt-3">-->
+<!--                        <div class="form-row">-->
+<!--                          <div class="col-5">-->
+<!--                            <label for="month">Ay</label>-->
+<!--                            <select #month="ngModel"-->
+<!--                                    [(ngModel)]="paymentToSend.month"-->
+<!--                                    class="form-control form-control-sm payment-processor-input"-->
+<!--                                    id="month"-->
+<!--                                    name="month"-->
+<!--                                    required>-->
+<!--                              <option value="01">Yanvar</option>-->
+<!--                              <option value="02">Fevral</option>-->
+<!--                              <option value="03">Mart</option>-->
+<!--                              <option value="04">Aprel</option>-->
+<!--                              <option value="05">May</option>-->
+<!--                              <option value="06">İyun</option>-->
+<!--                              <option value="07">İyul</option>-->
+<!--                              <option value="08">Avqust</option>-->
+<!--                              <option value="09">Sentyabr</option>-->
+<!--                              <option value="10">Oktyabr</option>-->
+<!--                              <option value="11">Noyabr</option>-->
+<!--                              <option value="12">Dekabr</option>-->
+<!--                            </select>-->
+<!--                            <small *ngIf="month.invalid && (month.dirty || month.touched)"-->
+<!--                                   class="text-danger">Qeyd edin</small>-->
+<!--                          </div>-->
+<!--                          <div class="col-5 offset-2">-->
+<!--                            <label for="year">İl</label>-->
+<!--                            <select #year="ngModel"-->
+<!--                                    [(ngModel)]="paymentToSend.year"-->
+<!--                                    class="form-control form-control-sm payment-processor-input"-->
+<!--                                    id="year"-->
+<!--                                    name="year"-->
+<!--                                    required>-->
+<!--                              <option value="20">2020</option>-->
+<!--                              <option value="21">2021</option>-->
+<!--                              <option value="22">2022</option>-->
+<!--                              <option value="23">2023</option>-->
+<!--                              <option value="24">2024</option>-->
+<!--                              <option value="25">2025</option>-->
+<!--                              <option value="26">2026</option>-->
+<!--                              <option value="27">2027</option>-->
+<!--                              <option value="28">2028</option>-->
+<!--                              <option value="29">2029</option>-->
+<!--                              <option value="30">2030</option>-->
+<!--                            </select>-->
+<!--                            <small *ngIf="year.invalid && (year.dirty || year.touched)"-->
+<!--                                   class="text-danger">Qeyd edin</small>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="form-group mt-3">-->
+<!--                        <div class="form-row">-->
+<!--                          <div class="col-5">-->
+<!--                            <label for="cvv">CVC/CVV</label>-->
+<!--                            <input #cvv="ngModel"-->
+<!--                                   [(ngModel)]="paymentToSend.cvv"-->
+<!--                                   class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                                   id="cvv"-->
+<!--                                   maxlength="4"-->
+<!--                                   minlength="3"-->
+<!--                                   name="cvv"-->
+<!--                                   required>-->
+<!--                            <small *ngIf="cvv.invalid && (cvv.dirty || cvv.touched)"-->
+<!--                                   class="text-danger">Qeyd edin</small>-->
+<!--                          </div>-->
+<!--                          <div class="col-7 align-self-end ">-->
+<!--                            <img class="img-fluid align-text-bottom" src="../../../assets/img/3dsecure.png">-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+                    </div>
+                    <div class="card-footer">
+                      <button class="btn btn-outline-danger btn-sm mr-2" type="reset">Sil</button>
+                      <button [disabled]="paymentForm.invalid" class="btn btn-primary btn-sm">Təsdiqlə</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-9 mt-2">
+                <div *ngIf="transactions.length !== 0; else notTransactions">
+                  <div
+                    *ngFor="let transaction of transactions"
+                    class="card border-left-primary shadow h-100 pb-0 user-card mt-2"
+                  >
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-lg-2 align-self-center my-1">
+                          <span class="text-primary"> #{{ transaction.id }} </span>
+                        </div>
+                        <div class="col-lg-2 align-self-center my-1">
+                          <span> Məbləğ: {{ transaction.amount | currency:transaction.currency }} </span>
+                        </div>
+                        <div class="col-lg-3 align-self-center my-1">
+                          <span> Növ: {{ transaction.method.toString() }} </span>
+                        </div>
+
+                        <div class="col-lg-2 align-self-center my-1">
+                          <span> Status: {{ transaction.state.toString() }} </span>
+                        </div>
+                        <div class="col-md-3 align-self-center my-1">
+                          Tarix:
+                          {{
+                          transaction.created_date | date: "dd MMMM yyyy":"+4":"az-Latn"
+                          }}
+                        </div>
+                        <a
+                          *ngIf="transaction.state.toString() !== 'Created'; else justCreated"
+                          href="{{transaction.invoice_path}}"
+                          target="_blank">
+                          <i class="fa fa-file-pdf-o text-danger"
+                             style="position: absolute;right: 20px;font-size: 20px;top: 24px;"></i>
+                        </a>
+                        <ng-template #justCreated>
+                        <span><i class="fa fa-file-pdf-o text-muted"
+                                 style="position: absolute;right: 20px;font-size: 20px;top: 24px;"></i></span>
+                        </ng-template>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ng-template #notTransactions>
+                  <div class="alert alert-primary">
+                    Hələki heçbir əməliyyatınız yoxdur. Hesabınızı artırmaq üçün üçün
+                    sağ küncdəki Balans artır düyməsini sıxa bilər və yaxud ofisimizə
+                    yaxınlaşa bilərsiniz.
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #payment_modal let-modal>
+  <div class="modal-body">
+    <iframe [src]="url | safe"></iframe>
+  </div>
+</ng-template>

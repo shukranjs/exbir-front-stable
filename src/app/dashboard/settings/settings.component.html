@@ -1,0 +1,337 @@
+<div id="wrapper">
+  <app-sidebar></app-sidebar>
+  <div class="d-flex flex-column" id="content-wrapper">
+    <!-- Main Content -->
+    <div id="content">
+      <app-dashboard-nav></app-dashboard-nav>
+      <div class="container-fluid">
+        <div
+          class="card border-left-primary shadow h-100 pb-0 user-card mt-2"
+
+        >
+          <div class="card-body">
+            <form (ngSubmit)="settings()" [formGroup]="settingsForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text-center">
+                    <img
+                      alt="exbir-logo"
+                      src="../../../assets/img/favicon.png"
+                      width="106"
+                    />
+                  </div>
+                  <p class="callus text-center">
+                    <i class="fa fa-phone"></i> Bizə zəng edin:
+                    <a class="theme-clr" href="tel:{{ telnumber }}">
+                      {{ telnumber }}</a
+                    >
+                  </p>
+                  <p class="infoText text-center">
+                    Şəxsi məlumatlarınızı burdan tənzimləyə bilərsiniz.
+                  </p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Ad</label>
+                        <input
+                          class="form-control"
+                          formControlName="first_name"
+                          name="first_name"
+                          pattern="[a-zA-Z0-9. ]*"
+                          type="text"
+                        />
+                        <span
+                          *ngIf="
+                            settingsForm
+                              .get('first_name')
+                              .hasError('required') &&
+                            settingsForm.get('first_name').touched
+                          "
+                          class="help-block"
+                        >
+                          Zəhmət olmasa adınızı düzgün qeyd edin.
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Soyad</label>
+                        <input
+                          class="form-control"
+                          formControlName="last_name"
+                          name="last_name"
+                          pattern="[a-zA-Z0-9. ]*"
+                          type="text"
+                        />
+
+                        <span
+                          *ngIf="
+                            settingsForm.get('last_name').hasError('required') &&
+                            settingsForm.get('last_name').touched
+                          "
+                          class="help-block"
+                        >
+                          Zəhmət olmasa soyadınızı düzgün qeyd edin.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label>E-Mail</label>
+                        <input
+                          class="form-control"
+                          formControlName="email_address"
+                          name="email_address"
+                          readonly
+                          type="email"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Şəxsiyyət №</label>
+                        <input
+                          #identity12
+                          class="form-control"
+                          formControlName="identity1"
+                          name="identity1"
+                          pattern="[a-zA-Z0-9. ]*"
+                          type="text"
+                        />
+
+                        <span
+                          *ngIf="
+                            settingsForm
+                              .get('identity1')
+                              .hasError('required') &&
+                            settingsForm.get('identity1').touched &&
+                            identity12.value.length != 8
+                          "
+                          class="help-block"
+                        >
+                          Zəhmət olmasa şəxsiyyət № düzgün qeyd edin.
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Fin Kodu</label>
+                        <i
+                          (click)="open(content)"
+                          class="fa fa-question-circle ml-1"
+                        ></i>
+                        <input
+                          #identity22
+                          class="form-control"
+                          formControlName="identity2"
+                          name="identity2"
+                          pattern="[a-zA-Z0-9. ]*"
+                          type="text"
+                        />
+
+                        <span
+                          *ngIf="
+                            identity22.value.length != 7 &&
+                            settingsForm.get('identity2').touched
+                          "
+                          class="help-block"
+                        >
+                          Zəhmət olmasa fin kodu düzgün qeyd edin.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col-md-6 align-self-end"
+                  style="margin-bottom:16px;"
+                >
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Telefon Nömrəsi</label>
+                        <div class="row">
+                          <div class="col-4">
+                            <select
+                              class="form-control"
+                              formControlName="telCode"
+                              name="telCode"
+                            >
+                              <option value="99410">99410</option>
+                              <option value="99450">99450</option>
+                              <option value="99451">99451</option>
+                              <option value="99455">99455</option>
+                              <option value="99470">99470</option>
+                              <option value="99477">99477</option>
+                              <option value="99499">99499</option>
+                            </select>
+                            <span
+                              *ngIf="
+                                settingsForm
+                                  .get('telCode')
+                                  .hasError('required') &&
+                                settingsForm.get('telCode').touched
+                              "
+                              class="help-block"
+                            >
+                              Zəhmət olmasa operator kodunuzu düzgün qeyd edin.
+                            </span>
+                          </div>
+                          <div class="col-8">
+                            <input
+                              #mobile_number2
+                              class="form-control"
+                              formControlName="mobile_number"
+                              name="mobile_number"
+                              type="number"
+                            />
+
+                            <span
+                              *ngIf="
+                                mobile_number2.value.length != 7 &&
+                                settingsForm.get('mobile_number').touched
+                              "
+                              class="help-block"
+                            >
+                              Zəhmət olmasa telefon nömrəsini düzgün qeyd edin.
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label>Doğum Tarixi</label>
+                        <div class="input-group">
+                          <input
+                            #birthday="ngbDatepicker"
+                            (focus)="birthday.toggle()"
+                            [maxDate]="{ year: 2004, month: 1, day: 1 }"
+                            [minDate]="{ year: 1960, month: 1, day: 1 }"
+                            class="form-control"
+                            formControlName="birthday"
+                            id="dateOfBirth"
+                            name="birthday"
+                            ngbDatepicker
+                            placeholder="iiii-aa-gg"
+                          />
+                          <div class="input-group-append">
+                            <button
+                              (click)="birthday.toggle()"
+                              class="btn btn-secondary calendar"
+                              type="button"
+                            ></button>
+                          </div>
+                        </div>
+                        <span
+                          *ngIf="
+                            settingsForm.get('birthday').hasError('required') &&
+                            settingsForm.get('birthday').touched
+                          "
+                          class="help-block"
+                        >
+                          Zəhmət olmasa doğum tarixini düzgün qeyd edin.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label>Ünvan</label>
+                        <input
+                          class="form-control"
+                          formControlName="address"
+                          name="address"
+                          pattern="[a-zA-Z0-9. ]*"
+                        />
+
+                        <span
+                          *ngIf="
+                            settingsForm.get('address').hasError('required') &&
+                            settingsForm.get('address').touched
+                          "
+                          class="help-block"
+                        >
+                          Zəhmət olmasa ünvanı düzgün qeyd edin.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" style="margin-bottom: 30px;">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Parol</label>
+                        <input
+                          #password2
+                          class="form-control"
+                          formControlName="password"
+                          name="password"
+                          type="text"
+                        />
+                        <span
+                          *ngIf="
+                            password2.value.length < 6 &&
+                            settingsForm.get('password').touched
+                          "
+                          class="help-block"
+                        >
+                          Parol ən az 6 xanalı olmalıdır.
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Yeni Parol</label>
+                        <input
+                          #new_password2
+                          class="form-control"
+                          formControlName="new_password"
+                          name="new_password"
+                          type="text"
+                        />
+                        <span
+                          *ngIf="
+                            new_password2.value.length < 6 &&
+                            settingsForm.get('new_password').touched
+                          "
+                          class="help-block"
+                        >
+                          Yeni parol ən az 6 xanalı olmalıdır.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <button
+                        [disabled]="settingsForm.invalid"
+                        class="btn btn-outline-primary btn-block mb-0"
+                        type="submit"
+                      >
+                        TƏSDİQLƏ
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #content let-modal>
+  <img
+    src="../../assets/img/fin.jpg"
+    style="max-width: 500px; max-height:300px;"
+  />
+</ng-template>

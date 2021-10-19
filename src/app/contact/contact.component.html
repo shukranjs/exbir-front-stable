@@ -1,0 +1,120 @@
+<section class="block remove-top" style="margin-top: 75px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading mt-md-0 mt-3">
+          <h2 translate>contact.heading</h2>
+        </div>
+        <div class="">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="region-contact-info team-detail-info">
+                <div class="contact-detail">
+                  <span class="contact">
+                    <i class="fa fa-map"></i>
+                    <strong translate>contact.detail.address</strong>
+                    <p translate>contact.detail.street_num</p>
+                  </span>
+                  <span class="contact">
+                    <i class="fa fa-clock-o"></i>
+                    <strong translate>contact.detail.working_hours</strong>
+                    <span>İş saatları : 10:00 - 19:00</span>
+                  </span>
+                  <span class="contact">
+                    <i class="fa fa-mobile"></i>
+                    <strong translate>contact.detail.phone_number</strong>
+                    <span>+994 (12) 490 38 39</span>
+                    <span>+994 (77) 568 85 20 (whatsapp)</span>
+                  </span>
+                  <span class="contact">
+                    <i class="fa fa-envelope"></i>
+                    <strong translate>contact.detail.email_address</strong>
+                    <span>info@exbir.az</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="get-quote-form contact-info-form">
+                <div class="contactform">
+                  <form
+                    #contactForm="ngForm"
+                    (ngSubmit)="sendEmail(contactForm)"
+                    id="contactform"
+                  >
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input
+                          #full_name="ngModel"
+                          [(ngModel)]="emailData.full_name"
+                          class="text-field input-style"
+                          id="full_name"
+                          name="full_name"
+                          placeholder="{{
+                            'contact.form.full_name' | translate
+                          }}"
+                          type="text"
+                        />
+                      </div>
+                      <br /><br /><br /><br />
+                      <div class="col-md-6">
+                        <input
+                          #email_address="ngModel"
+                          [(ngModel)]="emailData.email_address"
+                          class="text-field input-style"
+                          id="email"
+                          name="email"
+                          placeholder="{{
+                            'contact.form.email_address' | translate
+                          }}"
+                          required
+                          type="email"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <input
+                          #subject="ngModel"
+                          [(ngModel)]="emailData.subject"
+                          class="text-field input-style"
+                          id="subject"
+                          name="subject"
+                          placeholder="{{ 'contact.form.subject' | translate }}"
+                          required
+                          type="text"
+                        />
+                      </div>
+                      <div class="col-md-12" style="margin-top: 30px">
+                        <textarea
+                          #content="ngModel"
+                          [(ngModel)]="emailData.content"
+                          class="text-field input-style"
+                          id="description"
+                          name="content"
+                          placeholder="{{ 'contact.form.content' | translate }}"
+                          required
+                        ></textarea>
+                      </div>
+                      <div class="col-md-12 mt-3">
+                        <button
+                          [disabled]="contactForm.invalid"
+                          class="theme-btn"
+                          i18n="@@contact_form_send_button"
+                          id="quote-btn"
+                          itemprop="url"
+                          type="submit"
+                        >
+                          <i class="fa fa-paper-plane"></i>
+                          <span translate>contact.form.submit</span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

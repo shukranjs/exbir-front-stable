@@ -1,0 +1,72 @@
+<div class="container my-5">
+  <div class="text-center mt-5 mb-5">
+    <span class="text-primary text-uppercase heading">
+      Ödəniş
+    </span>
+  </div>
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div
+        class="card border-left-primary shadow h-100 pb-0 user-card"
+      >
+        <div class="card-body">
+          <div *ngIf="message === 'ok'; else notOk">
+            <div class="text-success text-center">
+              <i class="fa fa-check-circle mb-2" style="font-size: 50px"></i>
+              <h3>Uğurlu ödəniş</h3>
+              <h5 *ngIf="return_type === 'order_first'">Sifariş(lər)iniz uğurla artırılmışdır. Admin tərəfindən
+                yoxlanılıb sifarişiniz tamamlanacaqdır.</h5>
+
+              <h5 *ngIf="return_type === 'basket_first'">Səbət(lər)iniz uğurla artırılmışdır. Admin tərəfindən
+                yoxlanılıb sifarişiniz tamamlanacaqdır.</h5>
+
+              <h5 *ngIf="return_type === 'missing_fee_basket'">Sizin səbət(lər)iniz sifariş edilməyə hazırdır.</h5>
+
+              <h5 *ngIf="return_type === 'missing_fee'">Sizin linkəriniz sifariş edilməyə hazırdır.
+                Sifariş edildiyi zaman sizinlə təkrar əlaqəyə keçiləcəkdir.</h5>
+              <h5 *ngIf="return_type === 'package'">
+                Sizin bağlama(lar)nızın ödənişi uğurla tamamlanmışdır.
+              </h5>
+              <h5 *ngIf="return_type === 'wallet'">
+                Sizin balansınıza vəsait uğurla artırılmışdır.
+              </h5>
+            </div>
+            <hr>
+            <h5>Məbləğ: {{amount | currency:currency}}</h5>
+            <h5>Faktura: <a
+              href="https://exbir.s3.eu-central-1.amazonaws.com/invoices/{{user_id}}/payment/{{invoice_path}}"
+              target="_blank">
+              <i class="fa fa-external-link"></i> Link</a>
+            </h5>
+          </div>
+          <ng-template #notOk>
+            <div class="text-danger text-center">
+              <i class="fa fa-times-circle mb-2" style="font-size: 50px"></i>
+              <h3>Uğursuz ödəniş</h3>
+            </div>
+          </ng-template>
+          <hr>
+          <button *ngIf="return_type === 'wallet'"
+                  class="btn btn-light text-primary"
+                  routerLink="/dashboard/transactions">Əməliyyatlarım
+          </button>
+          <button *ngIf="return_type === 'package'"
+                  class="btn btn-light text-primary"
+                  routerLink="/dashboard/tracks">Bağlamalarım
+          </button>
+          <button *ngIf="return_type === 'order_first' || return_type === 'missing_fee'"
+                  class="btn btn-light text-primary"
+                  routerLink="/dashboard/orders">Sifarişlərim
+          </button>
+          <button *ngIf="return_type === 'basket_first' || return_type === 'missing_fee_basket'"
+                  class="btn btn-light text-primary"
+                  routerLink="/dashboard/baskets">Səbətlərim
+          </button>
+          <button class="btn btn-light text-primary ml-3" routerLink="/dashboard">Panel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

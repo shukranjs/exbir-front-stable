@@ -1,0 +1,42 @@
+<section class="block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-margin blog-detail-main">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="news-box blog-detail">
+                <div class="news-thumb">
+                  <div class="row">
+                    <div class="col-md-6 col-xs-12 col-sm-12 offset-md-3">
+                      <img alt="Exbir Logistics" itemprop="image" class="img-fluid" src="{{article.image_path}}" />
+                    </div>
+                  </div>
+                </div>
+                <div class="news-detail">
+                  <h1 itemprop="headline">{{article.subject}}</h1>
+                  <div class="detail-info">
+                    <ul class="post-meta2">
+                      <li><i class="fa fa-calendar-o"></i>{{article.created_date | date}}</li>
+                    </ul>
+                    <div class="share-it">
+                      <span translate>article.share_us</span>
+                      <ul>
+                        <li><a href="https://www.facebook.com/Exbir Logisticsaz-102809751313741/" itemprop="url"><i
+                              class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/exbir1.az" itemprop="url"><i
+                              class="fa fa-instagram"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <p [innerHtml]="article.text" itemprop="description"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

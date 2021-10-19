@@ -1,0 +1,216 @@
+* {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 14px !important;
+}
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.nav-item > .nav-link:hover {
+  color: #f2a900;
+}
+
+.text-primary {
+  color: #2C3E50 !important;
+}
+
+.alert-primary {
+  background-color: #2C3E50 !important;
+  color: #FFF !important;
+}
+
+.btn-primary {
+  background-color: #2C3E50 !important;
+}
+
+.btn-warning {
+  background-color: #f2a900;
+  border-color: #f2a900;
+}
+
+@media only screen and (max-width: 1199px) {
+  .comp {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1199px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.cargo-tracking__transactions-info {
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: 32px;
+  overflow: auto;
+  max-height: 490px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cargo-tracking__product-info__text {
+  color: #646464;
+  font-size: 13px;
+  line-height: 1.23;
+}
+
+.cargo-tracking__product-info__products {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.cargo-tracking__product-info__products__item {
+  width: 64px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.cargo-tracking__product-info__transactions-block {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.cargo-transactions {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  min-height: 150px;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.cargo-transactions__line {
+  width: 24px;
+  background-color: #e5e5e5;
+  border-radius: 12px;
+  padding: 7px 2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.cargo-transactions__line .road {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDIgMzYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iMjQiIGZpbGw9IndoaXRlIi8+PC9zdmc+);
+  width: 2px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: calc(50% - 1px);
+}
+
+.cargo-transactions__line .truck--delivered {
+  bottom: calc(100% - 40px);
+}
+
+.cargo-transactions__line .truck {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDE2IDMyIj4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIj4gICAgICAgIDxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik00IDhMMyA0bDUuNS0xLjUgNSAxLjUtMSA0eiIvPiAgICAgICAgPHBhdGggZmlsbD0iI0YyOEIwMCIgZD0iTTMuNzAyIDExLjQ1SDEuMzZ2MjAuMTU1aC40ODhWMzJoMTIuNDM4di0uMzk1aC40ODhWMTEuNDVoLTIuNDc2eiIvPiAgICAgICAgPHBhdGggZmlsbD0iI0I1NjQwMCIgZD0iTTMuMDMyLjc3Yy0uOTg3LjU2My0uODA0IDIuNTU4LS44MDQgMi41NThsLjIzNSA3LjYwMUgxMy41MzdsLjIzNS03LjYwOHMuMjE0LTEuOTkxLS43NzQtMi41NTVDMTIuNTIxLjQ5NSAxMS4xODYgMCA4LjAzIDAgNC44MDcgMCAzLjUxLjQ5OCAzLjAzMi43N3ptLS4zNCA5LjIyYy4wMzgtMi44NDQtLjAwOS00LjkzMi0uMDA5LTQuOTMyaC4yN2MuNDY5IDEuOTU3LjIgNC45OS4yIDQuOTlsLS40NjEtLjA1OXptMTAuNjY2LjAxNWwtLjM0LjA0M3MtLjI2OC0zLjAzMy4yMDItNC45OWguMjY4cy0uMTY4IDIuMTAzLS4xMyA0Ljk0N3ptLS41NzUtNS43OTVjLjEzNS4yOTMtLjMwMiAzLS4zMDIgMy0zLjIyMy0uMTk1LTQuMzY1LS4xMy00LjM2NS0uMTNzLTEuMTcyLS4wNjUtNC4zOTUuMTNjMCAwLS40MjEtMi43MDctLjI4Ny0zIC4xMzQtLjI5NCAxLjcyNy0uNDU3IDQuNjgzLS40NTcgMi44NTMgMCA0LjUzMi4xNjMgNC42NjYuNDU3eiIvPiAgICAgICAgPHBhdGggZmlsbD0iI0Y1QTgzRiIgZD0iTTMgMzBWMTNoMXYxN3pNNiAzMFYxM2gxdjE3ek05IDMwVjEzaDF2MTd6TTEyIDMwVjEzaDF2MTd6TTMuNzAyIDEwLjkzdi41Mmg4LjU5NnYtLjUyeiIvPiAgICAgICAgPHBhdGggZmlsbD0iI0I1NjQwMCIgZD0iTS41IDMwdi00aDF2NHpNMTQuNSAzMHYtNGgxdjR6TS41IDI1di00aDF2NHpNMTQuNSAyNXYtNGgxdjR6TTEuNSA3VjNoMXY0ek0xMy41IDdWM2gxdjR6Ii8+ICAgIDwvZz48L3N2Zz4=);
+  width: 16px;
+  height: 32px;
+  position: absolute;
+  left: calc(50% - 8px);
+  bottom: 10px;
+}
+
+.cargo-transactions__content {
+  -ms-flex: 1;
+  flex: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+
+.cargo-transactions__content__step {
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  margin-left: 24px;
+  margin-top: 16px;
+}
+
+.cargo-transactions__line .truck--delivered {
+  bottom: calc(100% - 40px);
+}
+
+.cargo-transactions__content__step:before {
+  content: " ";
+  background-color: #eee;
+  width: 8px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.cargo-transactions__content__step .step-title {
+  padding-top: 3px;
+  color: #484848;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.cargo-transactions__content__step .step-date {
+  font-size: 11px;
+}
+
+.cargo-transactions__content__step .step-date,
+.cargo-transactions__content__step .step-description {
+  color: #7b7b7b;
+  line-height: 1.45;
+  margin-top: 4px;
+}
+
+.cargo-transactions__content__step .step-description {
+  font-size: 13px;
+}
+
+.cargo-transactions__content__step .step-date,
+.cargo-transactions__content__step .step-description {
+  color: #7b7b7b;
+  line-height: 1.45;
+  margin-top: 4px;
+}
+
+.first {
+  bottom: calc(22% - 40px) !important;
+}
+
+.second {
+  bottom: calc(47% - 40px) !important;
+}
+
+.third {
+  bottom: calc(70% - 40px) !important;
+}
+
+.fourth {
+  bottom: calc(100% - 40px) !important;
+}
+
+.flag {
+  width: 20px;
+  cursor: pointer;
+}

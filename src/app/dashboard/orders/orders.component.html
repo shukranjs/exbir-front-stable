@@ -1,0 +1,753 @@
+<div id="wrapper">
+  <app-sidebar></app-sidebar>
+  <div class="d-flex flex-column" id="content-wrapper">
+    <!-- Main Content -->
+    <div id="content">
+      <app-dashboard-nav></app-dashboard-nav>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="card-body">
+            <div class="text-right">
+              <button
+                (click)="openLg(paymentModal)"
+                class="btn btn-outline-primary btn-sm mr-1"
+                type="button"
+              >
+                <i class="fa fa-money"></i> Ödəniş et
+              </button>
+              <button
+                class="btn btn-outline-primary btn-sm mr-1"
+                routerLink="/dashboard/orders/add-order"
+                type="button"
+              >
+                <i class="fa fa-shopping-bag"></i> Sifariş ver
+              </button>
+              <!--          <button-->
+              <!--            *ngIf="orders.length !== 0"-->
+              <!--            class="btn btn-primary btn-sm"-->
+              <!--            type="button"-->
+              <!--            (click)="isCollapsed = !isCollapsed"-->
+              <!--            [attr.aria-expanded]="!isCollapsed"-->
+              <!--          >-->
+              <!--            <i class="fa fa-arrows-v"></i> Detal-->
+              <!--          </button>-->
+            </div>
+            <hr>
+            <div *ngIf="orders.length !== 0; else notOrders">
+              <div class="row">
+                <div *ngFor="let order of orders"
+                     [attr.class]="orders.indexOf(order) > 3 ? 'col-lg-3 mt-lg-4 mt-2' : 'col-lg-3 mt-lg-2 mt-2'">
+                  <div class="card border-left-primary shadow h-100 pb-0 user-card">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+
+                      <h6 class="m-0 font-weight-bold text-primary">
+                        <button
+                          (click)="open(orderStatesModal, order)"
+                          class="btn btn-outline-warning btn-sm"
+                          style="position: absolute; right: 82px; top: 12px; cursor: pointer;padding: 2px 6px 2px 6px; border-radius: 5px;">
+                          <i class="fa fa-calendar" style="font-size: 12px;"></i></button>
+                        <button
+                          (click)="open(update_order_modal,order)"
+                          *ngIf="order.current_state.toString() === 'Created' || order.current_state.toString() === 'Updated' || order.current_state.toString() === 'NotCompleted'"
+                          class="btn btn-outline-info btn-sm"
+                          style="position: absolute; right: 50px; top: 12px; cursor: pointer;padding: 2px 6px 2px 6px; border-radius: 5px;">
+                          <i class="fa fa-edit" style="font-size: 12px;"></i></button>
+                        <button
+                          (click)=removeOrder(order.id)
+                          *ngIf="order.current_state.toString() === 'Created' || order.current_state.toString() === 'Updated' || order.current_state.toString() === 'NotCompleted'"
+                          class="btn btn-outline-danger btn-sm"
+                          style="position: absolute; right: 20px; top: 12px; cursor: pointer;padding: 2px 6px 2px 6px; border-radius: 5px;">
+                          <i class="fa fa-times"></i>
+                        </button>
+                        <span *ngIf="order.current_state.toString() === 'Created'"
+                              translate>Əlavə edilib</span>
+                        <span *ngIf="order.current_state.toString() === 'Paid'"
+                              translate>Ödəniş edilib</span>
+                        <span *ngIf="order.current_state.toString() === 'Ordered'"
+                              translate>Sifariş edilib</span>
+                        <span *ngIf="order.current_state.toString() === 'Updated'"
+                              translate>Tənzimlənib</span>
+                        <span *ngIf="order.current_state.toString() === 'Deleted'"
+                              translate>Ləvğ edilib</span>
+                        <span *ngIf="order.current_state.toString() === 'NotCompleted'"
+                              translate>Düzəliş gözlənilir</span>
+                        <span *ngIf="order.current_state.toString() === 'Incomplete'"
+                              translate
+                        >Ödəniş tamamlanmayıb</span>
+                        <span *ngIf="order.current_state.toString() === 'ReadyToOrder'"
+                              translate
+                        >Sifariş ediləcək</span>
+
+                      </h6>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">ID<br></small> {{order.id}}
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Natamam məbləğ<br></small> {{order.missing_fee | currency:'₺' }}
+                        </div>
+                      </div>
+                      <hr style="margin:1px">
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Ölçü<br></small> {{order.size}}
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Rəng<br></small> {{order.color}}
+                        </div>
+                      </div>
+                      <hr style="margin:1px">
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Link<br></small> <a href="{{order.url}}" target="_blank"><i
+                          class="fa fa-external-link"></i> Link</a>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Tarix<br></small>
+                          {{order.created_date | date: "dd MMMM yyyy":"+4":"az-Latn"}}
+                        </div>
+                      </div>
+                      <hr style="margin:1px">
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Qiymət<br></small>
+                          <span> {{order.price | currency:'₺'}}</span>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Daxili kargo<br></small>
+                          <span> {{order.courier_cost | currency:'₺'}}</span>
+                        </div>
+                      </div>
+                      <hr style="margin:1px">
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Bank xərci<br></small>
+                          <span> {{order.percentage | percent}}</span>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Status<br></small>
+                          <span *ngIf="order.current_state.toString() === 'Created'"
+                                translate>Əlavə edilib</span>
+                          <span *ngIf="order.current_state.toString() === 'Paid'"
+                                translate>Ödəniş edilib</span>
+                          <span *ngIf="order.current_state.toString() === 'Ordered'"
+                                translate>Sifariş edilib</span>
+                          <span *ngIf="order.current_state.toString() === 'Updated'"
+                                translate>Tənzimlənib</span>
+                          <span *ngIf="order.current_state.toString() === 'Deleted'"
+                                translate>Ləvğ edilib</span>
+                          <span *ngIf="order.current_state.toString() === 'NotCompleted'"
+                                translate>Düzəliş gözlənilir</span>
+                          <span *ngIf="order.current_state.toString() === 'Incomplete'"
+                                translate
+                          >Ödəniş tamamlanmayıb</span>
+                          <span *ngIf="order.current_state.toString() === 'ReadyToOrder'"
+                                translate
+                          >Sifariş ediləcək</span>
+                        </div>
+                      </div>
+                      <hr style="margin:1px">
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Əlavə qeydlər<br></small>
+                          <span> {{order.description}}</span>
+                        </div>
+                        <div *ngIf="order.current_state.toString() === 'Incomplete'" class="col-6">
+                          <button (click)="openLg(paymentModal)"
+                                  class="btn btn-success btn-sm mt-2"
+                                  translate
+                          ><i class="fa fa-money"></i> Ödə
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <!--                  <div class="modal-footer">-->
+                    <!--                    <button class="btn btn-primary btn-sm btn-block" routerLink="/dashboard/tracks/222">Ətraflı</button>-->
+                    <!--                  </div>-->
+                  </div>
+                </div>
+              </div>
+
+              <!--            <div class="container-fluid">-->
+              <!--              <div class="row">-->
+              <!--                <div [attr.class]="orders.indexOf(order) > 1 ? 'col-lg-6 mt-lg-4 mt-2' : 'col-lg-6 mt-lg-2 mt-2'"-->
+              <!--                     *ngFor="let order of orders">-->
+              <!--                  <div class="card border-left-primary shadow h-100 pb-0 user-card">-->
+              <!--                    <div class="card-body">-->
+              <!--                <span class="text-warning"-->
+              <!--                      (click)="open(orderStatesModal, order)"-->
+              <!--                      style="position: absolute; right: 52px; top: 4px; cursor: pointer;">-->
+              <!--                        <i class="fa fa-calendar" style="font-size: 12px;"></i>-->
+              <!--                      </span>-->
+              <!--                      <span-->
+              <!--                        *ngIf="order.current_state.toString() !== 'Ordered' || order.current_state.toString() !== 'Paid' || order.current_state.toString() !== 'Deleted'"-->
+              <!--                        class="text-info"-->
+              <!--                        style="position: absolute; right: 29px; top: 5px; cursor: pointer;"-->
+              <!--                        (click)=open(update_order_modal,order)>-->
+              <!--                  <i class="fa fa-edit" style="font-size: 12px;"></i></span>-->
+              <!--                      <span-->
+              <!--                        *ngIf="order.current_state.toString() !== 'Ordered' || order.current_state.toString() !== 'Paid' || order.current_state.toString() !== 'Deleted'"-->
+              <!--                        class="text-danger"-->
+              <!--                        style="position: absolute; right: 10px; top: 5px; cursor: pointer;"-->
+              <!--                        (click)=removeOrder(order.id)>-->
+              <!--                  <i class="fa fa-times"></i>-->
+              <!--                </span>-->
+              <!--                      <div class="row">-->
+              <!--                        <div class="col-lg-3 align-self-center my-1">-->
+              <!--                          <a class="text-primary" href="{{ order.url }}" target="_blank">-->
+              <!--                            <i class="fa fa-external-link-square"></i> #{{ order.id }}-->
+              <!--                          </a>-->
+              <!--                        </div>-->
+              <!--                        <div class="col-lg-3 align-self-center my-1">-->
+              <!--                          <span>Qiymət: {{ order.price | currency }}</span>-->
+              <!--                        </div>-->
+
+              <!--                        <div class="col-lg-3 align-self-center my-1">-->
+              <!--                          <span *ngIf="order.current_state.toString() === 'Created'; else paid"-->
+              <!--                                translate>Əlavə edilib</span>-->
+              <!--                          <ng-template #paid>-->
+              <!--              <span *ngIf="order.current_state.toString() === 'Paid'; else ordered"-->
+              <!--                    translate>Ödənilib</span>-->
+              <!--                            <ng-template #ordered>-->
+              <!--                <span *ngIf="order.current_state.toString() === 'Ordered'; else updated"-->
+              <!--                      translate>Tamamlanıb</span>-->
+              <!--                              <ng-template #updated>-->
+              <!--                  <span *ngIf="order.current_state.toString() === 'Updated'; else deleted"-->
+              <!--                        translate>Tənzimlənib</span>-->
+              <!--                                <ng-template #deleted>-->
+              <!--                  <span *ngIf="order.current_state.toString() === 'Deleted'; else not_completed"-->
+              <!--                        translate>Ləvğ edilib</span>-->
+              <!--                                  <ng-template #not_completed>-->
+              <!--                                    <span translate>Tamamlanmayıb</span>-->
+              <!--                                  </ng-template>-->
+              <!--                                </ng-template>-->
+              <!--                              </ng-template>-->
+              <!--                            </ng-template>-->
+              <!--                          </ng-template>-->
+              <!--                        </div>-->
+              <!--                        <div class="col-lg-3 align-self-center my-1">-->
+              <!--                          {{order.created_date | date: "dd MMMM yyyy"}}-->
+              <!--                        </div>-->
+              <!--                      </div>-->
+              <!--                    </div>-->
+              <!--                    <div id="collapseExample" [ngbCollapse]="isCollapsed">-->
+              <!--                      <div class="card">-->
+              <!--                        <div class="card-body">-->
+              <!--                          <div class="row">-->
+              <!--                            <div class="col-lg-3">-->
+              <!--                              Ölçü: {{ order.size }}-->
+              <!--                            </div>-->
+              <!--                            <div class="col-lg-3">-->
+              <!--                              Rəng: {{ order.color }}-->
+              <!--                            </div>-->
+              <!--                            <div class="col-lg-3">-->
+              <!--                              Ədəd: {{ order.quantity }}-->
+              <!--                            </div>-->
+              <!--                            <div class="col-lg-3">-->
+              <!--                              Qeydlər: {{ order.description }}-->
+              <!--                            </div>-->
+              <!--                          </div>-->
+              <!--                        </div>-->
+              <!--                      </div>-->
+              <!--                    </div>-->
+              <!--                  </div>-->
+              <!--                </div>-->
+              <!--              </div>-->
+              <!--            </div>-->
+            </div>
+            <ng-template #notOrders>
+              <div class="alert alert-primary">
+                Hələki heçbir sifariş verməmisiniz. Sifariş vermək üçün zəhmət olmasa sağ küncdəki Sifariş ver
+                düyməsini
+                sıxın.
+              </div>
+            </ng-template>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal to update order -->
+<ng-template #update_order_modal let-modal>
+  <form #orderForm="ngForm" (ngSubmit)="updateOrder(orderForm)">
+    <div class="modal-header">
+      <h5 class="modal-title text-primary" id="update-order-modal-basic-title">
+        <i class="fa fa-shopping-bag"></i>
+        Sifariş tənzimlə
+      </h5>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="url">Məhsul linki</label>
+        <input
+          #url="ngModel"
+          [(ngModel)]="orderToUpdate.url"
+          autofocus
+          class="form-control form-control-sm"
+          id="url"
+          name="url"
+          pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
+          placeholder="Misal üçün: http://www.hepsiburada.com/..."
+          required
+        />
+        <small *ngIf="url.invalid && (url.dirty || url.touched)"
+               class="form-text text-danger">
+          Linki düzgün qeyd edin.
+        </small>
+      </div>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-6">
+            <label for="price"
+            >Məhsul qiyməti (TRY)</label
+            >
+            <input
+              #price="ngModel"
+              [(ngModel)]="orderToUpdate.price"
+              class="form-control form-control-sm"
+              id="price"
+              name="price"
+              pattern="(^\d*\.?\d+$)"
+              placeholder="Misal üçün: 20.00"
+              required
+              type="number"
+            />
+            <small *ngIf="price.invalid && (price.dirty || price.touched)"
+                   class="form-text text-danger">
+              Qiyməti düzgün qeyd edin.
+            </small>
+          </div>
+          <div class="col-6">
+            <label for="quantity">Ədəd</label>
+            <select
+              #quantity="ngModel"
+              [(ngModel)]="orderToUpdate.quantity"
+              class="form-control form-control-sm"
+              id="quantity"
+              name="quantity"
+              required
+            >
+              <option
+                *ngFor="let i of quantityOptions"
+                value="{{ i }}"
+              >{{ i }}</option
+              >
+            </select>
+            <small *ngIf="quantity.invalid && (quantity.dirty || quantity.touched)"
+                   class="form-text text-danger">
+              Ədədi düzgün qeyd edin.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-6">
+            <label for="courier_cost"
+            >Daxili kargo (TRY)</label
+            >
+            <input
+              #courier_cost="ngModel"
+              [(ngModel)]="orderToUpdate.courier_cost"
+              class="form-control form-control-sm"
+              id="courier_cost"
+              name="courier_cost"
+              pattern="(^\d*\.?\d+$)"
+              placeholder="Misal üçün: 5.00"
+              required
+              type="number"
+            />
+            <small *ngIf="courier_cost.invalid && (courier_cost.dirty || courier_cost.touched)"
+                   class="form-text text-danger">
+              Daxili kargonu düzgün qeyd edin.
+            </small>
+          </div>
+          <div class="col-6">
+            <label for="description"
+            >Xüsusi qeydlər</label
+            >
+            <input
+              #description="ngModel"
+              [(ngModel)]="orderToUpdate.description"
+              class="form-control form-control-sm"
+              id="description"
+              name="description"
+              placeholder="Misal üçün: Hədiyyə paketi"
+              required
+            />
+            <small *ngIf="description.invalid && (description.dirty || description.touched)"
+                   class="form-text text-danger">
+              Qeydlərinizi düzgün qeyd edin.
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-6"><label for="size">Ölçü</label>
+            <input
+              #size="ngModel"
+              [(ngModel)]="orderToUpdate.size"
+              class="form-control form-control-sm"
+              id="size"
+              name="size"
+              placeholder="Misal üçün: M, 36"
+              required
+            />
+            <small *ngIf="size.invalid && (size.dirty || size.touched)"
+                   class="form-text text-danger">
+              Ölçünü düzgün qeyd edin.
+            </small></div>
+          <div class="col-6">
+            <label for="color">Rəng</label>
+            <input
+              #color="ngModel"
+              [(ngModel)]="orderToUpdate.color"
+              class="form-control form-control-sm"
+              id="color"
+              name="color"
+              placeholder="Misal üçün: Qırmızı, Yaşıl"
+              required
+            />
+            <small *ngIf="color.invalid && (color.dirty || color.touched)"
+                   class="form-text text-danger">
+              Rəngi düzgün qeyd edin.
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        (click)="modal.dismiss()"
+        aria-label="Close"
+        class="btn btn-outline-primary btn-sm"
+        type="button"
+      >
+        <span>Bağla</span>
+      </button>
+      <button [disabled]="orderForm.invalid" class="btn btn-primary btn-sm" type="submit">
+        <span>Təsdiqlə</span>
+      </button>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #orderStatesModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title text-primary">
+      <i class="fa fa-calendar"></i>
+      <span translate> Sifariş hərəkətləri</span>
+    </h5>
+  </div>
+  <div class="modal-body">
+    <span translate>Sifariş</span> : #{{orderToUpdate.id}} <br>
+    <span translate>Tarix</span>
+    : {{orderToUpdate.created_date | date: "dd MMMM yyyy":"+4":"az-Latn"}}
+    <hr>
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered table-striped table-hover">
+        <caption translate>Sifariş hərəkətləri</caption>
+        <thead class="bg-primary text-white">
+        <tr>
+          <th scope="col" translate>№</th>
+          <th scope="col" translate>Status</th>
+          <th scope="col" translate>Tarix</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let state of orderToUpdate.states">
+          <td>{{orderToUpdate.id}}</td>
+          <td>
+            <span *ngIf="state.state.toString() === 'Created'"
+                  translate>Əlavə edilib</span>
+            <span *ngIf="state.state.toString() === 'Paid'"
+                  translate>Ödəniş edilib</span>
+            <span *ngIf="state.state.toString() === 'Ordered'"
+                  translate>Sifariş edilib</span>
+            <span *ngIf="state.state.toString() === 'Updated'"
+                  translate>Tənzimlənib</span>
+            <span *ngIf="state.state.toString() === 'NotCompleted'"
+                  translate>Düzəliş gözlənilir</span>
+            <span *ngIf="state.state.toString() === 'Deleted'"
+                  translate>Ləvğ edilib</span>
+            <span *ngIf="state.state.toString() === 'Incomplete'"
+                  translate
+            >Ödəniş tamamlanmayıb</span>
+            <span *ngIf="state.state.toString() === 'ReadyToOrder'"
+                  translate
+            >Sifariş ediləcək</span>
+          </td>
+          <td>{{state.created_date | date: "dd MMMM yyyy":"+4":"az-Latn"}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button
+      (click)="modal.dismiss()"
+      aria-label="Close"
+      class="btn btn-outline-primary btn-sm"
+      type="button"
+    >
+      <span translate>Bağla</span>
+    </button>
+  </div>
+</ng-template>
+
+
+<ng-template #paymentModal let-modal>
+  <form #paymentForm="ngForm" (ngSubmit)="createPaymentMissing(paymentForm)">
+    <div class="modal-header">
+      <h5 class="modal-title text-primary">
+        <i class="fa fa-money"></i>
+        Ödəniş et
+      </h5>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="alert alert-primary">
+            <i class="fa fa-info-circle"></i>
+            <small
+            > Aşağıda ödənişi tamamlanmamış sifarişlərinizin nömrələri list
+              edilmişdir.
+              Ödəniş etmək istədiyiniz sifarişlərin nömrələrini seçməklə və lazimi xanaları doldurmaqla
+              ödənişinizi tamamlaya bilərsiniz.
+            </small>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="tracking_numbers">Sifarişlər</label>
+            <select #ids="ngModel"
+                    (change)="calculateMissingPaymentAmount()"
+                    [(ngModel)]="selectedOrders"
+                    class="form-control form-control-sm selectpicker"
+                    data-actions-box="true"
+                    data-deselect-all-text="Seçimləri ləğv et"
+                    data-none-selected-text="Heç nə seçilmədi"
+                    data-select-all-text="Hamısını seç"
+                    data-selected-text-format="count > 1"
+                    id="tracking_numbers"
+                    multiple
+                    name="tracking_numbers"
+                    required>
+              <option *ngFor="let order of ordersForPayment"
+                      [attr.value]=order.id>
+                {{ order.id }}
+              </option>
+            </select>
+            <small *ngIf="ids.invalid && (ids.dirty || ids.touched)"
+                   class="form-text text-danger">
+              Sifariş nömrələrini qeyd edin.
+            </small>
+          </div>
+          <hr>
+          <div class="alert alert-primary" style="font-size: 14px">TRY Balans:
+            <strong>{{wallet | currency:'₺' }}</strong></div>
+          <div class="custom-control custom-checkbox mt-2">
+            <input (change)="calculateMissingPaymentAmount()" [(ngModel)]="via_wallet_missing"
+                   class="custom-control-input"
+                   id="via_wallet_missing"
+                   name="via_wallet_missing" type="checkbox">
+            <label class="custom-control-label" for="via_wallet_missing">Balansımdan istifadə etmək istəyirəm.</label>
+          </div>
+          <hr>
+
+        </div>
+        <div *ngIf="selectedOrders.length > 0" class="col-md-5" style="border-left: 1px solid #ddd;">
+          <div *ngIf="paymentToSendMissing.amount > 0">
+            <div class="form-row">
+              <div class="col-9">
+                <div class="form-group">
+                  <label>Məbləğ</label>
+                  <input
+                    [(ngModel)]="paymentToSendMissing.amount"
+                    aria-label="Amount (to the nearest try)"
+                    class="form-control form-control-sm payment-processor-input font-weight-bold"
+                    id="missing_amount"
+                    name="missing_amount"
+                    type="hidden">
+                  <h3 style="    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #ddd;"><strong>{{paymentToSendMissing.amount | currency:'₺'}}</strong></h3>
+                </div>
+              </div>
+              <div class="col-3">
+                <img *ngIf="isVisa"
+                     alt="Credit Card Logos"
+                     class="card-number-image"
+                     src="assets/img/visa.gif" title="Credit Card Logos"/>
+                <img *ngIf="isMastercard"
+                     alt="Credit Card Logos"
+                     class="card-number-image"
+                     src="assets/img/mastercard.gif" title="Credit Card Logos"/>
+              </div>
+            </div>
+<!--            <div class="form-group">-->
+<!--              <label for="missing_card_number_1">Kart nömrəsi</label>-->
+<!--              <div class="form-row">-->
+<!--                <div class="col-3">-->
+<!--                  <input #missing_card_number_1="ngModel"-->
+<!--                         (keyup)="cardNumber2FocusMissing()"-->
+<!--                         [(ngModel)]="paymentToSendMissing.card_number_1"-->
+<!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                         id="missing_card_number_1"-->
+<!--                         maxlength="4"-->
+<!--                         minlength="4"-->
+<!--                         name="missing_card_number_1"-->
+<!--                         required>-->
+<!--                </div>-->
+<!--                <div class="col-3">-->
+<!--                  <input #missing_card_number_2="ngModel"-->
+<!--                         (keyup)="cardNumber3FocusMissing()"-->
+<!--                         [(ngModel)]="paymentToSendMissing.card_number_2"-->
+<!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                         id="missing_card_number_2"-->
+<!--                         maxlength="4"-->
+<!--                         minlength="4"-->
+<!--                         name="missing_card_number_2"-->
+<!--                         required>-->
+<!--                </div>-->
+<!--                <div class="col-3">-->
+<!--                  <input #missing_card_number_3="ngModel"-->
+<!--                         (keyup)="cardNumber4FocusMissing()"-->
+<!--                         [(ngModel)]="paymentToSendMissing.card_number_3"-->
+<!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                         id="missing_card_number_3"-->
+<!--                         maxlength="4"-->
+<!--                         minlength="4"-->
+<!--                         name="missing_card_number_3"-->
+<!--                         required>-->
+<!--                </div>-->
+<!--                <div class="col-3">-->
+<!--                  <input #missing_card_number_4="ngModel"-->
+<!--                         [(ngModel)]="paymentToSendMissing.card_number_4"-->
+<!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                         id="missing_card_number_4"-->
+<!--                         maxlength="4"-->
+<!--                         minlength="4"-->
+<!--                         name="missing_card_number_4"-->
+<!--                         required>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <small *ngIf="-->
+<!--                        (missing_card_number_1.invalid && (missing_card_number_1.dirty || missing_card_number_1.touched)) ||-->
+<!--                        (missing_card_number_2.invalid && (missing_card_number_2.dirty || missing_card_number_2.touched)) ||-->
+<!--                        (missing_card_number_3.invalid && (missing_card_number_3.dirty || missing_card_number_3.touched)) ||-->
+<!--                        (missing_card_number_4.invalid && (missing_card_number_4.dirty || missing_card_number_4.touched))"-->
+<!--                     class="text-danger">-->
+<!--                Kart nömrəsini düzgün qeyd edin-->
+<!--              </small>-->
+<!--            </div>-->
+<!--            <div class="form-group mt-3">-->
+<!--              <div class="form-row">-->
+<!--                <div class="col-5">-->
+<!--                  <label for="missing_month">Ay</label>-->
+<!--                  <select #missing_month="ngModel"-->
+<!--                          [(ngModel)]="paymentToSendMissing.month"-->
+<!--                          class="form-control form-control-sm payment-processor-input"-->
+<!--                          id="missing_month"-->
+<!--                          name="missing_month"-->
+<!--                          required>-->
+<!--                    <option value="01">Yanvar</option>-->
+<!--                    <option value="02">Fevral</option>-->
+<!--                    <option value="03">Mart</option>-->
+<!--                    <option value="04">Aprel</option>-->
+<!--                    <option value="05">May</option>-->
+<!--                    <option value="06">İyun</option>-->
+<!--                    <option value="07">İyul</option>-->
+<!--                    <option value="08">Avqust</option>-->
+<!--                    <option value="09">Sentyabr</option>-->
+<!--                    <option value="10">Oktyabr</option>-->
+<!--                    <option value="11">Noyabr</option>-->
+<!--                    <option value="12">Dekabr</option>-->
+<!--                  </select>-->
+<!--                  <small *ngIf="missing_month.invalid && (missing_month.dirty || missing_month.touched)"-->
+<!--                         class="text-danger">Qeyd-->
+<!--                    edin</small>-->
+<!--                </div>-->
+<!--                <div class="col-5 offset-2">-->
+<!--                  <label for="missing_year">İl</label>-->
+<!--                  <select #missing_year="ngModel"-->
+<!--                          [(ngModel)]="paymentToSendMissing.year"-->
+<!--                          class="form-control form-control-sm payment-processor-input"-->
+<!--                          id="missing_year"-->
+<!--                          name="missing_year"-->
+<!--                          required>-->
+<!--                    <option value="20">2020</option>-->
+<!--                    <option value="21">2021</option>-->
+<!--                    <option value="22">2022</option>-->
+<!--                    <option value="23">2023</option>-->
+<!--                    <option value="24">2024</option>-->
+<!--                    <option value="25">2025</option>-->
+<!--                    <option value="26">2026</option>-->
+<!--                    <option value="27">2027</option>-->
+<!--                    <option value="28">2028</option>-->
+<!--                    <option value="29">2029</option>-->
+<!--                    <option value="30">2030</option>-->
+<!--                  </select>-->
+<!--                  <small *ngIf="missing_year.invalid && (missing_year.dirty || missing_year.touched)"-->
+<!--                         class="text-danger">Qeyd-->
+<!--                    edin</small>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="form-group mt-3">-->
+<!--              <div class="form-row">-->
+<!--                <div class="col-5">-->
+<!--                  <label for="missing_cvv">CVC/CVV</label>-->
+<!--                  <input #missing_cvv="ngModel"-->
+<!--                         [(ngModel)]="paymentToSendMissing.cvv"-->
+<!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+<!--                         id="missing_cvv"-->
+<!--                         maxlength="4"-->
+<!--                         minlength="3"-->
+<!--                         name="missing_cvv"-->
+<!--                         required>-->
+<!--                  <small *ngIf="missing_cvv.invalid && (missing_cvv.dirty || missing_cvv.touched)"-->
+<!--                         class="text-danger">Qeyd edin</small>-->
+<!--                </div>-->
+<!--                <div class="col-7 align-self-end ">-->
+<!--                  <img class="img-fluid align-text-bottom" src="../../../assets/img/3dsecure.png">-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+          </div>
+          <div *ngIf="paymentToSendMissing.amount <= 0">
+            <label>Qalıq balans</label>
+            <h3 style="    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #ddd;"><strong>{{paymentToSendMissing.amount * -1 | currency:'₺' }}</strong></h3>
+          </div>
+        </div>
+        <div *ngIf="selectedOrders.length === 0" class="col-md-5 align-self-end"
+             style="border-left: 1px solid #ddd;">
+          <img class="img-fluid" src="assets/img/credit_cards.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        (click)="modal.dismiss()"
+        aria-label="Close"
+        class="btn btn-outline-primary btn-sm"
+        type="button"
+      >
+        <span>Bağla</span>
+      </button>
+      <button [disabled]="paymentForm.invalid && selectedOrders.length === 0" class="btn btn-primary btn-sm"
+              type="submit">
+        <span>Təsdiqlə</span>
+      </button>
+    </div>
+  </form>
+</ng-template>
+

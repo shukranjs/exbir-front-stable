@@ -1,0 +1,456 @@
+<div class="main-slider overlape">
+  <owl-carousel
+    [items]="images"
+    [options]="{ items: 1, dots: true, navigation: true }"
+    [carouselClasses]="['owl-theme', 'row', 'mx-0', 'sliding']"
+  >
+    <img
+      class="img-fluid"
+      itemprop="image"
+      [src]="image"
+      *ngFor="let image of images; let i = index"
+    />
+  </owl-carousel>
+</div>
+
+<section class="track-sec mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="track-form">
+          <div class="heading2">
+            <img
+              alt="Exbir Logistics"
+              src="assets/images/resource/track-form.png"
+            />
+            <br />
+            <span translate> home.search_package.description </span>
+          </div>
+          <form
+            #getPackageByTrackingNumberForm="ngForm"
+            (ngSubmit)="
+              getPackageByTrackingNumber(getPackageByTrackingNumberForm)
+            "
+          >
+            <label
+              ><i class="fa fa-stumbleupon"></i>
+              <input
+                #tracking_number="ngModel"
+                [(ngModel)]="trackingNumber"
+                id="tracking_number"
+                name="tracking_number"
+                placeholder="{{
+                  'home.search_package.placeholder' | translate
+                }}"
+                required
+                type="text"
+            /></label>
+            <button
+              [disabled]="getPackageByTrackingNumberForm.invalid"
+              class="theme-btn"
+              type="submit"
+            >
+              <i class="fa fa-paper-plane"></i>
+              <span translate>home.search_package.button</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading mt-md-0 mt-3">
+          <h2 translate>home.how_is_working.heading</h2>
+        </div>
+        <div class="top-margin packages">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="our-packages">
+                <div class="packages-thumb">
+                  <img
+                    alt="Exbir Logistics"
+                    itemprop="image"
+                    src="assets/images/warehouse.jpg"
+                  />
+                  <div class="packages-info">
+                    <h2 itemprop="name">
+                      <a itemprop="url" translate
+                        >home.how_is_working.external_storage.heading</a
+                      >
+                    </h2>
+                    <ul>
+                      <li
+                        style="text-align: justify; font-size: 14px"
+                        translate
+                      >
+                        home.how_is_working.external_storage.description
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="our-packages">
+                <div class="packages-thumb">
+                  <img
+                    alt="Exbir Logistics"
+                    itemprop="image"
+                    src="assets/images/register.jpg"
+                  />
+                  <div class="packages-info">
+                    <h2 itemprop="name">
+                      <a itemprop="url" translate
+                        >home.how_is_working.sign_in.heading</a
+                      >
+                    </h2>
+                    <ul>
+                      <li
+                        style="text-align: justify; font-size: 14px"
+                        translate
+                      >
+                        home.how_is_working.sign_in.description
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="our-packages">
+                <div class="packages-thumb">
+                  <img
+                    alt="Exbir Logistics"
+                    itemprop="image"
+                    src="assets/images/courier.jpg"
+                  />
+                  <div class="packages-info">
+                    <h2 itemprop="name">
+                      <a itemprop="url" translate
+                        >home.how_is_working.deliver.heading</a
+                      >
+                    </h2>
+                    <ul>
+                      <li
+                        style="text-align: justify; font-size: 14px"
+                        translate
+                      >
+                        home.how_is_working.deliver.description
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block no-padding">
+  <div
+    class="fixed-bg still"
+    style="background: url(assets/images/calculate.jpg) no-repeat scroll"
+  ></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="cargo-shipment">
+          <div class="calculate-shipping">
+            <div class="dark-title">
+              <h3 translate>home.calculator.heading</h3>
+            </div>
+            <div class="calculate-shipping-form">
+              <form
+                #calculateForm="ngForm"
+                (ngSubmit)="calculatePrice(calculateForm)"
+              >
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="">
+                      <select
+                        #country="ngModel"
+                        [(ngModel)]="calculateData.country"
+                        id="country"
+                        name="country"
+                        required
+                      >
+                        <option value="Turkey">Türkiyə</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="">
+                      <select
+                        #type="ngModel"
+                        [(ngModel)]="calculateData.type"
+                        id="type"
+                        name="type"
+                        required
+                      >
+                        <option translate value="general">
+                          home.calculator.form.type.general
+                        </option>
+                        <option translate value="liquid">
+                          home.calculator.form.type.liquid
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <!--                  <div class="col-md-6">-->
+                  <!--                    <div class="">-->
+                  <!--                      <select #kgorg="ngModel"-->
+                  <!--                              [(ngModel)]="calculateData.kgorg"-->
+                  <!--                              id="kgorg"-->
+                  <!--                              name="kgorg"-->
+                  <!--                              required>-->
+                  <!--                        <option translate value="g" disabled>home.calculator.form.kgorg.g</option>-->
+                  <!--                        <option translate value="kg">home.calculator.form.kgorg.kg</option>-->
+                  <!--                      </select>-->
+                  <!--                    </div>-->
+                  <!--                  </div>-->
+                  <div class="col-md-6">
+                    <input
+                      #weight="ngModel"
+                      [(ngModel)]="calculateData.weight"
+                      class="text-field"
+                      id="weight"
+                      name="weight"
+                      placeholder="{{
+                        'home.calculator.form.weight' | translate
+                      }} (kg)"
+                      required
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      #width="ngModel"
+                      [(ngModel)]="calculateData.width"
+                      class="text-field"
+                      id="width"
+                      name="width"
+                      placeholder="{{
+                        'home.calculator.form.width' | translate
+                      }} (sm)"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      #length="ngModel"
+                      [(ngModel)]="calculateData.length"
+                      class="text-field"
+                      id="length"
+                      name="length"
+                      placeholder="{{
+                        'home.calculator.form.length' | translate
+                      }} (sm)"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      #height="ngModel"
+                      [(ngModel)]="calculateData.height"
+                      class="text-field"
+                      id="height"
+                      name="height"
+                      placeholder="{{
+                        'home.calculator.form.height' | translate
+                      }} (sm)"
+                      type="text"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <div class="extra-services">
+                      <!--                                                    <span>-->
+                      <!--                                                        <input tabindex="23" type="checkbox" id="field18"/>-->
+                      <!--                                                        <label for="field18">Внутригородская доставка</label>-->
+                      <!--                                                    </span>-->
+                      <!--                      <span>-->
+                      <!--                                                        <input tabindex="23" type="checkbox" id="field19"/>-->
+                      <!--                                                        <label for="field19">Доставка по районам</label>-->
+                      <!--                                                    </span>-->
+                      <!--                      <span>-->
+                      <!--                                                        <input tabindex="23" type="checkbox" id="field20"/>-->
+                      <!--                                                        <label for="field19">Страховка</label>-->
+                      <!--                                                    </span>-->
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <button
+                      [disabled]="calculateForm.invalid"
+                      class="theme-btn"
+                      type="submit"
+                    >
+                      <i class="fa fa-paper-plane"></i>
+                      <span translate>home.calculator.form.submit</span>
+                    </button>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="total">
+                      <div class="cargo-total">
+                        <h4 translate>home.calculator.form.total</h4>
+                        {{ totalAmount | currency }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading mt-md-0 mt-3">
+          <h2 translate>home.articles.heading</h2>
+        </div>
+        <div class="top-margin">
+          <div class="row">
+            <div *ngFor="let article of articles.slice(0, 3)" class="col-md-4">
+              <div class="news-box">
+                <div class="news-thumb">
+                  <a itemprop="url" routerLink="/article/{{ article.id }}">
+                    <img
+                      alt="Exbir Logistics"
+                      itemprop="image"
+                      src="{{ article.image_path }}"
+                  /></a>
+                  <div class="date">
+                    <strong>{{ article.created_date | date: "dd" }}</strong>
+                    <span>{{ article.created_date | date: "MMMM" }}</span>
+                  </div>
+                </div>
+                <div class="news-detail">
+                  <h2 itemprop="headline">
+                    <a itemprop="url" routerLink="/article/{{ article.id }}">
+                      {{ article.subject }}</a
+                    >
+                  </h2>
+                  <p
+                    [innerHtml]="article.text | slice: 0:100"
+                    itemprop="description"
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-partners></app-partners>
+
+<ng-template #getPackageByTrackingNumberModal let-modal>
+  <div class="modal-header" translate>home.package_states_modal.heading</div>
+  <div class="modal-body">
+    <span translate>home.package_states_modal.body.package</span> : #{{
+      package.id
+    }}
+    <br />
+    <span translate>home.package_states_modal.body.tracking_number</span> :
+    {{ package.tracking_number }} <br />
+    <span translate>home.package_states_modal.body.created_date</span> :
+    {{ package.created_date | date }}
+    <hr />
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered table-striped table-hover">
+        <caption translate>
+          home.package_states_modal.body.table.caption
+        </caption>
+        <thead class="bg-primary text-white">
+          <tr>
+            <th scope="col" translate>
+              home.package_states_modal.body.table.heads.barcode
+            </th>
+            <th scope="col" translate>
+              home.package_states_modal.body.table.heads.current_state
+            </th>
+            <th scope="col" translate *ngIf="!package.is_internal">
+              home.package_states_modal.body.table.heads.from
+            </th>
+            <th scope="col" translate *ngIf="!package.is_internal">
+              home.package_states_modal.body.table.heads.to
+            </th>
+            <th scope="col" translate>
+              home.package_states_modal.body.table.heads.date
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="package.is_internal === true; else externalPackage">
+            <td>{{ package.barcode }}</td>
+
+            <td>
+              {{ package.comment }}
+            </td>
+
+            <td>{{ package.created_date | date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      (click)="modal.dismiss()"
+      aria-label="Close"
+      class="btn btn-outline-primary"
+      type="button"
+    >
+      <span translate>home.package_states_modal.footer.buttons.close</span>
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #internalPackage [ngIf]="package.is_internal === true">
+</ng-template>
+
+<ng-template #externalPackage [ngIf]="package.is_internal === false">
+  <tr *ngFor="let state of package.states">
+    <td>{{ package.barcode }}</td>
+
+    <td *ngIf="package.is_internal === true">
+      {{ package.comment }}
+    </td>
+
+    <td *ngIf="state.state.toString() === 'Declarations'">Bəyan edilib</td>
+    <td *ngIf="state.state.toString() === 'NotCompleted'">
+      Tamamlanmayıb (<a
+        href="https://play.google.com/store/apps/details?id=com.crocusoft.smartcustoms"
+        >Bəyan edin</a
+      >)
+    </td>
+    <td *ngIf="state.state.toString() === 'ExternalStorage'">Xarici anbar</td>
+    <td *ngIf="state.state.toString() === 'OnWay'">Yoldadır</td>
+    <td *ngIf="state.state.toString() === 'CustomsClearance'">
+      Gömrük yoxlanışı
+    </td>
+
+    <td *ngIf="state.state.toString() === 'InternalStorage'">Bakı anbarı</td>
+
+    <td *ngIf="state.state.toString() === 'Delivered'">Təhvil verilib</td>
+
+    <td *ngIf="state.state.toString() === 'Deleted'">Ləğv edilib</td>
+    <td>{{ package.shipping_from }}</td>
+    <td>{{ package.shipping_to }}</td>
+    <td>{{ state.created_date | date }}</td>
+  </tr>
+</ng-template>

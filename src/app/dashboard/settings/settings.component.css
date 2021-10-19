@@ -1,0 +1,89 @@
+* {
+  font-family: "proxima-nova", sans-serif;
+}
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+body {
+  background-color: #2C3E50;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #2C3E50;
+}
+
+.cont {
+  border: 2px solid #2C3E50;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  margin-bottom: 50px;
+}
+
+.callus {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #666666;
+  margin: 0px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.infoText {
+  line-height: 1.8;
+  color: #666666;
+  margin: 0px;
+  font-size: 16px;
+  margin-bottom: 29px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="date"]::-webkit-outer-spin-button,
+input[type="date"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="date"] {
+  -moz-appearance: textfield;
+}
+
+button.calendar, button.calendar:active {
+  width: 2.75rem;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=) !important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center;
+}
+.text-primary{
+  color: #2C3E50 !important;
+}
+.alert-primary {
+  background-color: #2C3E50 !important;
+  color: #FFF !important;
+}
+.btn-primary {
+  background-color: #2C3E50 !important;
+}
+.help-block {
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80%;
+  color: #FC3939;
+}
+
+.border-left-primary {
+  border-left: .25rem solid #2C3E50 !important;
+}

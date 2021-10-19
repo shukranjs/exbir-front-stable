@@ -1,0 +1,20 @@
+* {
+  font-family: "proxima-nova", sans-serif !important;
+}
+p, span, input, li, select, textarea {
+  font-size: 14px !important;
+}
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome !important;
+}
+.text-primary{
+  color: #2C3E50 !important;
+}
+.alert-primary {
+  background-color: #2C3E50 !important;
+  color: #FFF !important;
+}
+.btn-primary {
+  background-color: #2C3E50 !important;
+}

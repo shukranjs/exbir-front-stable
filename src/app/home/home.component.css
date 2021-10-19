@@ -1,0 +1,39 @@
+* {
+  font-family: "proxima-nova", sans-serif;
+}
+
+p, span, input, li, select {
+  font-size: 14px !important;
+}
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+select {
+  color: #6c6b6b;
+  float: left;
+  font-family: proxima-nova;
+  font-size: 11px;
+  height: 53px;
+  padding: 0 15px 0 25px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+.text-primary{
+  color: #2C3E50 !important;
+}
+.alert-primary {
+  background-color: #2C3E50 !important;
+  color: #FFF !important;
+}
+.btn-primary {
+  background-color: #2C3E50 !important;
+}
+span.progress-declaration {
+  padding: 10px 19px;
+  border-radius: 100%;
+  top: 3px;
+  position: absolute;
+}

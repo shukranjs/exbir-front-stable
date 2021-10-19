@@ -1,0 +1,196 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "a066959b-36e6-433b-af6c-d2c8e3394c08"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "exbir-spa": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/exbir-spa",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/assets/css/sb.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/alertifyjs/build/css/alertify.min.css",
+              "./node_modules/ngx-toastr/toastr.css",
+              "node_modules/bootstrap-select/dist/css/bootstrap-select.min.css",
+              "src/assets/css/style.css",
+              "src/assets/css/forgot.css",
+              "src/assets/css/jquery.circliful.css",
+              "src/assets/css/jquery.datepick.css",
+              "src/assets/css/lightbox.min.css",
+              "node_modules/owl.carousel/dist/assets/owl.carousel.css",
+              "node_modules/owl.carousel/dist/assets/owl.theme.default.css",
+              "src/assets/css/perfect-scrollbar.css",
+              "src/assets/css/responsive.css",
+              "src/assets/css/select2.min.css",
+              "src/assets/css/tracking.css",
+              "src/assets/css/color.css",
+              "node_modules/bootswatch/dist/flatly/bootstrap.min.css",
+              "node_modules/@ng-select/ng-select/themes/default.theme.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css"
+            ],
+            "scripts": [
+              "node_modules/alertifyjs/build/alertify.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/bootstrap-select/dist/js/bootstrap-select.min.js",
+              "src/assets/js/modernizr-2.0.6.js",
+              "src/assets/js/scrolltopcontrol.js",
+              "src/assets/js/jquery.scrolly.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
+              "src/assets/js/icheck.js",
+              "src/assets/js/select2.full.js",
+              "src/assets/js/perfect-scrollbar.js",
+              "src/assets/js/perfect-scrollbar.jquery.js",
+              "src/assets/js/jquery.circliful.min.js",
+              "src/assets/js/jquery.counterup.min.js",
+              "src/assets/js/jquery.isotope.js",
+              "src/assets/js/jquery.plugin.js",
+              "src/assets/js/jquery.poptrox.min.js",
+              "src/assets/js/lightbox.min.js",
+              "src/assets/js/scroll-up-bar.js",
+              "src/assets/js/script.js"
+            ],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "ru": {
+              "aot": true,
+              "outputPath": "dist/ru/",
+              "i18nFile": "src/locale/messages.ru.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "ru",
+              "i18nMissingTranslation": "error"
+            },
+            "uk": {
+              "aot": true,
+              "outputPath": "dist/uk/",
+              "i18nFile": "src/locale/messages.uk.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "uk",
+              "i18nMissingTranslation": "error"
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "exbir-spa:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "exbir-spa:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "exbir-spa:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "exbir-spa-e2e": {
+      "root": "e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "exbir-spa:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "exbir-spa:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "exbir-spa"
+}

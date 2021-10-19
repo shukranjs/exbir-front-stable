@@ -1,0 +1,14 @@
+#sectionfoot {
+  padding-top: 20px;
+  background-color: #2C3E50;
+}
+p, span, input, li, select, textarea, a {
+  font-size: 14px !important;
+}
+* {
+  font-family: "proxima-nova", sans-serif;
+}
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome;
+}

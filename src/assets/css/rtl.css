@@ -1,0 +1,8 @@
+body,
+.owl-item {
+  direction: rtl;
+}
+
+.owl-carousel {
+  direction: ltr;
+}

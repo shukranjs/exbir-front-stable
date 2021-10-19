@@ -1,0 +1,255 @@
+<header class="fancy-header stick">
+  <div class="top-sec">
+    <div class="top-bar">
+      <div class="container">
+        <span class="cargo-time"><i class="fa fa-clock-o"></i><span translate>navbar.working_hours</span> : 10:00 -
+          19:00</span>
+        <!-- # TODO: flags-->
+        <div class="connect-us">
+          <ul class="social-btn">
+            <li>
+              <a (click)="useLanguage('ru')"><img class="flag" src="assets/images/ru.png" /></a>
+            </li>
+            <!-- <li>
+              <a (click)="useLanguage('en')"
+                ><img class="flag" src="assets/images/en.png"
+              /></a>
+            </li> -->
+            <li>
+              <a (click)="useLanguage('az')"><img class="flag" src="assets/images/az.png" /></a>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="!isAuthenticated; else Authenticated" class="extra-links">
+          <a routerLink="/register" translate>navbar.sign_up</a>/
+          <a routerLink="/login" translate>navbar.sign_in</a>
+        </div>
+        <ng-template #Authenticated>
+          <div class="extra-links">
+            <a routerLink="/dashboard" translate>navbar.dashboard</a>/
+            <a (click)="logOut()" style="cursor: pointer" translate>navbar.sign_out</a>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  <div class="logo-menu-sec">
+    <div class="logo-menu">
+      <div class="logo">
+        <a itemprop="url" routerLink="/">
+          <img itemprop="image" src="assets/images/resource/exbir.png" width="126" height="70" alt="" />
+          <!--          Exbir LOGO-->
+        </a>
+      </div>
+      <div class="quick-contact">
+        <ul>
+          <li>
+            <img alt="" src="assets/images/resource/phone.png" />
+            <span>012 490 38 39</span><br />
+            <span>077 568 85 20 (whatsapp)</span>
+            <p translate>contact.detail.street_num</p>
+          </li>
+          <li>
+            <img alt="Exbir Logistics" src="assets/images/resource/sms.png" />
+            <span translate>navbar.email</span>
+            <p>info@exbir.az</p>
+          </li>
+          <li>
+            <a class="theme-btn" type="button" translate href="https://www.youtube.com/watch?v=Hmnxk3VWI68"
+              target="_blank">
+              navbar.order
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav class="menu-curve">
+      <ul>
+        <li class="menu-item-has-children">
+          <a itemprop="url" routerLink="/" translate>navbar.navigation.home_page</a>
+          <ul>
+            <li>
+              <a itemprop="url" routerLink="/our-services/about-us" translate>navbar.navigation.about_us</a>
+            </li>
+            <!--            <li><a itemprop="url" routerLink="/our-services/external-storage" translate>navbar.navigation.external_storage</a>-->
+            <!--            </li>-->
+            <li>
+              <a itemprop="url" routerLink="/our-services/shipping" translate>navbar.navigation.shipping</a>
+            </li>
+            <li>
+              <a itemprop="url" routerLink="/our-services/rules" translate>navbar.navigation.rules</a>
+            </li>
+
+            <li>
+              <a itemprop="url" routerLink="/our-services/rules" translate>navbar.navigation.mission</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu-item-has-children">
+          <a itemprop="url" routerLink="/our-services" translate>navbar.navigation.our_services</a>
+        </li>
+        <li class="menu-item-has-children">
+          <a itemprop="url" routerLink="/shops" translate>navbar.navigation.shops</a>
+        </li>
+        <li class="menu-item-has-children">
+          <a itemprop="url" routerLink="/articles" translate>navbar.navigation.articles</a>
+        </li>
+        <li class="menu-item-has-children">
+          <a itemprop="url" routerLink="/contact" translate>navbar.navigation.contact</a>
+          <ul>
+            <li>
+              <a itemprop="url" routerLink="/contact/commercial" translate>navbar.navigation.commercial</a>
+            </li>
+          </ul>
+        </li>
+        <!--        <li class="menu-item-has-children"><a disabled href="#" itemprop="url" translate>navbar.languages.heading</a>-->
+        <!--          <ul>-->
+        <!--            <li><a (click)="useLanguage('ru')" itemprop="url" style="cursor: pointer" translate>navbar.languages.ru</a>-->
+        <!--            </li>-->
+        <!--            <li><a (click)="useLanguage('az')" itemprop="url" style="cursor: pointer" translate>navbar.languages.az</a>-->
+        <!--            </li>-->
+        <!--            <li><a (click)="useLanguage('en')" itemprop="url" style="cursor: pointer" translate>navbar.languages.en</a>-->
+        <!--            </li>-->
+        <!--          </ul>-->
+        <!--        </li>-->
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="responsive-header">
+  <span class="top-sec-btn"><i class="fa fa-angle-double-down"></i></span>
+  <div class="responsive-top-sec">
+    <div class="responsive-top-bar top-bar">
+      <div class="container">
+        <span class="cargo-time"><i><span translate>navbar.working_hours</span> : 10:00 - 19:00</i></span>
+        <div class="connect-us">
+          <ul class="social-btn">
+            <li>
+              <a (click)="useLanguage('ru')"><img class="flag" src="assets/images/ru.png" /></a>
+            </li>
+            <!-- <li>
+              <a (click)="useLanguage('en')"><img class="flag" src="assets/images/en.png" /></a>
+            </li> -->
+            <li>
+              <a (click)="useLanguage('az')"><img class="flag" src="assets/images/az.png" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="responsive-quick-contact">
+      <div class="container">
+        <div class="quick-contact">
+          <ul>
+            <li>
+              <img alt="Exbir Logistics" src="assets/images/resource/phone.png" />
+              <span>+994 (12) 490 38 39</span><br />
+              <span>+994 (77) 568 85 20 (whatsapp)</span>
+              <p translate>contact.detail.street_num</p>
+            </li>
+            <li>
+              <img alt="" src="assets/images/resource/sms.png" />
+              <span translate>navbar.email</span>
+              <p>info@exbir.az</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="responsive-nav">
+    <div class="container">
+      <div class="responsive-logo visible-lg">
+        <div class="logo">
+          <a itemprop="url" routerLink="/">
+            <img itemprop="image" style="width: 84px" src="assets/images/logo.png" alt="Exbir Logistics" />
+          </a>
+        </div>
+      </div>
+      <span class="responsive-btn"><i class="fa fa-list"></i></span>
+      <div class="responsive-menu">
+        <span class="close-btn"><i class="fa fa-close"></i></span>
+        <ul *ngIf="!isAuthenticated; else AuthenticatedResponsive" class="responsive-popup-btns">
+          <li>
+            <i class="fa fa-user"></i><a routerLink="/register" translate>navbar.sign_up</a>
+          </li>
+          <li>
+            <i class="fa fa-user"></i><a routerLink="/login" translate>navbar.sign_in</a>
+          </li>
+        </ul>
+        <ng-template #AuthenticatedResponsive>
+          <ul class="responsive-popup-btns">
+            <li>
+              <i class="fa fa-user"></i><a routerLink="/dashboard" translate>navbar.dashboard</a>
+            </li>
+            <li>
+              <i class="fa fa-user"></i><a (click)="logOut()" style="cursor: pointer" translate>navbar.sign_out</a>
+            </li>
+          </ul>
+        </ng-template>
+        <ul>
+          <li class="menu-item-has-children">
+            <a disabled href="#" itemprop="url" translate>navbar.menu</a>
+            <ul>
+              <li>
+                <a itemprop="url" routerLink="/" translate>navbar.navigation.home_page</a>
+              </li>
+              <li>
+                <a itemprop="url" routerLink="/our-services" translate>navbar.navigation.our_services</a>
+              </li>
+              <li>
+                <a itemprop="url" routerLink="/our-services/about-us" translate>navbar.navigation.about_us</a>
+              </li>
+              <!--              <li><a itemprop="url" routerLink="/our-services/external-storage" translate>navbar.navigation.external_storage</a>-->
+              <!--              </li>-->
+              <li>
+                <a itemprop="url" routerLink="/our-services/shipping" translate>navbar.navigation.shipping</a>
+              </li>
+              <li>
+                <a itemprop="url" routerLink="/our-services/rules" translate>navbar.navigation.rules</a>
+              </li>
+              <li>
+                <a itemprop="url" routerLink="/shops" translate>navbar.navigation.shops</a>
+              </li>
+              <li>
+                <a itemprop="url" routerLink="/articles" translate>navbar.navigation.articles</a>
+              </li>
+              <li>
+                <a itemprop="url" routerLink="/contact/commercial" translate>navbar.navigation.commercial</a>
+              </li>
+              <li>
+                <a itemprop="url" routerLink="/contact" translate>navbar.navigation.contact</a>
+              </li>
+            </ul>
+          </li>
+          <!--          <li class="menu-item-has-children"><a disabled href="#" itemprop="url" translate>navbar.languages.heading</a>-->
+          <!--            <ul>-->
+          <!--              <li><a (click)="useLanguage('ru')" itemprop="url" style="cursor: pointer"-->
+          <!--                     translate>navbar.languages.ru</a></li>-->
+          <!--              <li><a (click)="useLanguage('en')" itemprop="url" style="cursor: pointer"-->
+          <!--                     translate>navbar.languages.en</a></li>-->
+          <!--              <li><a (click)="useLanguage('az')" itemprop="url" style="cursor: pointer"-->
+          <!--                     translate>navbar.languages.az</a></li>-->
+          <!--            </ul>-->
+          <!--          </li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <!-- 16:9 aspect ratio -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

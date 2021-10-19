@@ -1,0 +1,2730 @@
+ [
+    {
+      "id": 469,
+      "parentId": 159,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 470,
+      "parentId": 431,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 471,
+      "parentId": 1,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 472,
+      "parentId": 39,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 473,
+      "parentId": 52,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 474,
+      "parentId": 66,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 475,
+      "parentId": 180,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 476,
+      "parentId": 196,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 477,
+      "parentId": 214,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 478,
+      "parentId": 78,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 479,
+      "parentId": 92,
+      "goodsNameAz": "Klaviatura",
+      "goodsNameEn": "Keyboard",
+      "goodsNameRu": "Клавиатурa",
+      "isDeleted": false
+    },
+    {
+      "id": 480,
+      "parentId": 92,
+      "goodsNameAz": "Ana kart",
+      "goodsNameEn": "Mother board",
+      "goodsNameRu": "Материнские плата",
+      "isDeleted": false
+    },
+    {
+      "id": 481,
+      "parentId": 92,
+      "goodsNameAz": "Kompüterlərin digər hissələri və aksesuarları (kordonlar və ya məftillər deyil)",
+      "goodsNameEn": "Other parts and accessories of computers (not cords or wires)",
+      "goodsNameRu": "Прочие части и аксессуары компьютеров (кроме шнуров и проводов)",
+      "isDeleted": false
+    },
+    {
+      "id": 482,
+      "parentId": 110,
+      "goodsNameAz": "Oyun kontolerləri",
+      "goodsNameEn": "Game controllers (steering and pedal combinations, directional pads and multi-controllers)",
+      "goodsNameRu": "Игровые контроллеры (комбинации рулевого управления и педалей, направляющие пэды и мульти-контроллеры)",
+      "isDeleted": false
+    },
+    {
+      "id": 486,
+      "parentId": 116,
+      "goodsNameAz": "Üz üçün tozlar (Kirşan, Tonal krem və s.)",
+      "goodsNameEn": "Powders (Foundation cream, Blushes etc.)",
+      "goodsNameRu": "пудры (тональный крем,румяна и т.д )",
+      "isDeleted": false
+    },
+    {
+      "id": 487,
+      "parentId": 116,
+      "goodsNameAz": "Tuş, göz kölgələri, göz layneri, göz qaş məhsulları",
+      "goodsNameEn": "Mascaras, eye shadows, eye liners, eye brow products",
+      "goodsNameRu": "Туши, тени, подводки для глаз, средства для бровей",
+      "isDeleted": false
+    },
+    {
+      "id": 488,
+      "parentId": 116,
+      "goodsNameAz": "Dodaq boyası( Pomada), dodaq parıldadıcısı və digər dodaq makiyajı",
+      "goodsNameEn": "Lipstick, lip gloss and other lip make-up",
+      "goodsNameRu": "Губная помада, блеск для губ и другой макияж для губ",
+      "isDeleted": false
+    },
+    {
+      "id": 229,
+      "parentId": 214,
+      "goodsNameAz": "Gimnastika alətləri",
+      "goodsNameEn": "Gymnastic instruments",
+      "goodsNameRu": "Снаряжение для гимнастики",
+      "isDeleted": false
+    },
+    {
+      "id": 230,
+      "parentId": 0,
+      "goodsNameAz": "Kamera və hissələri",
+      "goodsNameEn": " Camera and parts",
+      "goodsNameRu": " Камера и детали",
+      "isDeleted": false
+    },
+    {
+      "id": 231,
+      "parentId": 230,
+      "goodsNameAz": "Avtomobillər üçün kamera dəstləri (kamera, monitor)",
+      "goodsNameEn": "Camera sets for cars (camera, monitor)",
+      "goodsNameRu": "Комплекты виденаблюдения для автомобилей (камера, монитор)",
+      "isDeleted": false
+    },
+    {
+      "id": 232,
+      "parentId": 230,
+      "goodsNameAz": "Video registratorlar",
+      "goodsNameEn": "Video recorders",
+      "goodsNameRu": "видео регистратор",
+      "isDeleted": false
+    },
+    {
+      "id": 233,
+      "parentId": 230,
+      "goodsNameAz": "Video kameralar",
+      "goodsNameEn": "Video cameras",
+      "goodsNameRu": "видео камера",
+      "isDeleted": false
+    },
+    {
+      "id": 234,
+      "parentId": 230,
+      "goodsNameAz": "Video nəzarət kameraları",
+      "goodsNameEn": "Video surveillance cameras",
+      "goodsNameRu": "камеры видеонаблюдения",
+      "isDeleted": false
+    },
+    {
+      "id": 235,
+      "parentId": 230,
+      "goodsNameAz": "DVR",
+      "goodsNameEn": "DVR",
+      "goodsNameRu": "видеорегистратор DVR",
+      "isDeleted": false
+    },
+    {
+      "id": 236,
+      "parentId": 230,
+      "goodsNameAz": "Rəqəmsal kameralar (foto aparatlar) ",
+      "goodsNameEn": "Digital cameras",
+      "goodsNameRu": "цифровые камеры (фото аппарат) ",
+      "isDeleted": false
+    },
+    {
+      "id": 237,
+      "parentId": 230,
+      "goodsNameAz": "Veb kameralar",
+      "goodsNameEn": "Webcams",
+      "goodsNameRu": "Веб-камера",
+      "isDeleted": false
+    },
+    {
+      "id": 238,
+      "parentId": 230,
+      "goodsNameAz": "Obyektiv linzalar ",
+      "goodsNameEn": "Objective lenses",
+      "goodsNameRu": "Объективные линзы",
+      "isDeleted": false
+    },
+    {
+      "id": 239,
+      "parentId": 230,
+      "goodsNameAz": "Selfie çubuqları, monopodlar, bipodlar, tripodlar",
+      "goodsNameEn": "Selfie sticks, monopods, bipods, tripods",
+      "goodsNameRu": "Селфи палка,штатив, монопод,сошки ",
+      "isDeleted": false
+    },
+    {
+      "id": 430,
+      "parentId": 230,
+      "goodsNameAz": "Kameralar üçün yaddaş kartları və flash kartlar ",
+      "goodsNameEn": "Memory cards and flash cards for cameras",
+      "goodsNameRu": "Карты памяти и флеш карты для камер",
+      "isDeleted": false
+    },
+    {
+      "id": 431,
+      "parentId": 0,
+      "goodsNameAz": "Kitablar",
+      "goodsNameEn": " Books",
+      "goodsNameRu": "Книги",
+      "isDeleted": false
+    },
+    {
+      "id": 432,
+      "parentId": 431,
+      "goodsNameAz": "Kitab",
+      "goodsNameEn": "Book",
+      "goodsNameRu": "книга",
+      "isDeleted": false
+    },
+    {
+      "id": 433,
+      "parentId": 431,
+      "goodsNameAz": "Jurnal",
+      "goodsNameEn": "\"Magazine\"",
+      "goodsNameRu": "журнал",
+      "isDeleted": false
+    },
+    {
+      "id": 434,
+      "parentId": 431,
+      "goodsNameAz": "Elektron kitab",
+      "goodsNameEn": "Electronic book",
+      "goodsNameRu": "электронная книга",
+      "isDeleted": false
+    },
+    {
+      "id": 435,
+      "parentId": 431,
+      "goodsNameAz": "Audio kitab",
+      "goodsNameEn": "Audio book",
+      "goodsNameRu": "аудиокнига",
+      "isDeleted": false
+    },
+    {
+      "id": 436,
+      "parentId": 431,
+      "goodsNameAz": "Film və musiqi diski",
+      "goodsNameEn": "Movie and music disc",
+      "goodsNameRu": "Компакт-диск ",
+      "isDeleted": false
+    },
+    {
+      "id": 437,
+      "parentId": 431,
+      "goodsNameAz": "Səsyazıları toplusu",
+      "goodsNameEn": "Collection of recordings",
+      "goodsNameRu": "Сборник записей (цифровая книга) ",
+      "isDeleted": false
+    },
+    {
+      "id": 438,
+      "parentId": 431,
+      "goodsNameAz": "Elektron kitab oxuyucu",
+      "goodsNameEn": "E-book reader",
+      "goodsNameRu": "электронная книга ( E-book reader)",
+      "isDeleted": false
+    },
+    {
+      "id": 439,
+      "parentId": 133,
+      "goodsNameAz": "Telefon ehtiyat hissələri",
+      "goodsNameEn": "Phone spare parts",
+      "goodsNameRu": "Запчасти для телефонов",
+      "isDeleted": false
+    },
+    {
+      "id": 440,
+      "parentId": 196,
+      "goodsNameAz": "Dərman",
+      "goodsNameEn": "medicine",
+      "goodsNameRu": "лекарство",
+      "isDeleted": false
+    },
+    {
+      "id": 441,
+      "parentId": 0,
+      "goodsNameAz": "Kimyəvi təmizləyici vasitələr",
+      "goodsNameEn": "Cleaning Detergents",
+      "goodsNameRu": "Моющие средства",
+      "isDeleted": false
+    },
+    {
+      "id": 442,
+      "parentId": 441,
+      "goodsNameAz": "Qabyuma vasitələri",
+      "goodsNameEn": "Dishwashing liquid ",
+      "goodsNameRu": "Моющие средства для посуды",
+      "isDeleted": false
+    },
+    {
+      "id": 443,
+      "parentId": 441,
+      "goodsNameAz": "Paltaryuma vasitələri",
+      "goodsNameEn": "laundry detergents,",
+      "goodsNameRu": "Моющие средства для стирки",
+      "isDeleted": false
+    },
+    {
+      "id": 444,
+      "parentId": 441,
+      "goodsNameAz": "Avtomobil təmizləmə vasitələri",
+      "goodsNameEn": "carwash liquid detergents",
+      "goodsNameRu": "Моющие средства для автомойки",
+      "isDeleted": false
+    },
+    {
+      "id": 445,
+      "parentId": 441,
+      "goodsNameAz": "Mebel təmizləmə vasitələri",
+      "goodsNameEn": "furniture cleaning detergents",
+      "goodsNameRu": "Чистящие средства для мебели",
+      "isDeleted": false
+    },
+    {
+      "id": 446,
+      "parentId": 441,
+      "goodsNameAz": "Digər vasitələr",
+      "goodsNameEn": "other detergents",
+      "goodsNameRu": "Другие моющие средства",
+      "isDeleted": false
+    },
+    {
+      "id": 447,
+      "parentId": 0,
+      "goodsNameAz": "Suvinir və oyuncaqlar",
+      "goodsNameEn": "Souvenirs and toys",
+      "goodsNameRu": null,
+      "isDeleted": false
+    },
+    {
+      "id": 448,
+      "parentId": 447,
+      "goodsNameAz": "Suvinirlər",
+      "goodsNameEn": "Souvenirs",
+      "goodsNameRu": "Сувениры",
+      "isDeleted": false
+    },
+    {
+      "id": 449,
+      "parentId": 447,
+      "goodsNameAz": "Oyuncaqlar",
+      "goodsNameEn": "Toys",
+      "goodsNameRu": "Игрушки",
+      "isDeleted": false
+    },
+    {
+      "id": 450,
+      "parentId": 0,
+      "goodsNameAz": "Təmir-tikinti alətləri",
+      "goodsNameEn": "Repair and Construction tools",
+      "goodsNameRu": "Ремонтно- Строительные инструменты",
+      "isDeleted": false
+    },
+    {
+      "id": 451,
+      "parentId": 450,
+      "goodsNameAz": "Əl alətləri, alət dəstləri",
+      "goodsNameEn": "handheld tools (manual), Tool sets",
+      "goodsNameRu": "Ручные инструменты, Наборы инструментов",
+      "isDeleted": false
+    },
+    {
+      "id": 452,
+      "parentId": 450,
+      "goodsNameAz": "Elektrikli əl alətləri",
+      "goodsNameEn": "Electric hand tools",
+      "goodsNameRu": "Ручные электрические инструменты",
+      "isDeleted": false
+    },
+    {
+      "id": 453,
+      "parentId": 450,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "others",
+      "goodsNameRu": "Другие",
+      "isDeleted": true
+    },
+    {
+      "id": 454,
+      "parentId": 0,
+      "goodsNameAz": "Ovçuluq ləvazimatları",
+      "goodsNameEn": "Hunting equipment",
+      "goodsNameRu": "Охотничье снаряжение",
+      "isDeleted": false
+    },
+    {
+      "id": 455,
+      "parentId": 454,
+      "goodsNameAz": "Balıqtutma vasitələri",
+      "goodsNameEn": "fishing equipment",
+      "goodsNameRu": "Рыболовное снаряжение",
+      "isDeleted": false
+    },
+    {
+      "id": 456,
+      "parentId": 454,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 457,
+      "parentId": 137,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 458,
+      "parentId": 146,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 459,
+      "parentId": 110,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 460,
+      "parentId": 92,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 461,
+      "parentId": 116,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 462,
+      "parentId": 133,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 463,
+      "parentId": 202,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 464,
+      "parentId": 230,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 465,
+      "parentId": 441,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": true
+    },
+    {
+      "id": 466,
+      "parentId": 447,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": false
+    },
+    {
+      "id": 468,
+      "parentId": 454,
+      "goodsNameAz": "Digər",
+      "goodsNameEn": "Others",
+      "goodsNameRu": "Другие",
+      "isDeleted": true
+    },
+    {
+      "id": 489,
+      "parentId": 116,
+      "goodsNameAz": "Dırnaq lakı, manikür və pedikür hazırlıqları (məsələn, süni dırnaqlar) və kutikül məhsulları",
+      "goodsNameEn": "Nail varnish, manicure and pedicure preparations (for example artificial nails) and cuticle products",
+      "goodsNameRu": "Лак для ногтей, средства для маникюра и педикюра (например, искусственные ногти) и средства для кутикулы",
+      "isDeleted": false
+    },
+    {
+      "id": 490,
+      "parentId": 116,
+      "goodsNameAz": "Ətirlər, tualet suyu - məhsullar",
+      "goodsNameEn": "Perfumes, eau de toilette -products",
+      "goodsNameRu": "Духи, туалетная вода, товары",
+      "isDeleted": false
+    },
+    {
+      "id": 491,
+      "parentId": 116,
+      "goodsNameAz": "Nəmləndiricilər və digər dəri məhsulları, günəşdən qoruyucu və özünə qaralma preparatları",
+      "goodsNameEn": "Moisturizers and other skin products, sunscreen and self tanning preparations",
+      "goodsNameRu": "Увлажняющие средства и другие продукты для кожи, солнцезащитные средства и средства для автозагара",
+      "isDeleted": false
+    },
+    {
+      "id": 492,
+      "parentId": 116,
+      "goodsNameAz": "Dezodorantlar və antiperspirantlar",
+      "goodsNameEn": "Deodorants and antiperspirants",
+      "goodsNameRu": "Дезодоранты и антиперспиранты",
+      "isDeleted": false
+    },
+    {
+      "id": 493,
+      "parentId": 116,
+      "goodsNameAz": "Vanna yağları, hamam duzları və digər hamam hazırlıqları",
+      "goodsNameEn": "Bath oils, bath salts and other bath preparations",
+      "goodsNameRu": "Масла для ванн, соли для ванн и другие средства для ванн",
+      "isDeleted": false
+    },
+    {
+      "id": 494,
+      "parentId": 116,
+      "goodsNameAz": "Liquid shower wash",
+      "goodsNameEn": "Liquid shower wash",
+      "goodsNameRu": "Жидкий гель для душа",
+      "isDeleted": false
+    },
+    {
+      "id": 495,
+      "parentId": 116,
+      "goodsNameAz": "Diş ipi",
+      "goodsNameEn": "Dental floss",
+      "goodsNameRu": "Зубная нить",
+      "isDeleted": false
+    },
+    {
+      "id": 496,
+      "parentId": 116,
+      "goodsNameAz": "Diş fırçaları",
+      "goodsNameEn": "Toothbrushes",
+      "goodsNameRu": "Зубные щетки",
+      "isDeleted": false
+    },
+    {
+      "id": 497,
+      "parentId": 116,
+      "goodsNameAz": "Diş pastası və ağız yuyucusu",
+      "goodsNameEn": "Toothpaste and mouthwash",
+      "goodsNameRu": "Зубная паста и жидкость для полоскания рта",
+      "isDeleted": false
+    },
+    {
+      "id": 498,
+      "parentId": 116,
+      "goodsNameAz": "Diş ağartma məhsulları",
+      "goodsNameEn": "Tooth whitening products",
+      "goodsNameRu": "Средства для отбеливания зубов",
+      "isDeleted": false
+    },
+    {
+      "id": 499,
+      "parentId": 116,
+      "goodsNameAz": "Saç üslubu məhsulları, saç boyası və digər saç məhsulları",
+      "goodsNameEn": "Hair styling products, hair dye and other hair products",
+      "goodsNameRu": "Средства для укладки, краски для волос и другие средства для волос",
+      "isDeleted": false
+    },
+    {
+      "id": 500,
+      "parentId": 116,
+      "goodsNameAz": "Şampunlar, kondisionerlər və saç yağları",
+      "goodsNameEn": "Shampoos, conditioners and hair oils",
+      "goodsNameRu": "Шампуни, кондиционеры и масла для волос",
+      "isDeleted": false
+    },
+    {
+      "id": 501,
+      "parentId": 116,
+      "goodsNameAz": "Peruklar və insan saçlarından hazırlanmış digər saç düzəltmələri",
+      "goodsNameEn": "Wigs and other hair extensions made of human hair",
+      "goodsNameRu": "Парики и другие изделия для наращивания волос из человеческих волос",
+      "isDeleted": false
+    },
+    {
+      "id": 502,
+      "parentId": 116,
+      "goodsNameAz": "Fırçalar, saç fırçaları və təraş fırçaları",
+      "goodsNameEn": "Make up brushes, hairbrushes and shaving brushes",
+      "goodsNameRu": "Кисти для макияжа, расчески и кисти для бритья",
+      "isDeleted": false
+    },
+    {
+      "id": 503,
+      "parentId": 159,
+      "goodsNameAz": "Üzqırxanlar, saç kəsmə maşınları və epilyasiya cihazları (elektrikli)",
+      "goodsNameEn": "Shavers, hair clippers and hair-removing appliances (electric)",
+      "goodsNameRu": "Бритвы, машинки для стрижки и эпиляции (электрические)",
+      "isDeleted": false
+    },
+    {
+      "id": 504,
+      "parentId": 196,
+      "goodsNameAz": "Çay",
+      "goodsNameEn": "Çay",
+      "goodsNameRu": "Чай",
+      "isDeleted": false
+    },
+    {
+      "id": 505,
+      "parentId": 196,
+      "goodsNameAz": "Qəhvə",
+      "goodsNameEn": "Coffee",
+      "goodsNameRu": "Кофе",
+      "isDeleted": false
+    },
+    {
+      "id": 507,
+      "parentId": 450,
+      "goodsNameAz": "Soket dəstləri",
+      "goodsNameEn": "Socket sets",
+      "goodsNameRu": "Наборы розеток",
+      "isDeleted": false
+    },
+    {
+      "id": 508,
+      "parentId": 454,
+      "goodsNameAz": "Çadırlar",
+      "goodsNameEn": "Tents",
+      "goodsNameRu": "Палатки",
+      "isDeleted": false
+    },
+    {
+      "id": 509,
+      "parentId": 454,
+      "goodsNameAz": "Yuxu çantaları",
+      "goodsNameEn": "Sleeping bags",
+      "goodsNameRu": "Спальные мешки",
+      "isDeleted": false
+    },
+    {
+      "id": 510,
+      "parentId": 454,
+      "goodsNameAz": "Ov tüfənglərinin və tüfənglərin hissələri",
+      "goodsNameEn": "Parts of shotguns and rifles",
+      "goodsNameRu": "Части ружей и винтовок",
+      "isDeleted": false
+    },
+    {
+      "id": 511,
+      "parentId": 0,
+      "goodsNameAz": "Ampullər, lampalar",
+      "goodsNameEn": "Bulbs, lamps",
+      "goodsNameRu": "лампы",
+      "isDeleted": false
+    },
+    {
+      "id": 512,
+      "parentId": 511,
+      "goodsNameAz": "Tavan, divar, standart və masa lampaları",
+      "goodsNameEn": "Ceiling, wall, standard and table lamps",
+      "goodsNameRu": "Потолочные, настенные, торшеры и настольные лампы",
+      "isDeleted": false
+    },
+    {
+      "id": 513,
+      "parentId": 511,
+      "goodsNameAz": "LED lampalar (parıltı lampalarını əvəz edir) və LED lampalar",
+      "goodsNameEn": "LED bulbs (replaces glow bulbs) and LED lamps",
+      "goodsNameRu": "Светодиодные лампы (заменяет лампы накаливания) и светодиодные лампы",
+      "isDeleted": false
+    },
+    {
+      "id": 514,
+      "parentId": 511,
+      "goodsNameAz": "Nəqliyyat vasitələri üçün lampalar (parıltı filamenti)",
+      "goodsNameEn": "Bulbs for vehicles (glow filament)",
+      "goodsNameRu": "Лампы для автомобилей (нить накаливания)",
+      "isDeleted": false
+    },
+    {
+      "id": 515,
+      "parentId": 511,
+      "goodsNameAz": "Nəqliyyat vasitələri üçün lampalar (Volfram halogen) H1, H4, H7",
+      "goodsNameEn": "Bulbs for vehicles (Tungsten halogen) H1, H4, H7",
+      "goodsNameRu": "Лампы для автомобилей (галогенные вольфрамовые) H1, H4, H7",
+      "isDeleted": false
+    },
+    {
+      "id": 516,
+      "parentId": 511,
+      "goodsNameAz": "Nəqliyyat vasitələri üçün lampalar (xenon)",
+      "goodsNameEn": "Bulbs for vehicles (xenon)",
+      "goodsNameRu": "Лампочки для автомобилей (ксенон)",
+      "isDeleted": false
+    },
+    {
+      "id": 517,
+      "parentId": 0,
+      "goodsNameAz": "Ofis ləvazimatları və kağız məhsulları",
+      "goodsNameEn": "Crafts and paper products",
+      "goodsNameRu": "Ремесла и изделия из бумаги",
+      "isDeleted": false
+    },
+    {
+      "id": 518,
+      "parentId": 517,
+      "goodsNameAz": "Kartpostallar çap edilmişdir",
+      "goodsNameEn": "Printed postcards",
+      "goodsNameRu": "Открытки печатные",
+      "isDeleted": false
+    },
+    {
+      "id": 519,
+      "parentId": 517,
+      "goodsNameAz": "Təqvimlər",
+      "goodsNameEn": "Calendars",
+      "goodsNameRu": "Календари",
+      "isDeleted": false
+    },
+    {
+      "id": 520,
+      "parentId": 517,
+      "goodsNameAz": "Qələm, marker, karandaş və rəsm boyaları",
+      "goodsNameEn": "Pens, marker pens, pencil leads and drawing charcoals",
+      "goodsNameRu": "Ручки, маркеры, грифели для карандашей и уголь для рисования",
+      "isDeleted": false
+    },
+    {
+      "id": 521,
+      "parentId": 517,
+      "goodsNameAz": "Qayçı",
+      "goodsNameEn": "Scissors",
+      "goodsNameRu": "Ножницы",
+      "isDeleted": false
+    },
+    {
+      "id": 524,
+      "parentId": 0,
+      "goodsNameAz": "Heyvan təchizatı",
+      "goodsNameEn": "Pet supplies",
+      "goodsNameRu": "Зоотовары",
+      "isDeleted": false
+    },
+    {
+      "id": 525,
+      "parentId": 524,
+      "goodsNameAz": "Heyvan ləvazimatları (qurğuşun və qoşqu, it paltoları, cilovlar, at xalçaları, yəhərlər və yəhər parçalar və digər at ləvazimatları)",
+      "goodsNameEn": "Pet supplies (leads and harnesses, dog coats, bridles, horse rugs, saddles and saddle-cloths and other horse supplies)",
+      "goodsNameRu": "Принадлежности для домашних животных (поводки и упряжи, собачьи шубы, уздечки, коврики для лошадей, седла, повязки и другие товары для лошадей)",
+      "isDeleted": false
+    },
+    {
+      "id": 526,
+      "parentId": 524,
+      "goodsNameAz": "İtlər üçün naviqasiya yaxası",
+      "goodsNameEn": "Navigation collar for dogs",
+      "goodsNameRu": "Навигационный ошейник для собак",
+      "isDeleted": false
+    },
+    {
+      "id": 527,
+      "parentId": 524,
+      "goodsNameAz": "Heyvan oyuncaqları, rezin",
+      "goodsNameEn": "Pet toys, rubber",
+      "goodsNameRu": "Игрушки домашних животных, резина",
+      "isDeleted": false
+    },
+    {
+      "id": 1,
+      "parentId": 0,
+      "goodsNameAz": "Paltar, geyim",
+      "goodsNameEn": "Clothes",
+      "goodsNameRu": "Одежда",
+      "isDeleted": false
+    },
+    {
+      "id": 2,
+      "parentId": 1,
+      "goodsNameAz": "Palto",
+      "goodsNameEn": " Coat",
+      "goodsNameRu": "Пальто",
+      "isDeleted": false
+    },
+    {
+      "id": 3,
+      "parentId": 1,
+      "goodsNameAz": "Yarımpalto",
+      "goodsNameEn": " Shortcoat",
+      "goodsNameRu": "Полупальто",
+      "isDeleted": false
+    },
+    {
+      "id": 4,
+      "parentId": 1,
+      "goodsNameAz": "Bürüncək",
+      "goodsNameEn": "cape",
+      "goodsNameRu": "накидка",
+      "isDeleted": false
+    },
+    {
+      "id": 5,
+      "parentId": 1,
+      "goodsNameAz": "Plaş",
+      "goodsNameEn": "Raincoat",
+      "goodsNameRu": "Плащ",
+      "isDeleted": false
+    },
+    {
+      "id": 6,
+      "parentId": 1,
+      "goodsNameAz": "Gödəkçə",
+      "goodsNameEn": "Waistcoat",
+      "goodsNameRu": "куртка",
+      "isDeleted": false
+    },
+    {
+      "id": 7,
+      "parentId": 1,
+      "goodsNameAz": "Küləkçə",
+      "goodsNameEn": "Windbreaker",
+      "goodsNameRu": "ветровка",
+      "isDeleted": false
+    },
+    {
+      "id": 8,
+      "parentId": 1,
+      "goodsNameAz": "Fırtınalıq",
+      "goodsNameEn": "Stormcoat",
+      "goodsNameRu": "непромокаемый плащ",
+      "isDeleted": false
+    },
+    {
+      "id": 9,
+      "parentId": 1,
+      "goodsNameAz": "Kostyum",
+      "goodsNameEn": "Suit",
+      "goodsNameRu": "костюм",
+      "isDeleted": false
+    },
+    {
+      "id": 10,
+      "parentId": 1,
+      "goodsNameAz": "Şalvar",
+      "goodsNameEn": "Pants",
+      "goodsNameRu": "брюки",
+      "isDeleted": false
+    },
+    {
+      "id": 11,
+      "parentId": 1,
+      "goodsNameAz": "Kombinezon",
+      "goodsNameEn": "Overalls",
+      "goodsNameRu": "комбинезон",
+      "isDeleted": false
+    },
+    {
+      "id": 12,
+      "parentId": 1,
+      "goodsNameAz": "Brici",
+      "goodsNameEn": "Midi short",
+      "goodsNameRu": "бриджи",
+      "isDeleted": false
+    },
+    {
+      "id": 13,
+      "parentId": 1,
+      "goodsNameAz": "Şort",
+      "goodsNameEn": "Short",
+      "goodsNameRu": "шорты",
+      "isDeleted": false
+    },
+    {
+      "id": 14,
+      "parentId": 1,
+      "goodsNameAz": "Jaket",
+      "goodsNameEn": "Jacket",
+      "goodsNameRu": "жакет",
+      "isDeleted": false
+    },
+    {
+      "id": 15,
+      "parentId": 1,
+      "goodsNameAz": "Pencək",
+      "goodsNameEn": "Coat",
+      "goodsNameRu": "пиджак",
+      "isDeleted": false
+    },
+    {
+      "id": 16,
+      "parentId": 1,
+      "goodsNameAz": "Blazer",
+      "goodsNameEn": "Blouse",
+      "goodsNameRu": "блейзер",
+      "isDeleted": false
+    },
+    {
+      "id": 17,
+      "parentId": 1,
+      "goodsNameAz": "Köynək",
+      "goodsNameEn": "Shirt",
+      "goodsNameRu": "рубашка",
+      "isDeleted": false
+    },
+    {
+      "id": 18,
+      "parentId": 1,
+      "goodsNameAz": "Bluz",
+      "goodsNameEn": "Camisole",
+      "goodsNameRu": "блузка",
+      "isDeleted": false
+    },
+    {
+      "id": 19,
+      "parentId": 1,
+      "goodsNameAz": "Mayka",
+      "goodsNameEn": "T-shirt",
+      "goodsNameRu": "майка",
+      "isDeleted": false
+    },
+    {
+      "id": 20,
+      "parentId": 1,
+      "goodsNameAz": "Alt fufayka",
+      "goodsNameEn": "undershirt",
+      "goodsNameRu": "фуфайка(нижняя сорочка)",
+      "isDeleted": false
+    },
+    {
+      "id": 21,
+      "parentId": 1,
+      "goodsNameAz": "Kalson",
+      "goodsNameEn": "Kalson",
+      "goodsNameRu": "кальсоны",
+      "isDeleted": false
+    },
+    {
+      "id": 22,
+      "parentId": 1,
+      "goodsNameAz": "Tuman",
+      "goodsNameEn": "Underpants",
+      "goodsNameRu": "трусы",
+      "isDeleted": false
+    },
+    {
+      "id": 23,
+      "parentId": 1,
+      "goodsNameAz": "Gecə köynəyi",
+      "goodsNameEn": "Nightgown",
+      "goodsNameRu": "ночная рубашка",
+      "isDeleted": false
+    },
+    {
+      "id": 24,
+      "parentId": 1,
+      "goodsNameAz": "Pijama",
+      "goodsNameEn": "Pajamas",
+      "goodsNameRu": "пижама",
+      "isDeleted": false
+    },
+    {
+      "id": 25,
+      "parentId": 1,
+      "goodsNameAz": "Hamam xələti",
+      "goodsNameEn": "Bathrobe",
+      "goodsNameRu": "банный халат",
+      "isDeleted": false
+    },
+    {
+      "id": 26,
+      "parentId": 1,
+      "goodsNameAz": "Ev xələti",
+      "goodsNameEn": "Homerobe",
+      "goodsNameRu": "домашний халат",
+      "isDeleted": false
+    },
+    {
+      "id": 27,
+      "parentId": 1,
+      "goodsNameAz": "Çimərlik kostyumları",
+      "goodsNameEn": "Swimwear",
+      "goodsNameRu": "пляжный костюм(купальник) ",
+      "isDeleted": false
+    },
+    {
+      "id": 28,
+      "parentId": 1,
+      "goodsNameAz": "Xizək kostyumları",
+      "goodsNameEn": "Ski suits",
+      "goodsNameRu": "лыжный костюм",
+      "isDeleted": false
+    },
+    {
+      "id": 29,
+      "parentId": 1,
+      "goodsNameAz": "İstehsalat və peşə geyimi",
+      "goodsNameEn": "Overalls",
+      "goodsNameRu": "производственная и профессиональная одежда",
+      "isDeleted": false
+    },
+    {
+      "id": 30,
+      "parentId": 1,
+      "goodsNameAz": "Büstqalter",
+      "goodsNameEn": "Bra",
+      "goodsNameRu": "бюстгалтер",
+      "isDeleted": false
+    },
+    {
+      "id": 31,
+      "parentId": 1,
+      "goodsNameAz": "Korset",
+      "goodsNameEn": "Shapewear",
+      "goodsNameRu": "корсет",
+      "isDeleted": false
+    },
+    {
+      "id": 32,
+      "parentId": 1,
+      "goodsNameAz": "Çiyinbağı",
+      "goodsNameEn": "Shoulder-strap",
+      "goodsNameRu": "погон",
+      "isDeleted": false
+    },
+    {
+      "id": 33,
+      "parentId": 1,
+      "goodsNameAz": "Yaylıq",
+      "goodsNameEn": "Shawl",
+      "goodsNameRu": "платок",
+      "isDeleted": false
+    },
+    {
+      "id": 34,
+      "parentId": 1,
+      "goodsNameAz": "Şərf",
+      "goodsNameEn": "Scarf",
+      "goodsNameRu": "шарф",
+      "isDeleted": false
+    },
+    {
+      "id": 35,
+      "parentId": 1,
+      "goodsNameAz": "Qalstuk",
+      "goodsNameEn": "Tie",
+      "goodsNameRu": "галстук",
+      "isDeleted": false
+    },
+    {
+      "id": 36,
+      "parentId": 1,
+      "goodsNameAz": "Əlcək və yarıməlcək",
+      "goodsNameEn": "Gloves and halfgloves",
+      "goodsNameRu": "перчатки и полуперчатки",
+      "isDeleted": false
+    },
+    {
+      "id": 37,
+      "parentId": 1,
+      "goodsNameAz": "İdman kostyumları",
+      "goodsNameEn": "Sport suits",
+      "goodsNameRu": "спортивные костюмы",
+      "isDeleted": false
+    },
+    {
+      "id": 38,
+      "parentId": 1,
+      "goodsNameAz": "Önlük",
+      "goodsNameEn": "Apron",
+      "goodsNameRu": "фартук",
+      "isDeleted": false
+    },
+    {
+      "id": 39,
+      "parentId": 0,
+      "goodsNameAz": "Ayaqqabı",
+      "goodsNameEn": "Shoes",
+      "goodsNameRu": "Oбувь:",
+      "isDeleted": false
+    },
+    {
+      "id": 40,
+      "parentId": 39,
+      "goodsNameAz": "Xizək üçün çəkmə",
+      "goodsNameEn": "Ski boots",
+      "goodsNameRu": "лыжные ботинки",
+      "isDeleted": false
+    },
+    {
+      "id": 41,
+      "parentId": 39,
+      "goodsNameAz": "Snoubord üçün çəkmə",
+      "goodsNameEn": "Snowboarding boots",
+      "goodsNameRu": "ботинки для сноуборда",
+      "isDeleted": false
+    },
+    {
+      "id": 42,
+      "parentId": 39,
+      "goodsNameAz": "Klassik",
+      "goodsNameEn": "Classic",
+      "goodsNameRu": "классическая",
+      "isDeleted": false
+    },
+    {
+      "id": 43,
+      "parentId": 39,
+      "goodsNameAz": "Derbi",
+      "goodsNameEn": "Derby",
+      "goodsNameRu": "дерби",
+      "isDeleted": false
+    },
+    {
+      "id": 44,
+      "parentId": 39,
+      "goodsNameAz": "Lofer",
+      "goodsNameEn": "Loafer",
+      "goodsNameRu": "лоферы",
+      "isDeleted": false
+    },
+    {
+      "id": 45,
+      "parentId": 39,
+      "goodsNameAz": "Oksford",
+      "goodsNameEn": "Oxford",
+      "goodsNameRu": "оксфорды",
+      "isDeleted": false
+    },
+    {
+      "id": 46,
+      "parentId": 39,
+      "goodsNameAz": "Yarımboğaz ayaqqabı",
+      "goodsNameEn": "Half boot(mid-calf boot)",
+      "goodsNameRu": "полуботинки",
+      "isDeleted": false
+    },
+    {
+      "id": 47,
+      "parentId": 39,
+      "goodsNameAz": "Krassovka",
+      "goodsNameEn": "Sneaker",
+      "goodsNameRu": "кроссовки",
+      "isDeleted": false
+    },
+    {
+      "id": 48,
+      "parentId": 39,
+      "goodsNameAz": "Mokasin",
+      "goodsNameEn": "Moccasin",
+      "goodsNameRu": "мокасины",
+      "isDeleted": false
+    },
+    {
+      "id": 49,
+      "parentId": 39,
+      "goodsNameAz": "Espadril",
+      "goodsNameEn": "Espadril",
+      "goodsNameRu": "эспадрильи",
+      "isDeleted": false
+    },
+    {
+      "id": 50,
+      "parentId": 39,
+      "goodsNameAz": "Səndəl",
+      "goodsNameEn": "Sandal",
+      "goodsNameRu": "сандалии",
+      "isDeleted": false
+    },
+    {
+      "id": 51,
+      "parentId": 39,
+      "goodsNameAz": "Ev tərliyi",
+      "goodsNameEn": "Slippers",
+      "goodsNameRu": "домашняя обувь( тапочки)",
+      "isDeleted": false
+    },
+    {
+      "id": 52,
+      "parentId": 0,
+      "goodsNameAz": "Ayaqqabı qadın üçün",
+      "goodsNameEn": "Women's shoes",
+      "goodsNameRu": "Женская обувь:",
+      "isDeleted": true
+    },
+    {
+      "id": 53,
+      "parentId": 52,
+      "goodsNameAz": "Xizək üçün çəkmə",
+      "goodsNameEn": "Ski boots",
+      "goodsNameRu": "лыжные ботинки",
+      "isDeleted": true
+    },
+    {
+      "id": 54,
+      "parentId": 52,
+      "goodsNameAz": "Snoubord üçün çəkmə",
+      "goodsNameEn": "Snowboarding boots",
+      "goodsNameRu": "ботинки для сноуборда",
+      "isDeleted": true
+    },
+    {
+      "id": 55,
+      "parentId": 52,
+      "goodsNameAz": "Derbi",
+      "goodsNameEn": "Derby",
+      "goodsNameRu": "Дерби",
+      "isDeleted": true
+    },
+    {
+      "id": 56,
+      "parentId": 39,
+      "goodsNameAz": "Slip-on",
+      "goodsNameEn": "Slip-on",
+      "goodsNameRu": "слипоны",
+      "isDeleted": false
+    },
+    {
+      "id": 57,
+      "parentId": 52,
+      "goodsNameAz": "Lofer",
+      "goodsNameEn": "Loafer",
+      "goodsNameRu": "лоферы",
+      "isDeleted": true
+    },
+    {
+      "id": 58,
+      "parentId": 39,
+      "goodsNameAz": "Uzunboğaz çəkmə",
+      "goodsNameEn": "Knee-high boots",
+      "goodsNameRu": "высокие сапоги",
+      "isDeleted": false
+    },
+    {
+      "id": 59,
+      "parentId": 39,
+      "goodsNameAz": "Yarımboğaz çəkmə",
+      "goodsNameEn": "Mid-calf boots",
+      "goodsNameRu": "полусапоги",
+      "isDeleted": false
+    },
+    {
+      "id": 60,
+      "parentId": 39,
+      "goodsNameAz": "Hündurdaban",
+      "goodsNameEn": "Heels",
+      "goodsNameRu": "высокий каблук",
+      "isDeleted": false
+    },
+    {
+      "id": 61,
+      "parentId": 52,
+      "goodsNameAz": "Espadril",
+      "goodsNameEn": "Espadril",
+      "goodsNameRu": "эспадрильи",
+      "isDeleted": true
+    },
+    {
+      "id": 62,
+      "parentId": 39,
+      "goodsNameAz": "Baletka",
+      "goodsNameEn": "Baletka",
+      "goodsNameRu": "балетки",
+      "isDeleted": false
+    },
+    {
+      "id": 63,
+      "parentId": 52,
+      "goodsNameAz": "Səndəl",
+      "goodsNameEn": "Sandal",
+      "goodsNameRu": "сандалии",
+      "isDeleted": true
+    },
+    {
+      "id": 64,
+      "parentId": 52,
+      "goodsNameAz": "Krassovka",
+      "goodsNameEn": "Sneaker",
+      "goodsNameRu": "кроссовки",
+      "isDeleted": true
+    },
+    {
+      "id": 65,
+      "parentId": 52,
+      "goodsNameAz": "Ev tərliyi",
+      "goodsNameEn": "Slippers",
+      "goodsNameRu": "домашняя обувь( тапочки)",
+      "isDeleted": true
+    },
+    {
+      "id": 66,
+      "parentId": 0,
+      "goodsNameAz": "Geyim aksesuarları",
+      "goodsNameEn": "Accessories",
+      "goodsNameRu": "Аксессуары:",
+      "isDeleted": false
+    },
+    {
+      "id": 67,
+      "parentId": 66,
+      "goodsNameAz": "Qayış",
+      "goodsNameEn": "Belt",
+      "goodsNameRu": "ремень",
+      "isDeleted": false
+    },
+    {
+      "id": 68,
+      "parentId": 66,
+      "goodsNameAz": "Şərf",
+      "goodsNameEn": "Scarf",
+      "goodsNameRu": "шарф",
+      "isDeleted": false
+    },
+    {
+      "id": 69,
+      "parentId": 66,
+      "goodsNameAz": "Əlcək",
+      "goodsNameEn": "Gloves ",
+      "goodsNameRu": "перчатки",
+      "isDeleted": false
+    },
+    {
+      "id": 70,
+      "parentId": 66,
+      "goodsNameAz": "Bijuteriya",
+      "goodsNameEn": "Bijouterie",
+      "goodsNameRu": "бижутерия",
+      "isDeleted": false
+    },
+    {
+      "id": 71,
+      "parentId": 66,
+      "goodsNameAz": "Portmone",
+      "goodsNameEn": "Wallet",
+      "goodsNameRu": "портмоне",
+      "isDeleted": false
+    },
+    {
+      "id": 72,
+      "parentId": 66,
+      "goodsNameAz": "Papaq",
+      "goodsNameEn": "Hat",
+      "goodsNameRu": "шапка",
+      "isDeleted": false
+    },
+    {
+      "id": 73,
+      "parentId": 66,
+      "goodsNameAz": "Qalstuk",
+      "goodsNameEn": "Tie",
+      "goodsNameRu": "галстук",
+      "isDeleted": false
+    },
+    {
+      "id": 74,
+      "parentId": 66,
+      "goodsNameAz": "Çanta",
+      "goodsNameEn": "Bag",
+      "goodsNameRu": "сумка",
+      "isDeleted": false
+    },
+    {
+      "id": 75,
+      "parentId": 66,
+      "goodsNameAz": "Eynək",
+      "goodsNameEn": "Sunglasses",
+      "goodsNameRu": "очки",
+      "isDeleted": false
+    },
+    {
+      "id": 76,
+      "parentId": 66,
+      "goodsNameAz": "Çətir",
+      "goodsNameEn": "Umbrella",
+      "goodsNameRu": "зонт",
+      "isDeleted": false
+    },
+    {
+      "id": 77,
+      "parentId": 66,
+      "goodsNameAz": "Saat",
+      "goodsNameEn": "Watch",
+      "goodsNameRu": "часы",
+      "isDeleted": false
+    },
+    {
+      "id": 78,
+      "parentId": 0,
+      "goodsNameAz": "Geyim aksesuarları qadın üçün",
+      "goodsNameEn": "Accessories for women",
+      "goodsNameRu": "Аксессуары для женщин:",
+      "isDeleted": true
+    },
+    {
+      "id": 79,
+      "parentId": 66,
+      "goodsNameAz": "Makiyaj çantaları",
+      "goodsNameEn": "Beauty case",
+      "goodsNameRu": "косметичка",
+      "isDeleted": false
+    },
+    {
+      "id": 80,
+      "parentId": 78,
+      "goodsNameAz": "Qayış",
+      "goodsNameEn": "Belt",
+      "goodsNameRu": "ремень",
+      "isDeleted": true
+    },
+    {
+      "id": 81,
+      "parentId": 78,
+      "goodsNameAz": "Əlcək",
+      "goodsNameEn": "Gloves",
+      "goodsNameRu": "перчатки ",
+      "isDeleted": true
+    },
+    {
+      "id": 82,
+      "parentId": 78,
+      "goodsNameAz": "Çətir",
+      "goodsNameEn": "Umbrella",
+      "goodsNameRu": "зонт",
+      "isDeleted": true
+    },
+    {
+      "id": 83,
+      "parentId": 78,
+      "goodsNameAz": "Portmone",
+      "goodsNameEn": "Wallet",
+      "goodsNameRu": "портмоне",
+      "isDeleted": true
+    },
+    {
+      "id": 84,
+      "parentId": 78,
+      "goodsNameAz": "Eynək",
+      "goodsNameEn": "Sunglasses",
+      "goodsNameRu": "очки",
+      "isDeleted": true
+    },
+    {
+      "id": 85,
+      "parentId": 78,
+      "goodsNameAz": "Şərf",
+      "goodsNameEn": "Scarf",
+      "goodsNameRu": "шарф",
+      "isDeleted": true
+    },
+    {
+      "id": 86,
+      "parentId": 78,
+      "goodsNameAz": "Papaq",
+      "goodsNameEn": "Hat",
+      "goodsNameRu": "шапка",
+      "isDeleted": true
+    },
+    {
+      "id": 162,
+      "parentId": 159,
+      "goodsNameAz": "Mətbəx kombaynı",
+      "goodsNameEn": "Kitchen combine",
+      "goodsNameRu": "кухонный комбайн",
+      "isDeleted": false
+    },
+    {
+      "id": 163,
+      "parentId": 159,
+      "goodsNameAz": "Mikser",
+      "goodsNameEn": "Mixer",
+      "goodsNameRu": "миксер",
+      "isDeleted": false
+    },
+    {
+      "id": 164,
+      "parentId": 159,
+      "goodsNameAz": "Ətçəkən maşın",
+      "goodsNameEn": "Meat Grinder Machine",
+      "goodsNameRu": "Мясорубка",
+      "isDeleted": false
+    },
+    {
+      "id": 165,
+      "parentId": 159,
+      "goodsNameAz": "Multibişiricilər",
+      "goodsNameEn": "Multicooker",
+      "goodsNameRu": "Мультиварка ",
+      "isDeleted": false
+    },
+    {
+      "id": 166,
+      "parentId": 159,
+      "goodsNameAz": "Mikrodalğalı soba",
+      "goodsNameEn": "Microwave",
+      "goodsNameRu": "Микроволновая печь ( СВЧ-печь)",
+      "isDeleted": false
+    },
+    {
+      "id": 167,
+      "parentId": 159,
+      "goodsNameAz": "Çörək bişrən",
+      "goodsNameEn": "Baker",
+      "goodsNameRu": "Хлебопечка (хлебопечь)",
+      "isDeleted": false
+    },
+    {
+      "id": 87,
+      "parentId": 78,
+      "goodsNameAz": "Bijuteriya",
+      "goodsNameEn": "Bijouterie",
+      "goodsNameRu": "бижутерия",
+      "isDeleted": true
+    },
+    {
+      "id": 88,
+      "parentId": 78,
+      "goodsNameAz": "Çanta",
+      "goodsNameEn": "Bag",
+      "goodsNameRu": "сумка",
+      "isDeleted": true
+    },
+    {
+      "id": 89,
+      "parentId": 78,
+      "goodsNameAz": "Saat ",
+      "goodsNameEn": "Watch",
+      "goodsNameRu": "часы",
+      "isDeleted": true
+    },
+    {
+      "id": 90,
+      "parentId": 78,
+      "goodsNameAz": "Çətir",
+      "goodsNameEn": "Umbrella",
+      "goodsNameRu": "зонт",
+      "isDeleted": true
+    },
+    {
+      "id": 91,
+      "parentId": 66,
+      "goodsNameAz": "Saç aksesuarları",
+      "goodsNameEn": "Hair accessories",
+      "goodsNameRu": "аксессуары для волос",
+      "isDeleted": false
+    },
+    {
+      "id": 92,
+      "parentId": 0,
+      "goodsNameAz": "Kompüter, Elektronika",
+      "goodsNameEn": "Computer",
+      "goodsNameRu": "Компьютер",
+      "isDeleted": false
+    },
+    {
+      "id": 93,
+      "parentId": 92,
+      "goodsNameAz": "Noutbuk",
+      "goodsNameEn": "Laptop",
+      "goodsNameRu": "ноутбук",
+      "isDeleted": false
+    },
+    {
+      "id": 94,
+      "parentId": 92,
+      "goodsNameAz": "Netbuk",
+      "goodsNameEn": "Netbook",
+      "goodsNameRu": "нетбук",
+      "isDeleted": false
+    },
+    {
+      "id": 95,
+      "parentId": 92,
+      "goodsNameAz": "Masaüstü komputer",
+      "goodsNameEn": "Desktop computer",
+      "goodsNameRu": "Настольный (стационарный) компьютер",
+      "isDeleted": false
+    },
+    {
+      "id": 96,
+      "parentId": 92,
+      "goodsNameAz": "Monoblok",
+      "goodsNameEn": "Monoblock",
+      "goodsNameRu": "моноблок",
+      "isDeleted": false
+    },
+    {
+      "id": 97,
+      "parentId": 92,
+      "goodsNameAz": "Oyun kompüteri",
+      "goodsNameEn": "Game computer",
+      "goodsNameRu": "игровой компьютер",
+      "isDeleted": false
+    },
+    {
+      "id": 98,
+      "parentId": 92,
+      "goodsNameAz": "Monitor",
+      "goodsNameEn": "Monitor",
+      "goodsNameRu": "монитор",
+      "isDeleted": false
+    },
+    {
+      "id": 99,
+      "parentId": 92,
+      "goodsNameAz": "Printer",
+      "goodsNameEn": "Printer",
+      "goodsNameRu": "принтер",
+      "isDeleted": false
+    },
+    {
+      "id": 100,
+      "parentId": 92,
+      "goodsNameAz": "Xarici toplayıcı disklər HDD ",
+      "goodsNameEn": "External storage drives HDD",
+      "goodsNameRu": "внешний hdd-накопитель",
+      "isDeleted": false
+    },
+    {
+      "id": 101,
+      "parentId": 92,
+      "goodsNameAz": "Kartric",
+      "goodsNameEn": "Cartridge",
+      "goodsNameRu": "картридж",
+      "isDeleted": false
+    },
+    {
+      "id": 102,
+      "parentId": 92,
+      "goodsNameAz": "Proyektor",
+      "goodsNameEn": "Projector",
+      "goodsNameRu": "проектор",
+      "isDeleted": false
+    },
+    {
+      "id": 103,
+      "parentId": 92,
+      "goodsNameAz": "Siçan",
+      "goodsNameEn": "Mouse",
+      "goodsNameRu": "Компьютерная мышь",
+      "isDeleted": false
+    },
+    {
+      "id": 104,
+      "parentId": 92,
+      "goodsNameAz": "Prezentasiya üçün pult",
+      "goodsNameEn": "Presentation remote control",
+      "goodsNameRu": "пульт для презентаций",
+      "isDeleted": false
+    },
+    {
+      "id": 105,
+      "parentId": 92,
+      "goodsNameAz": "Noutbuk üçün çanta",
+      "goodsNameEn": "Laptop bag",
+      "goodsNameRu": "сумка для ноутбука",
+      "isDeleted": false
+    },
+    {
+      "id": 106,
+      "parentId": 92,
+      "goodsNameAz": "Noutbuk üçün altlıq",
+      "goodsNameEn": "Laptop case",
+      "goodsNameRu": "кейс для ноутбука",
+      "isDeleted": false
+    },
+    {
+      "id": 107,
+      "parentId": 92,
+      "goodsNameAz": "Fleş toplayıcı",
+      "goodsNameEn": "Flash collector",
+      "goodsNameRu": "флеш-накопитель ",
+      "isDeleted": false
+    },
+    {
+      "id": 108,
+      "parentId": 92,
+      "goodsNameAz": "Modem",
+      "goodsNameEn": "Modem",
+      "goodsNameRu": "модем",
+      "isDeleted": false
+    },
+    {
+      "id": 109,
+      "parentId": 92,
+      "goodsNameAz": "Xarici toplayıcı disklər SSD",
+      "goodsNameEn": "External storage drives SSD",
+      "goodsNameRu": " Внешние SSD накопители",
+      "isDeleted": false
+    },
+    {
+      "id": 110,
+      "parentId": 0,
+      "goodsNameAz": "Oyun konsolları",
+      "goodsNameEn": "Game consoles",
+      "goodsNameRu": " Игровые приставки",
+      "isDeleted": false
+    },
+    {
+      "id": 111,
+      "parentId": 110,
+      "goodsNameAz": "Playstation",
+      "goodsNameEn": "Playstation",
+      "goodsNameRu": "Playstation",
+      "isDeleted": false
+    },
+    {
+      "id": 112,
+      "parentId": 110,
+      "goodsNameAz": "Xbox",
+      "goodsNameEn": "Xbox",
+      "goodsNameRu": "Xbox",
+      "isDeleted": false
+    },
+    {
+      "id": 113,
+      "parentId": 110,
+      "goodsNameAz": "DVD ",
+      "goodsNameEn": "DVD ",
+      "goodsNameRu": "DVD ",
+      "isDeleted": false
+    },
+    {
+      "id": 114,
+      "parentId": 110,
+      "goodsNameAz": "DVD və CD disklər",
+      "goodsNameEn": "DVD and CD disks",
+      "goodsNameRu": "DVD и CD ",
+      "isDeleted": false
+    },
+    {
+      "id": 115,
+      "parentId": 110,
+      "goodsNameAz": "Nintendo",
+      "goodsNameEn": "Nintendo",
+      "goodsNameRu": "Nintendo",
+      "isDeleted": false
+    },
+    {
+      "id": 116,
+      "parentId": 0,
+      "goodsNameAz": "Kosmetik vasitələr",
+      "goodsNameEn": "Cosmetics",
+      "goodsNameRu": "Косметические средства",
+      "isDeleted": false
+    },
+    {
+      "id": 117,
+      "parentId": 116,
+      "goodsNameAz": "Kirşan",
+      "goodsNameEn": "Powder",
+      "goodsNameRu": "пудра",
+      "isDeleted": true
+    },
+    {
+      "id": 118,
+      "parentId": 116,
+      "goodsNameAz": "Tonal krem",
+      "goodsNameEn": "Foundation cream",
+      "goodsNameRu": "тональный крем",
+      "isDeleted": true
+    },
+    {
+      "id": 119,
+      "parentId": 116,
+      "goodsNameAz": "Konsiler",
+      "goodsNameEn": "Consealer",
+      "goodsNameRu": "консилер",
+      "isDeleted": true
+    },
+    {
+      "id": 120,
+      "parentId": 116,
+      "goodsNameAz": "Ənlik",
+      "goodsNameEn": "Blushes",
+      "goodsNameRu": "румяна",
+      "isDeleted": true
+    },
+    {
+      "id": 121,
+      "parentId": 116,
+      "goodsNameAz": "Tuş",
+      "goodsNameEn": "Mascara",
+      "goodsNameRu": "тушь",
+      "isDeleted": true
+    },
+    {
+      "id": 122,
+      "parentId": 116,
+      "goodsNameAz": "Göz kölgəsi",
+      "goodsNameEn": "Eye shadow",
+      "goodsNameRu": "Тени для век",
+      "isDeleted": true
+    },
+    {
+      "id": 123,
+      "parentId": 116,
+      "goodsNameAz": "Göz qələmi",
+      "goodsNameEn": "Eye pencil",
+      "goodsNameRu": "карандаш для глаз",
+      "isDeleted": true
+    },
+    {
+      "id": 124,
+      "parentId": 116,
+      "goodsNameAz": "Dodaq boyası",
+      "goodsNameEn": "Lipstick",
+      "goodsNameRu": "Губная помада",
+      "isDeleted": true
+    },
+    {
+      "id": 125,
+      "parentId": 116,
+      "goodsNameAz": "Bronzer",
+      "goodsNameEn": "Bronzer",
+      "goodsNameRu": "бронзер",
+      "isDeleted": true
+    },
+    {
+      "id": 126,
+      "parentId": 116,
+      "goodsNameAz": "Korrektor",
+      "goodsNameEn": "Corrector",
+      "goodsNameRu": "корректор",
+      "isDeleted": true
+    },
+    {
+      "id": 127,
+      "parentId": 116,
+      "goodsNameAz": "Layner",
+      "goodsNameEn": "Liner",
+      "goodsNameRu": "лайнер",
+      "isDeleted": true
+    },
+    {
+      "id": 128,
+      "parentId": 116,
+      "goodsNameAz": "Praymer",
+      "goodsNameEn": "Face primer",
+      "goodsNameRu": "праймер",
+      "isDeleted": true
+    },
+    {
+      "id": 129,
+      "parentId": 116,
+      "goodsNameAz": "Haylayter",
+      "goodsNameEn": "Highlighter",
+      "goodsNameRu": "хайлайтер",
+      "isDeleted": true
+    },
+    {
+      "id": 130,
+      "parentId": 116,
+      "goodsNameAz": "Qaş qələmi",
+      "goodsNameEn": "Eyebrow pencil",
+      "goodsNameRu": "Карандаш для бровей",
+      "isDeleted": true
+    },
+    {
+      "id": 131,
+      "parentId": 116,
+      "goodsNameAz": "Qaş kirşanı",
+      "goodsNameEn": "Eyebrow powder",
+      "goodsNameRu": "пудра для бровей",
+      "isDeleted": true
+    },
+    {
+      "id": 132,
+      "parentId": 116,
+      "goodsNameAz": "Dırnaq lakı",
+      "goodsNameEn": "Nail polish",
+      "goodsNameRu": "Лак для ногтей",
+      "isDeleted": true
+    },
+    {
+      "id": 133,
+      "parentId": 0,
+      "goodsNameAz": "Telefon və telefon üçün aksesuarlar",
+      "goodsNameEn": "Phone and phone accessories:",
+      "goodsNameRu": "Телефон и аксессуары для телефона",
+      "isDeleted": false
+    },
+    {
+      "id": 134,
+      "parentId": 133,
+      "goodsNameAz": "Mobil telefon",
+      "goodsNameEn": "Mobile phone",
+      "goodsNameRu": "мобильный телефон",
+      "isDeleted": false
+    },
+    {
+      "id": 135,
+      "parentId": 133,
+      "goodsNameAz": "Ev və ofis telefonu",
+      "goodsNameEn": "Home and office phone",
+      "goodsNameRu": "домашний и офисный телефон",
+      "isDeleted": false
+    },
+    {
+      "id": 136,
+      "parentId": 133,
+      "goodsNameAz": "Smart saatlar",
+      "goodsNameEn": "Smart watches",
+      "goodsNameRu": "Умные часы ( Смарт-часы)",
+      "isDeleted": false
+    },
+    {
+      "id": 137,
+      "parentId": 0,
+      "goodsNameAz": "Telefon(telefon üçün aksesuarlar)",
+      "goodsNameEn": "Phone accessories:",
+      "goodsNameRu": "аксессуары для телефона",
+      "isDeleted": true
+    },
+    {
+      "id": 138,
+      "parentId": 133,
+      "goodsNameAz": "Qulaqlıqlar",
+      "goodsNameEn": "Headphones",
+      "goodsNameRu": "Наушники",
+      "isDeleted": false
+    },
+    {
+      "id": 139,
+      "parentId": 133,
+      "goodsNameAz": "Ekran qoruyucuları",
+      "goodsNameEn": "Screensaver",
+      "goodsNameRu": "защита дисплея",
+      "isDeleted": false
+    },
+    {
+      "id": 140,
+      "parentId": 137,
+      "goodsNameAz": "Keyslər",
+      "goodsNameEn": "Cases",
+      "goodsNameRu": "кейс для телефона",
+      "isDeleted": false
+    },
+    {
+      "id": 141,
+      "parentId": 133,
+      "goodsNameAz": "Portativ akkumlyator",
+      "goodsNameEn": "Portable accumulator",
+      "goodsNameRu": "портативный аккумулятор для телефона (power bank)",
+      "isDeleted": false
+    },
+    {
+      "id": 142,
+      "parentId": 133,
+      "goodsNameAz": "Adapter",
+      "goodsNameEn": "Adapter",
+      "goodsNameRu": "Адаптер ",
+      "isDeleted": false
+    },
+    {
+      "id": 143,
+      "parentId": 133,
+      "goodsNameAz": "Yaddaş qurğuları",
+      "goodsNameEn": "Memory devices",
+      "goodsNameRu": "Устройства памяти телефона",
+      "isDeleted": false
+    },
+    {
+      "id": 144,
+      "parentId": 133,
+      "goodsNameAz": "USB və AUX kabelləri",
+      "goodsNameEn": "USB and AUX cables",
+      "goodsNameRu": "Кабель для телефона USB и AUX",
+      "isDeleted": false
+    },
+    {
+      "id": 145,
+      "parentId": 133,
+      "goodsNameAz": "Selfi çubuqları",
+      "goodsNameEn": "Selfie sticks",
+      "goodsNameRu": "селфи-палка",
+      "isDeleted": false
+    },
+    {
+      "id": 146,
+      "parentId": 0,
+      "goodsNameAz": "Məişət avadanlıqları(Böyük məişət texnikası)",
+      "goodsNameEn": "Large home appliances:",
+      "goodsNameRu": "Крупная бытовая техника ",
+      "isDeleted": false
+    },
+    {
+      "id": 147,
+      "parentId": 146,
+      "goodsNameAz": "Soyuducu",
+      "goodsNameEn": "\"Refrigerator\"",
+      "goodsNameRu": " Холодильник",
+      "isDeleted": false
+    },
+    {
+      "id": 148,
+      "parentId": 146,
+      "goodsNameAz": "Dondurucu kamera",
+      "goodsNameEn": "Freezer",
+      "goodsNameRu": "Морозильная камера",
+      "isDeleted": false
+    },
+    {
+      "id": 149,
+      "parentId": 146,
+      "goodsNameAz": "Paltaryuyan maşın",
+      "goodsNameEn": "Washing machine",
+      "goodsNameRu": " Стиральная машина",
+      "isDeleted": false
+    },
+    {
+      "id": 150,
+      "parentId": 146,
+      "goodsNameAz": "Quruducu maşın",
+      "goodsNameEn": "Drying machine",
+      "goodsNameRu": "сушильная машина ",
+      "isDeleted": false
+    },
+    {
+      "id": 151,
+      "parentId": 146,
+      "goodsNameAz": "Buxar dolabı",
+      "goodsNameEn": "Steam cabinet",
+      "goodsNameRu": "Паровой шкаф ",
+      "isDeleted": false
+    },
+    {
+      "id": 152,
+      "parentId": 146,
+      "goodsNameAz": "Qabyuyan maşın",
+      "goodsNameEn": "Dishwasher",
+      "goodsNameRu": " Посудомоечная машина",
+      "isDeleted": false
+    },
+    {
+      "id": 153,
+      "parentId": 146,
+      "goodsNameAz": "Televizor",
+      "goodsNameEn": "Television",
+      "goodsNameRu": "телевизор",
+      "isDeleted": false
+    },
+    {
+      "id": 154,
+      "parentId": 146,
+      "goodsNameAz": "Kondisioner",
+      "goodsNameEn": "Conditioners",
+      "goodsNameRu": "Кондиционер ",
+      "isDeleted": false
+    },
+    {
+      "id": 155,
+      "parentId": 146,
+      "goodsNameAz": "Aspirator",
+      "goodsNameEn": "Aspirator",
+      "goodsNameRu": "Аспиратор ",
+      "isDeleted": false
+    },
+    {
+      "id": 156,
+      "parentId": 146,
+      "goodsNameAz": "Bişirmə paneli",
+      "goodsNameEn": "Cooking panel",
+      "goodsNameRu": "варочная панель",
+      "isDeleted": false
+    },
+    {
+      "id": 157,
+      "parentId": 146,
+      "goodsNameAz": "Soba",
+      "goodsNameEn": "Stove",
+      "goodsNameRu": "духовка",
+      "isDeleted": false
+    },
+    {
+      "id": 158,
+      "parentId": 146,
+      "goodsNameAz": "Plitə",
+      "goodsNameEn": "Heater",
+      "goodsNameRu": "кухонная плита,",
+      "isDeleted": false
+    },
+    {
+      "id": 159,
+      "parentId": 0,
+      "goodsNameAz": "Məişət avadanlıqları(Kiçik məişət texnikası)",
+      "goodsNameEn": "Small home appliances:",
+      "goodsNameRu": "Мелкая бытовая техника ",
+      "isDeleted": false
+    },
+    {
+      "id": 160,
+      "parentId": 159,
+      "goodsNameAz": "Blender",
+      "goodsNameEn": "Blender",
+      "goodsNameRu": "блендер",
+      "isDeleted": false
+    },
+    {
+      "id": 161,
+      "parentId": 159,
+      "goodsNameAz": "Mətbəx tərəzisi",
+      "goodsNameEn": "Kitchen scales",
+      "goodsNameRu": " кухонные весы",
+      "isDeleted": false
+    },
+    {
+      "id": 168,
+      "parentId": 159,
+      "goodsNameAz": "Elektrik sobası",
+      "goodsNameEn": "Electric oven",
+      "goodsNameRu": "Электрическая духовка ",
+      "isDeleted": false
+    },
+    {
+      "id": 169,
+      "parentId": 159,
+      "goodsNameAz": "Toster",
+      "goodsNameEn": "Toaster",
+      "goodsNameRu": "тостер",
+      "isDeleted": false
+    },
+    {
+      "id": 170,
+      "parentId": 159,
+      "goodsNameAz": "Buxarlı bişirici",
+      "goodsNameEn": "Steam cooker",
+      "goodsNameRu": "Пароварка",
+      "isDeleted": false
+    },
+    {
+      "id": 171,
+      "parentId": 159,
+      "goodsNameAz": "Fen",
+      "goodsNameEn": "Hair-drier",
+      "goodsNameRu": "фен",
+      "isDeleted": false
+    },
+    {
+      "id": 172,
+      "parentId": 159,
+      "goodsNameAz": "Fritoz",
+      "goodsNameEn": "Deep fryer",
+      "goodsNameRu": "Фритюрница",
+      "isDeleted": false
+    },
+    {
+      "id": 173,
+      "parentId": 159,
+      "goodsNameAz": "Elektrik çaydan",
+      "goodsNameEn": "Kettle",
+      "goodsNameRu": "Электрический чайник ",
+      "isDeleted": false
+    },
+    {
+      "id": 174,
+      "parentId": 159,
+      "goodsNameAz": "Qəhvə dəmləyən",
+      "goodsNameEn": "Coffee brewer",
+      "goodsNameRu": "Кофеварка",
+      "isDeleted": false
+    },
+    {
+      "id": 175,
+      "parentId": 159,
+      "goodsNameAz": "Qəhvə üyüdən",
+      "goodsNameEn": "Coffee grinder",
+      "goodsNameRu": "Кофемолка",
+      "isDeleted": false
+    },
+    {
+      "id": 176,
+      "parentId": 159,
+      "goodsNameAz": "Şirəçəkən",
+      "goodsNameEn": "Juicer",
+      "goodsNameRu": "Соковыжималка",
+      "isDeleted": false
+    },
+    {
+      "id": 177,
+      "parentId": 159,
+      "goodsNameAz": "Ütü",
+      "goodsNameEn": "İron",
+      "goodsNameRu": "утюг",
+      "isDeleted": false
+    },
+    {
+      "id": 178,
+      "parentId": 159,
+      "goodsNameAz": "Tozsoran",
+      "goodsNameEn": "Vacuum cleaner",
+      "goodsNameRu": "Пылесос",
+      "isDeleted": false
+    },
+    {
+      "id": 179,
+      "parentId": 159,
+      "goodsNameAz": "Buxarlı təmizləyici",
+      "goodsNameEn": "Steam cleaner",
+      "goodsNameRu": "Пароочиститель",
+      "isDeleted": false
+    },
+    {
+      "id": 180,
+      "parentId": 0,
+      "goodsNameAz": "Maşın ehtiyat hissələri",
+      "goodsNameEn": "Car spare parts",
+      "goodsNameRu": "Автомобильные запчасти",
+      "isDeleted": false
+    },
+    {
+      "id": 181,
+      "parentId": 180,
+      "goodsNameAz": "Mühərrik hissələri",
+      "goodsNameEn": "Auto body parts",
+      "goodsNameRu": " Детали двигателя ",
+      "isDeleted": false
+    },
+    {
+      "id": 182,
+      "parentId": 180,
+      "goodsNameAz": "Kuzov(əsas) hissələri",
+      "goodsNameEn": "Engine parts",
+      "goodsNameRu": "детали (основные) кузова",
+      "isDeleted": false
+    },
+    {
+      "id": 183,
+      "parentId": 180,
+      "goodsNameAz": "Fara",
+      "goodsNameEn": "Headlights:",
+      "goodsNameRu": "фара",
+      "isDeleted": false
+    },
+    {
+      "id": 184,
+      "parentId": 180,
+      "goodsNameAz": "Ampül",
+      "goodsNameEn": "Bulbs",
+      "goodsNameRu": "Лампа",
+      "isDeleted": false
+    },
+    {
+      "id": 185,
+      "parentId": 180,
+      "goodsNameAz": "Gücləndirici çeviricilər",
+      "goodsNameEn": "Headlight buckets",
+      "goodsNameRu": "Усилитель-преобразователь",
+      "isDeleted": false
+    },
+    {
+      "id": 186,
+      "parentId": 180,
+      "goodsNameAz": "Əsas kordonlar",
+      "goodsNameEn": "Necessary cords",
+      "goodsNameRu": "Кабель для авто",
+      "isDeleted": false
+    },
+    {
+      "id": 187,
+      "parentId": 180,
+      "goodsNameAz": "Məftillər",
+      "goodsNameEn": "Wires",
+      "goodsNameRu": " Автомобильные провода",
+      "isDeleted": false
+    },
+    {
+      "id": 188,
+      "parentId": 180,
+      "goodsNameAz": "Bağlayıcılar",
+      "goodsNameEn": "Connectors",
+      "goodsNameRu": "Автомобильные разъемы",
+      "isDeleted": false
+    },
+    {
+      "id": 189,
+      "parentId": 180,
+      "goodsNameAz": "Quraşdırma avadanlığı",
+      "goodsNameEn": "Installation equipment",
+      "goodsNameRu": "Монтажное оборудование ",
+      "isDeleted": false
+    },
+    {
+      "id": 190,
+      "parentId": 180,
+      "goodsNameAz": "Rezindən avtomobil döşəkçələri",
+      "goodsNameEn": "Rubber car mats",
+      "goodsNameRu": "резиновые коврики",
+      "isDeleted": false
+    },
+    {
+      "id": 191,
+      "parentId": 180,
+      "goodsNameAz": "Süni toxuculuq materiallarından hazırlanmış avtomobil döşəkçələri",
+      "goodsNameEn": "Car mats of man-made textile materials",
+      "goodsNameRu": "Коврики из искусственных текстильных материалов",
+      "isDeleted": false
+    },
+    {
+      "id": 192,
+      "parentId": 180,
+      "goodsNameAz": "Güzgülər",
+      "goodsNameEn": "Mirrors",
+      "goodsNameRu": "Автомобильные зеркала",
+      "isDeleted": false
+    },
+    {
+      "id": 193,
+      "parentId": 180,
+      "goodsNameAz": "Nasoslar və Filtrlər",
+      "goodsNameEn": "Pumps and filters",
+      "goodsNameRu": "Фильтры, насосы",
+      "isDeleted": false
+    },
+    {
+      "id": 194,
+      "parentId": 180,
+      "goodsNameAz": "Hava filtrləri",
+      "goodsNameEn": "Air filters",
+      "goodsNameRu": "воздушный фильтр ",
+      "isDeleted": false
+    },
+    {
+      "id": 195,
+      "parentId": 180,
+      "goodsNameAz": "Yağ və benzin filtrləri",
+      "goodsNameEn": "Oil and gasoline filters",
+      "goodsNameRu": "Масляный и топливный фильтр ,",
+      "isDeleted": false
+    },
+    {
+      "id": 196,
+      "parentId": 0,
+      "goodsNameAz": "Qida əlavələri,Dərman",
+      "goodsNameEn": " Food supplements",
+      "goodsNameRu": "Пищевые добавки",
+      "isDeleted": false
+    },
+    {
+      "id": 197,
+      "parentId": 196,
+      "goodsNameAz": "Zülal tozu",
+      "goodsNameEn": "Protein powders",
+      "goodsNameRu": "Протеиновый порошок ",
+      "isDeleted": false
+    },
+    {
+      "id": 198,
+      "parentId": 196,
+      "goodsNameAz": "İçkilər",
+      "goodsNameEn": "Beverages",
+      "goodsNameRu": "спортивные напитки",
+      "isDeleted": false
+    },
+    {
+      "id": 199,
+      "parentId": 196,
+      "goodsNameAz": "Içki tozları",
+      "goodsNameEn": "Beverage powders",
+      "goodsNameRu": "Питьевой порошок ",
+      "isDeleted": false
+    },
+    {
+      "id": 200,
+      "parentId": 196,
+      "goodsNameAz": "Tərkibində kakao olan məhsullar",
+      "goodsNameEn": "Preparations containing cocoa",
+      "goodsNameRu": "пищевые продукты содержащие какао ",
+      "isDeleted": false
+    },
+    {
+      "id": 201,
+      "parentId": 196,
+      "goodsNameAz": "Zərdab",
+      "goodsNameEn": "Whey",
+      "goodsNameRu": "Сыворотка (протеиновая добавка)",
+      "isDeleted": false
+    },
+    {
+      "id": 202,
+      "parentId": 0,
+      "goodsNameAz": "Ev aksesuarları(mebel,dekor və digər)",
+      "goodsNameEn": "Home accessories (furniture, decor and others)",
+      "goodsNameRu": "Аксессуары для дома(мебель,декор и др.)",
+      "isDeleted": false
+    },
+    {
+      "id": 203,
+      "parentId": 202,
+      "goodsNameAz": "Güzgü",
+      "goodsNameEn": "Mirrors",
+      "goodsNameRu": "зеркало",
+      "isDeleted": false
+    },
+    {
+      "id": 204,
+      "parentId": 202,
+      "goodsNameAz": "Yataq mebeli",
+      "goodsNameEn": "Bedroom furniture",
+      "goodsNameRu": "спальняя мебель",
+      "isDeleted": false
+    },
+    {
+      "id": 205,
+      "parentId": 202,
+      "goodsNameAz": "Qonaq mebeli",
+      "goodsNameEn": "Living room furniture",
+      "goodsNameRu": "гостиная мебель",
+      "isDeleted": false
+    },
+    {
+      "id": 206,
+      "parentId": 202,
+      "goodsNameAz": "Mətbəx mebeli",
+      "goodsNameEn": "Kitchen furniture",
+      "goodsNameRu": "кухонная мебель",
+      "isDeleted": false
+    },
+    {
+      "id": 207,
+      "parentId": 202,
+      "goodsNameAz": "Hamam akseusarları",
+      "goodsNameEn": "Bathroom accessories",
+      "goodsNameRu": "ванные аксессуары",
+      "isDeleted": false
+    },
+    {
+      "id": 208,
+      "parentId": 202,
+      "goodsNameAz": "Divar kağızı",
+      "goodsNameEn": "Wallpapers",
+      "goodsNameRu": "обои",
+      "isDeleted": false
+    },
+    {
+      "id": 209,
+      "parentId": 202,
+      "goodsNameAz": "Saatlar",
+      "goodsNameEn": "Clocks",
+      "goodsNameRu": "часы",
+      "isDeleted": false
+    },
+    {
+      "id": 210,
+      "parentId": 202,
+      "goodsNameAz": "Divar üçün tablo ",
+      "goodsNameEn": "Wall painting",
+      "goodsNameRu": "настенная картина",
+      "isDeleted": false
+    },
+    {
+      "id": 211,
+      "parentId": 202,
+      "goodsNameAz": "Plastik mətbəx əşyaları",
+      "goodsNameEn": "Plastic kitchen utensils",
+      "goodsNameRu": "пластиковые принадлежности для кухни",
+      "isDeleted": false
+    },
+    {
+      "id": 212,
+      "parentId": 202,
+      "goodsNameAz": "Metaldan mətbəx əşyaları",
+      "goodsNameEn": "Metal kitchen utensils",
+      "goodsNameRu": "принадлежности для кухни из металлов",
+      "isDeleted": false
+    },
+    {
+      "id": 213,
+      "parentId": 202,
+      "goodsNameAz": "Şüşədən mətbəx əşyaları",
+      "goodsNameEn": "Glass kitchen utensils",
+      "goodsNameRu": "принадлежности для кухни из стекла",
+      "isDeleted": false
+    },
+    {
+      "id": 214,
+      "parentId": 0,
+      "goodsNameAz": "İdman alətləri",
+      "goodsNameEn": "Sports equipment",
+      "goodsNameRu": "Спортивные принадлежности",
+      "isDeleted": false
+    },
+    {
+      "id": 215,
+      "parentId": 214,
+      "goodsNameAz": "Trenajor alətlər",
+      "goodsNameEn": "Exercise equipment",
+      "goodsNameRu": "принадлежности для тренажеров",
+      "isDeleted": false
+    },
+    {
+      "id": 216,
+      "parentId": 214,
+      "goodsNameAz": "Toplar (futbol,voleybol, tennis,qolf və s. üçün)",
+      "goodsNameEn": "Balls(footballl,volleyball, tennis,golf, etc.)",
+      "goodsNameRu": "мячи(футбольные,войлебольные, теннисные,мяч для гольфа и др.)",
+      "isDeleted": false
+    },
+    {
+      "id": 217,
+      "parentId": 214,
+      "goodsNameAz": "Çantalar",
+      "goodsNameEn": "Bags",
+      "goodsNameRu": "сумки",
+      "isDeleted": false
+    },
+    {
+      "id": 218,
+      "parentId": 214,
+      "goodsNameAz": "İdmanda istifadə olunan yastıqcıqlar (dirsək, diz, sinə, qollar, ayaqlar üçün  və s.)",
+      "goodsNameEn": "Pillows used in sports (for elbows, knees, chest, arms, legs, etc)",
+      "goodsNameRu": "Подушки, используемые в спорте (для локтей, колен, груди, рук, ног и т. д.) Наколенники, нарукавники и т.д",
+      "isDeleted": false
+    },
+    {
+      "id": 219,
+      "parentId": 214,
+      "goodsNameAz": "Baş-üz üçün qoruyucular (kaska, dəbilqə, başlıq  və s.)",
+      "goodsNameEn": "Head-face protectors (helmet,hood, etc)",
+      "goodsNameRu": "Защита головы (шлем, капюшон и т. Д.)",
+      "isDeleted": false
+    },
+    {
+      "id": 220,
+      "parentId": 214,
+      "goodsNameAz": "Əlcəklər ",
+      "goodsNameEn": "Gloves",
+      "goodsNameRu": "перчатки",
+      "isDeleted": false
+    },
+    {
+      "id": 221,
+      "parentId": 214,
+      "goodsNameAz": "Qoruyucu sarğılar (əl,ayaq,bilək, qol, diz və s)",
+      "goodsNameEn": "Protective bandages (hand, foot, wrist, arm, knee, etc)",
+      "goodsNameRu": "Защитные повязки (кисть, стопа, запястье, рука, колено и т. Д.)",
+      "isDeleted": false
+    },
+    {
+      "id": 222,
+      "parentId": 214,
+      "goodsNameAz": "Çubuqlar (qolf, xokkey və s.)",
+      "goodsNameEn": "Sticks (golf, hockey, etc.)",
+      "goodsNameRu": "Клюшки (гольф, хоккей и др.)",
+      "isDeleted": false
+    },
+    {
+      "id": 223,
+      "parentId": 214,
+      "goodsNameAz": "Raketka (tennis,badminton və s.)",
+      "goodsNameEn": "Racket (tennis, badminton, etc.)",
+      "goodsNameRu": "ракетки (теннисные,для бадминтона и др.)",
+      "isDeleted": false
+    },
+    {
+      "id": 224,
+      "parentId": 214,
+      "goodsNameAz": "İdman üçün silahlar (paint ball, atıcılıq və s )",
+      "goodsNameEn": "Weapons for sports (paint ball, shooting, etc.)",
+      "goodsNameRu": "Оружие для спорта (пейнтбол, стрелковое и др.)",
+      "isDeleted": false
+    },
+    {
+      "id": 225,
+      "parentId": 214,
+      "goodsNameAz": "İdman silahları üçün toplar-güllələr (paint ball, atıcılıq və s )",
+      "goodsNameEn": "Balls for sports weapons (paint ball, shooting, etc.)",
+      "goodsNameRu": "шары для спортивного оружия (пейнтбол, стрелковое и др.)",
+      "isDeleted": false
+    },
+    {
+      "id": 226,
+      "parentId": 214,
+      "goodsNameAz": "Seqveylər və elektrik skuterlər",
+      "goodsNameEn": "Sequins and electric scooters",
+      "goodsNameRu": "Segway и электро скутера",
+      "isDeleted": false
+    },
+    {
+      "id": 227,
+      "parentId": 214,
+      "goodsNameAz": "Diyircəkli konki, xizək,skateboard,snowboard və s",
+      "goodsNameEn": "Roller skates, sledge,skateboard,snowboard, etc",
+      "goodsNameRu": "Роликовые коньки, санки, скейтборд, сноуборд и т. Д.",
+      "isDeleted": false
+    },
+    {
+      "id": 228,
+      "parentId": 214,
+      "goodsNameAz": "Oxçuluq üçün ləvazimatlar",
+      "goodsNameEn": "Archery equipments",
+      "goodsNameRu": "Снаряжение для стрельбы из лука",
+      "isDeleted": false
+    },
+    {
+      "id": 528,
+      "parentId": 524,
+      "goodsNameAz": "Simli və ipli heyvan oyuncaqları və pişik ağacları",
+      "goodsNameEn": "Pet toys and cat trees, of string and rop",
+      "goodsNameRu": "Игрушки домашних животных и кошачьи елки из веревки и веревки",
+      "isDeleted": false
+    },
+    {
+      "id": 529,
+      "parentId": 0,
+      "goodsNameAz": "Süfrə və mətbəx əşyaları",
+      "goodsNameEn": "Tableware and kitchenware ",
+      "goodsNameRu": "Посуда и кухонные принадлежности",
+      "isDeleted": false
+    },
+    {
+      "id": 530,
+      "parentId": 529,
+      "goodsNameAz": "Plastik süfrə və mətbəx əşyaları da birdəfəlik",
+      "goodsNameEn": "Plastik süfrə və mətbəx əşyaları da birdəfəlik",
+      "goodsNameRu": "Пластиковая посуда и кухонные принадлежности, также одноразовые",
+      "isDeleted": false
+    },
+    {
+      "id": 531,
+      "parentId": 529,
+      "goodsNameAz": "Taxta süfrə və ya mətbəx əşyaları",
+      "goodsNameEn": "Wooden tableware or kitchenware",
+      "goodsNameRu": "Деревянная посуда или кухонные принадлежности",
+      "isDeleted": false
+    },
+    {
+      "id": 532,
+      "parentId": 529,
+      "goodsNameAz": "Adi dulusçuluq qabları və mətbəx əşyaları",
+      "goodsNameEn": "Tableware and kitchenware of common pottery",
+      "goodsNameRu": "Посуда и посуда из обычной керамики",
+      "isDeleted": false
+    },
+    {
+      "id": 533,
+      "parentId": 529,
+      "goodsNameAz": "Seramik süfrə və ya mətbəx ləvazimatları",
+      "goodsNameEn": "Ceramic tableware or kitchenware",
+      "goodsNameRu": "Керамическая посуда или кухонные принадлежности",
+      "isDeleted": false
+    },
+    {
+      "id": 534,
+      "parentId": 529,
+      "goodsNameAz": "Porselen və ya çini süfrə və ya ev əşyaları",
+      "goodsNameEn": "Tableware or kitcheware of porcelain or china",
+      "goodsNameRu": "Посуда или кухонные принадлежности из фарфора или фарфора",
+      "isDeleted": false
+    },
+    {
+      "id": 535,
+      "parentId": 529,
+      "goodsNameAz": "Masa və ya mətbəx üçün istifadə olunan şüşə qablar",
+      "goodsNameEn": "Glassware used for table or kitchen",
+      "goodsNameRu": "Стеклянная посуда используется для стола или кухни",
+      "isDeleted": false
+    },
+    {
+      "id": 536,
+      "parentId": 529,
+      "goodsNameAz": "Masa örtükləri və peçetələr",
+      "goodsNameEn": "Tablecloths and serviettes of paper",
+      "goodsNameRu": "Скатерти и салфетки из бумаги",
+      "isDeleted": false
+    },
+    {
+      "id": 537,
+      "parentId": 529,
+      "goodsNameAz": "Mətbəx bıçaqları, masa  bıçaqları",
+      "goodsNameEn": "Kitchen knives, Table knives",
+      "goodsNameRu": "Ножи кухонные,  Столовые ножи",
+      "isDeleted": false
+    },
+    {
+      "id": 538,
+      "parentId": 529,
+      "goodsNameAz": "Qazan, tava",
+      "goodsNameEn": null,
+      "goodsNameRu": null,
+      "isDeleted": false
+    }
+  ]

@@ -1,0 +1,828 @@
+<div id="wrapper">
+  <app-sidebar></app-sidebar>
+  <div class="d-flex flex-column" id="content-wrapper">
+    <!-- Main Content -->
+    <div id="content">
+      <app-dashboard-nav></app-dashboard-nav>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="card-body">
+            <div class="text-right">
+              <button (click)="openLg(paymentModal)" class="btn btn-outline-primary btn-sm mr-1">
+                <i class="fa fa-money"></i> Ödəniş et
+              </button>
+              <button (click)="open(declaration_modal)" class="btn btn-outline-primary btn-sm mr-1">
+                <i class="fa fa-archive"></i> Bəyan et
+              </button>
+            </div>
+            <hr />
+            <div *ngIf="tracks.length !== 0; else notTracks">
+              <div class="row">
+                <div *ngFor="let track of tracks" [attr.class]="
+                    tracks.indexOf(track) > 3
+                      ? 'col-lg-3 mt-lg-4 mt-2'
+                      : 'col-lg-3 mt-lg-2 mt-2'
+                  ">
+                  <div class="card border-left-primary shadow h-100 pb-0 user-card">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">
+                        <button (click)="
+                            open(getPackageByTrackingNumberModal);
+                            package = track
+                          " class="btn btn-outline-warning btn-sm" style="
+                            position: absolute;
+                            right: 82px;
+                            top: 12px;
+                            cursor: pointer;
+                            padding: 2px 6px 2px 6px;
+                            border-radius: 5px;
+                          ">
+                          <i class="fa fa-calendar" style="font-size: 12px"></i>
+                        </button>
+                        <button (click)="openForUpdate(declarationUpdateModal, track)" *ngIf="
+                            track.current_state.toString() === 'Declarations' ||
+                            track.current_state.toString() === 'NotCompleted'
+                          " class="btn btn-outline-info btn-sm" style="
+                            position: absolute;
+                            right: 50px;
+                            top: 12px;
+                            cursor: pointer;
+                            padding: 2px 6px 2px 6px;
+                            border-radius: 5px;
+                          ">
+                          <i class="fa fa-edit" style="font-size: 12px"></i>
+                        </button>
+                        <button (click)="removeTrack(track.id)" *ngIf="
+                            track.current_state.toString() === 'Declarations'
+                          " class="btn btn-outline-danger btn-sm" style="
+                            position: absolute;
+                            right: 20px;
+                            top: 12px;
+                            cursor: pointer;
+                            padding: 2px 6px 2px 6px;
+                            border-radius: 5px;
+                          ">
+                          <i class="fa fa-times"></i>
+                        </button>
+                        <span *ngIf="
+                            track.current_state.toString() === 'Declarations'
+                          ">Bəyan edilib</span>
+                        <span *ngIf="
+                            track.current_state.toString() === 'NotCompleted'
+                          ">Tamamlanmayıb <br /><span style="color: red">(Bəyan olunmalıdır)</span></span>
+                        <span *ngIf="
+                            track.current_state.toString() === 'ExternalStorage'
+                          ">Xarici anbar</span>
+                        <span *ngIf="track.current_state.toString() === 'OnWay'">Yoldadır</span>
+                        <span *ngIf="
+                            track.current_state.toString() ===
+                            'CustomsClearance'
+                          ">Gömrük yoxlanışı</span>
+                        <span *ngIf="
+                            track.current_state.toString() === 'InternalStorage'
+                          ">Daxili anbar</span>
+                        <span *ngIf="track.current_state.toString() === 'Delivered'">Təhvil verilib</span>
+                        <span *ngIf="track.current_state.toString() === 'Deleted'">Ləvğ edilib</span>
+                      </h6>
+                    </div>
+                    <div class="card-body">
+                      <a href="https://play.google.com/store/apps/details?id=com.crocusoft.smartcustoms">
+                        <button class="btn btn-outline-danger mb-2" *ngIf="
+                            track.current_state.toString() === 'NotCompleted'
+                          ">
+                          SmartCustoms da bəyan edin<br />
+                        </button>
+                      </a>
+                      <hr style="margin: 1px" *ngIf="
+                          track.current_state.toString() === 'NotCompleted'
+                        " />
+                      <small class="text-primary">Tracking
+                        nömrəsi<br /></small>
+                      {{ track.tracking_number }}
+                      <i class="bi bi-clipboard pointer" aria-hidden="true"
+                        [copy-clipboard]="track.tracking_number"></i>
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Haradan<br /></small>
+                          {{ track.shipping_from.toString() }}
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Haraya<br /></small>
+                          {{ track.shipping_to.toString() }}
+                        </div>
+                      </div>
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Mağaza adı<br /></small>
+                          {{ track.shop }}
+                          <i class="bi bi-clipboard pointer" aria-hidden="true" [copy-clipboard]="track.shop"></i>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Tarix<br /></small>
+                          {{
+                          track.created_date
+                          | date: "dd MMMM yyyy":"+4":"az-Latn"
+                          }}
+                        </div>
+                      </div>
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Invoice dəyəri<br /></small>
+                          <span *ngIf="track.currency === 'TRY'">
+                            {{ track.price | currency: "₺" }} | ( {{ (track.price / usd_try ) | currency }} )</span>
+                          <span *ngIf="track.currency === 'USD'">
+                            {{ track.price | currency }}</span>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Çəki<br /></small>
+                          <span *ngIf="track.weight; else notWeight">
+                            {{ track.weight }}</span>
+                          <ng-template #notWeight> --</ng-template>
+                          kq
+                        </div>
+                      </div>
+                      <hr style="margin: 1px" />
+                      <small class="text-primary">Məhsul üst kateqoriyası<br /></small>
+                      <span>{{ getCategoryName(track.category_id) }}</span>
+                      <hr style="margin: 1px" />
+                      <small class="text-primary">Məhsul alt kateqoriyası<br /></small>
+                      <span>{{ getCategoryName(track.category_subId) }}</span>
+
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Daşınma haqqı<br /></small>
+                          <span *ngIf="track.amount; else notAmount">
+                            {{ track.amount | currency }}</span>
+                          <ng-template #notAmount> $-.--</ng-template>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Sayı<br /></small>
+                          <span *ngIf="track.quantity">
+                            {{ track.quantity }}</span>
+                        </div>
+                      </div>
+                      <hr style="margin: 1px" />
+                      <small class="text-primary">Malın gömrük dəyəri (Invoice dəyəri + Daşınma haqqı)<br /></small>
+                      <span *ngIf="track.currency === 'TRY'">{{ (track.amount + (track.price / usd_try)) | currency
+                        }}</span>
+                      <span *ngIf="track.currency === 'USD'">{{ (track.amount + track.price) | currency }}</span>
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Əlavə qeydlər<br /></small>
+                          <span>{{ track.comment }}</span>
+                        </div>
+                        <div class="col-6">
+                          <span *ngIf="track.is_paid" class="btn btn-success btn-sm mt-2" translate><i
+                              class="fa fa-money"></i> Ödənilib
+                          </span>
+                          <button (click)="openLg(paymentModal)" *ngIf="!track.is_paid"
+                            class="btn btn-success btn-sm mt-2" translate>
+                            <i class="fa fa-money"></i> Ödə
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ng-template #notTracks>
+              <div class="alert alert-primary">
+                Hələki heçbir sifariş verməmisiniz. Sifariş vermək üçün zəhmət
+                olmasa sağ küncdəki Bəyan et düyməsini sıxın.
+              </div>
+            </ng-template>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal to update package -->
+  <ng-template #declarationUpdateModal let-modal>
+    <form #packageUpdateForm="ngForm" (ngSubmit)="updateTrack(packageUpdateForm)">
+      <div class="modal-header">
+        <h5 class="modal-title text-primary" id="package-update-modal-basic-title">
+          <i class="fa fa-archive"></i>
+          Bəyannamə tənzimlə
+        </h5>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="tracking_number_to_update">Tracking nömrəsi *</label>
+          <input #tracking_number_to_update="ngModel" [(ngModel)]="declarationUpdate.tracking_number"
+            [attr.disabled]="true" class="form-control form-control-sm" id="tracking_number_to_update"
+            name="tracking_number_to_update" placeholder="Daşınma izləmə kodu" required />
+          <small *ngIf="
+              tracking_number_to_update.invalid &&
+              (tracking_number_to_update.dirty ||
+                tracking_number_to_update.touched)
+            " class="form-text text-danger">
+            Tracking nömrəsini düzgün qeyd edin.
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="shop_to_update">Mağaza adı *</label>
+          <input #shop_to_update="ngModel" [(ngModel)]="declarationUpdate.shop" class="form-control form-control-sm"
+            id="shop_to_update" name="shop_to_update" pattern="[a-zA-Z0-9. ]*" placeholder="Göndərici firma adı"
+            required />
+          <small *ngIf="
+              shop_to_update.invalid &&
+              (shop_to_update.dirty || shop_to_update.touched)
+            " class="form-text text-danger">
+            Mağaza adını düzgün qeyd edin (İngilis dili hərfləri ilə).
+          </small>
+        </div>
+        <!-- <div class="form-row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="shipping_from_to_update">Çıxış ölkəsi *</label>
+              <select #shipping_from_to_update="ngModel" [(ngModel)]="declarationUpdate.shipping_from"
+                class="form-control form-control-sm selectpicker" id="shipping_from_to_update"
+                name="shipping_from_to_update" required>
+                <option *ngFor="let country of countryData | slice: 0; let i = index"
+                  [attr.disabled]="country !== 'Turkey' ? true : null" [attr.value]="country">
+                  {{ country }}
+                </option>
+              </select>
+              <small *ngIf="
+                  shipping_from_to_update.invalid &&
+                  (shipping_from_to_update.dirty ||
+                    shipping_from_to_update.touched)
+                " class="form-text text-danger">
+                Çıxış ölkəsini düzgün qeyd edin.
+              </small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="shipping_to_to_update">Giriş ölkəsi *</label>
+              <select #shipping_to_to_update="ngModel" [(ngModel)]="declarationUpdate.shipping_to"
+                class="form-control form-control-sm selectpicker" id="shipping_to_to_update"
+                name="shipping_to_to_update" required>
+                <option *ngFor="let country of countryData | slice: 0; let i = index"
+                  [attr.disabled]="country !== 'Azerbaijan' ? true : null" [attr.value]="country">
+                  {{ country }}
+                </option>
+              </select>
+              <small *ngIf="
+                  shipping_to_to_update.invalid &&
+                  (shipping_to_to_update.dirty || shipping_to_to_update.touched)
+                " class="form-text text-danger">
+                Giriş ölkəsini düzgün qeyd edin.
+              </small>
+            </div>
+          </div>
+        </div> -->
+        <div class="form-group">
+          <ng-select [(ngModel)]="declarationUpdate.category_id" [ngModelOptions]="{standalone: true}"
+            (change)="filterCategory(declarationUpdate.category_id)" name="category_id_to_update"
+            #category_id_to_update="ngModel">
+            <ng-option *ngFor="let category of items" [value]="category.id">
+              {{category.goodsNameAz}}</ng-option>
+          </ng-select>
+
+          <small *ngIf="
+            category_id_to_update.invalid &&
+            (category_id_to_update.dirty || category_id_to_update.touched)
+          " class="form-text text-danger">
+            Məhsul kateqoriyasını düzgün qeyd edin.
+          </small>
+        </div>
+
+        <div class="form-group">
+          <ng-select [(ngModel)]="declarationUpdate.category_subId" [ngModelOptions]="{standalone: true}"
+            name="category_subId_to_update" name="category_subId_to_update" #category_subId_to_update="ngModel">
+            <ng-option *ngFor="let subCategory of temp" [value]="subCategory.id">{{subCategory.goodsNameAz}}</ng-option>
+          </ng-select>
+
+          <small *ngIf="
+            category_subId_to_update.invalid &&
+            (category_subId_to_update.dirty || category_subId_to_update.touched)
+          " class="form-text text-danger">
+            Məhsul alt kateqoriyasını düzgün qeyd edin.
+          </small>
+        </div>
+        <div class="form-row">
+          <div class="col-4">
+            <div class="form-group">
+              <label for="price_to_update">Məhsul qiyməti *</label>
+              <input #price_to_update="ngModel" [(ngModel)]="declarationUpdate.price"
+                class="form-control form-control-sm" id="price_to_update" name="price_to_update" pattern="(^\d*\.?\d+$)"
+                placeholder="Faktura dəyəri" required type="number" />
+              <small *ngIf="
+                  price_to_update.invalid &&
+                  (price_to_update.dirty || price_to_update.touched)
+                " class="form-text text-danger">
+                Düzgün qeyd edin.
+              </small>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label for="currency_to_update">Valyuta</label>
+              <select #currency_to_update="ngModel" [(ngModel)]="declarationUpdate.currency"
+                class="form-control form-control-sm" id="currency_to_update" name="currency_to_update" required>
+                <option value="USD">USD</option>
+                <option value="TRY">TRY</option>
+              </select>
+              <small *ngIf="
+                  currency_to_update.invalid &&
+                  (currency_to_update.dirty || currency_to_update.touched)
+                " class="form-text text-danger">
+                Qeyd edin.
+              </small>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="form-group">
+              <label for="quantity_to_update">Ədəd *</label>
+              <input #quantity_to_update="ngModel" [(ngModel)]="declarationUpdate.quantity"
+                class="form-control form-control-sm" id="quantity_to_update" name="quantity_to_update"
+                pattern="(^\d*\.?\d+$)" placeholder="Rəqəm ilə" required type="number" />
+              <small *ngIf="
+                  quantity_to_update.invalid &&
+                  (quantity_to_update.dirty || quantity_to_update.touched)
+                " class="form-text text-danger">
+                Düzgün qeyd edin.
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="comment_to_update">Əlavə qeydlər</label>
+          <textarea #comment_to_update="ngModel" [(ngModel)]="declarationUpdate.comment"
+            class="form-control form-control-sm" id="comment_to_update" name="comment_to_update" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <div class="custom-file">
+            <input (change)="fileChange($event)" accept=".pdf,.jpg,.jpeg,.png" class="custom-file-input"
+              id="invoice_to_update" name="invoice_to_update" required type="file" />
+            <label class="custom-file-label" data-browse="Browse" for="invoice_to_update" style="border-radius: 0">
+              Invoice *
+            </label>
+          </div>
+          <a href="{{ declarationUpdate.invoice_path }}" target="_blank">Invoice</a>
+        </div>
+        <div class="form-group">
+          <div class="custom-control custom-checkbox mt-4">
+            <input #is_liquid="ngModel" [(ngModel)]="declarationUpdate.is_liquid" class="custom-control-input"
+              id="is_liquid" name="send_email" type="checkbox" />
+            <label class="custom-control-label" for="is_liquid"><i class="fa fa-tint" style="color: #00f"></i>
+              Liquid</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button (click)="modal.dismiss()" aria-label="Close" class="btn btn-outline-primary btn-sm" type="button">
+          <span>Bağla</span>
+        </button>
+        <button [disabled]="
+            packageUpdateForm.invalid
+          " class="btn btn-primary btn-sm" type="submit">
+          <span>Təsdiqlə</span>
+        </button>
+      </div>
+    </form>
+  </ng-template>
+
+  <!-- Modal to declare package -->
+  <ng-template #declaration_modal let-modal>
+    <form #packageForm="ngForm" (ngSubmit)="addTrack(packageForm)">
+      <div class="modal-header">
+        <h5 class="modal-title text-primary" id="package-modal-basic-title">
+          <i class="fa fa-archive"></i>
+          Bəyan et
+        </h5>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="tracking_number">Tracking nömrəsi *</label>
+          <input #tracking_number="ngModel" [(ngModel)]="declaration.tracking_number"
+            class="form-control form-control-sm" id="tracking_number" name="tracking_number"
+            placeholder="Daşınma izləmə kodu" required />
+          <small *ngIf="
+              tracking_number.invalid &&
+              (tracking_number.dirty || tracking_number.touched)
+            " class="form-text text-danger">
+            Tracking nömrəsini düzgün qeyd edin.
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="shop">Mağaza adı *</label>
+          <input #shop="ngModel" [(ngModel)]="declaration.shop" class="form-control form-control-sm" id="shop"
+            name="shop" pattern="[a-zA-Z0-9. ]*" placeholder="Göndərici firma adı" required />
+          <small *ngIf="shop.invalid && (shop.dirty || shop.touched)" class="form-text text-danger">
+            Mağaza adını düzgün qeyd edin (İngilis dili hərfləri ilə).
+          </small>
+        </div>
+        <!-- <div class="form-row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="shipping_from">Çıxış ölkəsi *</label>
+              <select #shipping_from="ngModel" [(ngModel)]="declaration.shipping_from"
+                class="form-control form-control-sm selectpicker" id="shipping_from" name="shipping_from" required>
+                <option *ngFor="let country of countryData | slice: 0; let i = index"
+                  [attr.disabled]="country !== 'Turkey' ? true : null" [attr.value]="country">
+                  {{ country }}
+                </option>
+              </select>
+              <small *ngIf="
+                  shipping_from.invalid &&
+                  (shipping_from.dirty || shipping_from.touched)
+                " class="form-text text-danger">
+                Çıxış ölkəsini düzgün qeyd edin.
+              </small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="shipping_to">Giriş ölkəsi *</label>
+              <select #shipping_to="ngModel" [(ngModel)]="declaration.shipping_to"
+                class="form-control form-control-sm selectpicker" id="shipping_to" name="shipping_to" required>
+                <option *ngFor="let country of countryData | slice: 0; let i = index"
+                  [attr.disabled]="country !== 'Azerbaijan' ? true : null" [attr.value]="country">
+                  {{ country }}
+                </option>
+              </select>
+              <small *ngIf="
+                  shipping_to.invalid &&
+                  (shipping_to.dirty || shipping_to.touched)
+                " class="form-text text-danger">
+                Giriş ölkəsini düzgün qeyd edin.
+              </small>
+            </div>
+          </div>
+        </div> -->
+        <div class="form-group">
+          <ng-select [(ngModel)]="declaration.category_id" [ngModelOptions]="{standalone: true}"
+            (change)="filterCategory(declaration.category_id)" name="category_id" #category_id="ngModel">
+            <ng-option *ngFor="let category of items" [value]="category.id">
+              {{category.goodsNameAz}}</ng-option>
+          </ng-select>
+
+          <small *ngIf="
+            category_id.invalid &&
+            (category_id.dirty || category_id.touched)
+          " class="form-text text-danger">
+            Məhsul kateqoriyasını düzgün qeyd edin.
+          </small>
+        </div>
+
+        <div class="form-group">
+          <ng-select [(ngModel)]="declaration.category_subId" [ngModelOptions]="{standalone: true}"
+            name="category_subId" name="category_subId" #category_subId="ngModel">
+            <ng-option *ngFor="let subCategory of temp" [value]="subCategory.id">{{subCategory.goodsNameAz}}</ng-option>
+          </ng-select>
+
+          <small *ngIf="
+            category_subId.invalid &&
+            (category_subId.dirty || category_subId.touched)
+          " class="form-text text-danger">
+            Məhsul alt kateqoriyasını düzgün qeyd edin.
+          </small>
+        </div>
+
+
+        <div class="form-row">
+          <div class="col-4">
+            <div class="form-group">
+              <label for="price">Məhsul qiyməti *</label>
+              <input #price="ngModel" [(ngModel)]="declaration.price" class="form-control form-control-sm" id="price"
+                name="price" pattern="(^\d*\.?\d+$)" placeholder="Faktura dəyəri" required type="number" />
+              <small *ngIf="price.invalid && (price.dirty || price.touched)" class="form-text text-danger">
+                Düzgün qeyd edin.
+              </small>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="form-group">
+              <label for="currency">Valyuta</label>
+              <select #currency="ngModel" [(ngModel)]="declaration.currency" class="form-control form-control-sm"
+                id="currency" name="currency" required>
+                <option value="USD">USD</option>
+                <option value="TRY">TRY</option>
+              </select>
+              <small *ngIf="currency.invalid && (currency.dirty || currency.touched)" class="form-text text-danger">
+                Qeyd edin.
+              </small>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="form-group">
+              <label for="quantity">Ədəd *</label>
+              <input #quantity="ngModel" [(ngModel)]="declaration.quantity" class="form-control form-control-sm"
+                id="quantity" name="quantity" pattern="(^\d*\.?\d+$)" placeholder="Rəqəm ilə" required type="number" />
+              <small *ngIf="quantity.invalid && (quantity.dirty || quantity.touched)" class="form-text text-danger">
+                Düzgün qeyd edin.
+              </small>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="comment">Əlavə qeydlər</label>
+          <textarea #comment="ngModel" [(ngModel)]="declaration.comment" class="form-control form-control-sm"
+            id="comment" name="comment" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <div class="custom-file">
+            <input (change)="fileChange($event)" accept=".pdf,.jpg,.jpeg,.png" class="custom-file-input" id="invoice"
+              name="invoice" type="file" />
+            <label class="custom-file-label" data-browse="Axtar" for="invoice" style="border-radius: 0">
+              Faktura seç *
+            </label>
+            <!-- <small *ngIf="invoice.invalid && (invoice.dirty || invoice.touched)" class="form-text text-danger">
+              Düzgün qeyd edin.
+            </small> -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button (click)="modal.dismiss()" aria-label="Close" class="btn btn-outline-primary btn-sm" type="button">
+          <span>Bağla</span>
+        </button>
+        <button [disabled]="packageForm.invalid" class="btn btn-primary btn-sm" type="submit">
+          <span>Təsdiqlə</span>
+        </button>
+      </div>
+    </form>
+  </ng-template>
+</div>
+
+<ng-template #getPackageByTrackingNumberModal let-modal>
+  <div class="modal-header" translate>Bağlama hərəkətləri</div>
+  <div class="modal-body">
+    <span translate>Bağlama</span> : #{{ package.id }} <br />
+    <span translate>Trackin nömrəsi</span> : {{ package.tracking_number }}
+    <br />
+    <span translate>Tarix</span> : {{ package.created_date | date }}
+    <hr />
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered table-striped table-hover">
+        <caption translate>
+          Bağlama hərəkətləri
+        </caption>
+        <thead class="bg-primary text-white">
+          <tr>
+            <th scope="col" translate>Barkod</th>
+            <th scope="col" translate>Status</th>
+            <th scope="col" translate>Tarix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let state of package.states">
+            <td>{{ package.barcode }}</td>
+            <td>
+              <span *ngIf="state.state.toString() === 'Declarations'">Bəyan edilib</span>
+              <span *ngIf="state.state.toString() === 'NotCompleted'">Tamamlanmayıb</span>
+              <span *ngIf="state.state.toString() === 'ExternalStorage'">Xarici anbar</span>
+              <span *ngIf="state.state.toString() === 'OnWay'">Yoldadır</span>
+              <span *ngIf="state.state.toString() === 'CustomsClearance'">Gömrük yoxlanışı</span>
+              <span *ngIf="state.state.toString() === 'InternalStorage'">Daxili anbar</span>
+              <span *ngIf="state.state.toString() === 'Delivered'">Təhvil verilib</span>
+              <span *ngIf="state.state.toString() === 'Deleted'">Ləvğ edilib</span>
+            </td>
+            <td>{{ state.created_date | date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button (click)="modal.dismiss()" aria-label="Close" class="btn btn-outline-primary btn-sm" type="button">
+      <span>Bağla</span>
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #paymentModal let-modal>
+  <form #paymentForm="ngForm" (ngSubmit)="pay(paymentForm)">
+    <div class="modal-header">
+      <h5 class="modal-title text-primary">
+        <i class="fa fa-money"></i>
+        Ödəniş et
+      </h5>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="alert alert-primary">
+            <i class="fa fa-info-circle"></i>
+            <small>
+              Aşağıda daşınma haqqları hesablanmış və ödəniş gözləyən
+              bağlamalarınızın trekinq nömrələri list edilmişdir. Ödəniş etmək
+              istədiyiniz bağlamaların trekinq nömrələrini seçməklə və lazimi
+              xanaları doldurmaqla ödənişinizi tamamlaya bilərsiniz.
+            </small>
+          </div>
+          <hr />
+          <div class="form-group">
+            <label for="tracking_numbers">Bağlamalar</label>
+            <select #tracking_numbers="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="selectedPackages"
+              class="form-control form-control-sm selectpicker" data-actions-box="true"
+              data-deselect-all-text="Seçimləri ləğv et" data-none-selected-text="Heç nə seçilmədi"
+              data-select-all-text="Hamısını seç" data-selected-text-format="count > 1" id="tracking_numbers" multiple
+              name="tracking_numbers" required>
+              <option *ngFor="let track of packagesForPayment" [attr.value]="track.tracking_number">
+                {{ track.tracking_number }}
+              </option>
+            </select>
+            <small *ngIf="
+                tracking_numbers.invalid &&
+                (tracking_numbers.dirty || tracking_numbers.touched)
+              " class="form-text text-danger">
+              Tracking nömrələrini qeyd edin.
+            </small>
+          </div>
+          <hr />
+          <div class="alert alert-primary" style="font-size: 14px">
+            USD Balans: <strong>{{ wallet | currency }}</strong>
+          </div>
+          <div class="custom-control custom-checkbox mt-2">
+            <input (change)="calculatePaymentAmount()" [(ngModel)]="via_wallet" class="custom-control-input"
+              id="via_wallet" name="via_wallet" type="checkbox" />
+            <label class="custom-control-label" for="via_wallet">Balansımdan istifadə etmək istəyirəm.</label>
+          </div>
+          <hr />
+        </div>
+        <div *ngIf="selectedPackages.length > 0" class="col-md-5" style="border-left: 1px solid #ddd">
+          <div *ngIf="paymentToSend.amount > 0">
+            <div class="form-row">
+              <div class="col-9">
+                <div class="form-group">
+                  <label>Məbləğ</label>
+                  <input [(ngModel)]="paymentToSend.amount" aria-label="Amount (to the nearest try)"
+                    class="form-control form-control-sm payment-processor-input font-weight-bold" id="amount"
+                    name="amount" type="hidden" />
+                  <h3 style="
+                      padding: 3px;
+                      border-radius: 5px;
+                      border: 1px solid #ddd;
+                    ">
+                    <strong>{{ paymentToSend.amount | currency }}</strong>
+                  </h3>
+                </div>
+              </div>
+              <div class="col-3">
+                <img *ngIf="isVisa" alt="Credit Card Logos" class="card-number-image" src="assets/img/visa.gif"
+                  title="Credit Card Logos" />
+                <img *ngIf="isMastercard" alt="Credit Card Logos" class="card-number-image"
+                  src="assets/img/mastercard.gif" title="Credit Card Logos" />
+              </div>
+            </div>
+            <!--            <div class="form-group">-->
+            <!--              <label for="card_number_1">Kart nömrəsi</label>-->
+            <!--              <div class="form-row">-->
+            <!--                <div class="col-3">-->
+            <!--                  <input #card_number_1="ngModel"-->
+            <!--                         (keyup)="cardNumber2Focus()"-->
+            <!--                         [(ngModel)]="paymentToSend.card_number_1"-->
+            <!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+            <!--                         id="card_number_1"-->
+            <!--                         maxlength="4"-->
+            <!--                         minlength="4"-->
+            <!--                         name="card_number_1"-->
+            <!--                         required>-->
+            <!--                </div>-->
+            <!--                <div class="col-3">-->
+            <!--                  <input #card_number_2="ngModel"-->
+            <!--                         (keyup)="cardNumber3Focus()"-->
+            <!--                         [(ngModel)]="paymentToSend.card_number_2"-->
+            <!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+            <!--                         id="card_number_2"-->
+            <!--                         maxlength="4"-->
+            <!--                         minlength="4"-->
+            <!--                         name="card_number_2"-->
+            <!--                         required>-->
+            <!--                </div>-->
+            <!--                <div class="col-3">-->
+            <!--                  <input #card_number_3="ngModel"-->
+            <!--                         (keyup)="cardNumber4Focus()"-->
+            <!--                         [(ngModel)]="paymentToSend.card_number_3"-->
+            <!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+            <!--                         id="card_number_3"-->
+            <!--                         maxlength="4"-->
+            <!--                         minlength="4"-->
+            <!--                         name="card_number_3"-->
+            <!--                         required>-->
+            <!--                </div>-->
+            <!--                <div class="col-3">-->
+            <!--                  <input #card_number_4="ngModel"-->
+            <!--                         [(ngModel)]="paymentToSend.card_number_4"-->
+            <!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+            <!--                         id="card_number_4"-->
+            <!--                         maxlength="4"-->
+            <!--                         minlength="4"-->
+            <!--                         name="card_number_4"-->
+            <!--                         required>-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--              <small *ngIf="-->
+            <!--                        (card_number_1.invalid && (card_number_1.dirty || card_number_1.touched)) ||-->
+            <!--                        (card_number_2.invalid && (card_number_2.dirty || card_number_2.touched)) ||-->
+            <!--                        (card_number_3.invalid && (card_number_3.dirty || card_number_3.touched)) ||-->
+            <!--                        (card_number_4.invalid && (card_number_4.dirty || card_number_4.touched))"-->
+            <!--                     class="text-danger">-->
+            <!--                Kart nömrəsini düzgün qeyd edin-->
+            <!--              </small>-->
+            <!--            </div>-->
+            <!--            <div class="form-group mt-3">-->
+            <!--              <div class="form-row">-->
+            <!--                <div class="col-5">-->
+            <!--                  <label for="month">Ay</label>-->
+            <!--                  <select #month="ngModel"-->
+            <!--                          [(ngModel)]="paymentToSend.month"-->
+            <!--                          class="form-control form-control-sm payment-processor-input"-->
+            <!--                          id="month"-->
+            <!--                          name="month"-->
+            <!--                          required>-->
+            <!--                    <option value="01">Yanvar</option>-->
+            <!--                    <option value="02">Fevral</option>-->
+            <!--                    <option value="03">Mart</option>-->
+            <!--                    <option value="04">Aprel</option>-->
+            <!--                    <option value="05">May</option>-->
+            <!--                    <option value="06">İyun</option>-->
+            <!--                    <option value="07">İyul</option>-->
+            <!--                    <option value="08">Avqust</option>-->
+            <!--                    <option value="09">Sentyabr</option>-->
+            <!--                    <option value="10">Oktyabr</option>-->
+            <!--                    <option value="11">Noyabr</option>-->
+            <!--                    <option value="12">Dekabr</option>-->
+            <!--                  </select>-->
+            <!--                  <small *ngIf="month.invalid && (month.dirty || month.touched)"-->
+            <!--                         class="text-danger">Qeyd edin</small>-->
+            <!--                </div>-->
+            <!--                <div class="col-5 offset-2">-->
+            <!--                  <label for="year">İl</label>-->
+            <!--                  <select #year="ngModel"-->
+            <!--                          [(ngModel)]="paymentToSend.year"-->
+            <!--                          class="form-control form-control-sm payment-processor-input"-->
+            <!--                          id="year"-->
+            <!--                          name="year"-->
+            <!--                          required>-->
+            <!--                    <option value="20">2020</option>-->
+            <!--                    <option value="21">2021</option>-->
+            <!--                    <option value="22">2022</option>-->
+            <!--                    <option value="23">2023</option>-->
+            <!--                    <option value="24">2024</option>-->
+            <!--                    <option value="25">2025</option>-->
+            <!--                    <option value="26">2026</option>-->
+            <!--                    <option value="27">2027</option>-->
+            <!--                    <option value="28">2028</option>-->
+            <!--                    <option value="29">2029</option>-->
+            <!--                    <option value="30">2030</option>-->
+            <!--                  </select>-->
+            <!--                  <small *ngIf="year.invalid && (year.dirty || year.touched)"-->
+            <!--                         class="text-danger">Qeyd edin</small>-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
+            <!--            <div class="form-group mt-3">-->
+            <!--              <div class="form-row">-->
+            <!--                <div class="col-5">-->
+            <!--                  <label for="cvv">CVC/CVV</label>-->
+            <!--                  <input #cvv="ngModel"-->
+            <!--                         [(ngModel)]="paymentToSend.cvv"-->
+            <!--                         class="form-control form-control-sm font-weight-bold payment-processor-input"-->
+            <!--                         id="cvv"-->
+            <!--                         maxlength="4"-->
+            <!--                         minlength="3"-->
+            <!--                         name="cvv"-->
+            <!--                         required>-->
+            <!--                  <small *ngIf="cvv.invalid && (cvv.dirty || cvv.touched)"-->
+            <!--                         class="text-danger">Qeyd edin</small>-->
+            <!--                </div>-->
+            <!--                <div class="col-7 align-self-end ">-->
+            <!--                  <img class="img-fluid align-text-bottom" src="../../../assets/img/3dsecure.png">-->
+            <!--                </div>-->
+            <!--              </div>-->
+            <!--            </div>-->
+          </div>
+          <div *ngIf="paymentToSend.amount <= 0">
+            <label>Qalıq balans</label>
+            <h3 style="padding: 3px; border-radius: 5px; border: 1px solid #ddd">
+              <strong>{{ this.paymentToSend.amount * -1 | currency }}</strong>
+            </h3>
+          </div>
+        </div>
+        <div *ngIf="selectedPackages.length === 0" class="col-md-5 align-self-end" style="border-left: 1px solid #ddd">
+          <img class="img-fluid" src="assets/img/credit_cards.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button (click)="modal.dismiss()" aria-label="Close" class="btn btn-outline-primary btn-sm" type="button">
+        <span>Bağla</span>
+      </button>
+      <button [disabled]="paymentForm.invalid" class="btn btn-primary btn-sm" type="submit">
+        <span>Təsdiqlə</span>
+      </button>
+    </div>
+  </form>
+</ng-template>

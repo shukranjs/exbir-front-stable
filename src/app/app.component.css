@@ -1,0 +1,111 @@
+@import url("https://use.typekit.net/uki0lkj.css");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&subset=cyrillic-ext,latin-ext');
+
+.fa {
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+#left {
+  float: left;
+}
+
+.main {
+  position: absolute;
+  height: 75px;
+  width: 220px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  z-index: 9999;
+}
+
+.main > .text {
+  width: 135px;
+  height: 75px;
+  position: relative;
+  background: white;
+  font-family: 'Quicksand', sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 21px;
+  background: white;
+}
+
+.text > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+
+.main > .spinner-animation {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  background-color: white;
+}
+
+.spinner-animation > .spinner {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: top left;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid white;
+  border-left: 3px solid #2C3E50;
+  border-right: 3px solid #2C3E50;
+  animation: spinner 1.2s linear infinite;
+}
+
+
+.spinner-animation > .inner-spin {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: top left;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid white;
+  border-top: 3px solid #F2A900;
+  border-bottom: 3px solid #F2A900;
+  animation: inner-spin 1.2s linear infinite;
+}
+
+.layer {
+  position: absolute;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  opacity: 0.8;
+}
+
+@keyframes inner-spin {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(-360deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,96 @@
+<section class="block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading mt-md-0 mt-3">
+          <h2 translate>login.heading</h2>
+        </div>
+        <div class="top-margin">
+          <div class="row">
+            <div class="col-md-6">
+              <form
+                #loginForm="ngForm"
+                (ngSubmit)="login(loginForm)"
+                class="form-signin"
+              >
+                <div class="text-center mb-4">
+                  <img
+                    alt=""
+                    class="mb-4"
+                    src="../../assets/img/favicon.png"
+                    width="81"
+                  />
+                  <h2 class="h3 mb-3 font-weight-normal" translate>login.heading</h2>
+                </div>
+
+                <div class="form-label-group">
+                  <input
+                    #email_address="ngModel"
+                    [(ngModel)]="loginUser.email_address"
+                    autofocus
+                    class="form-control"
+                    id="inputEmail"
+                    name="email_address"
+                    placeholder="Email ünvanı"
+                    required
+                    type="email"
+                  />
+                  <label for="inputEmail" translate>login.email_address</label>
+                  <div
+                    *ngIf="email_address.invalid && email_address.dirty"
+                    class="invalid"
+                    translate
+                  >
+                    login.required
+                  </div>
+                </div>
+                <div class="form-label-group">
+                  <input
+                    #password="ngModel"
+                    [(ngModel)]="loginUser.password"
+                    class="form-control"
+                    id="inputPassword"
+                    name="password"
+                    placeholder="Parol"
+                    required
+                    type="password"
+                  />
+                  <a class="password" routerLink="/reset-password"
+                  ><small translate>login.forgot_password</small></a
+                  >
+                  <label for="inputPassword" translate>login.password</label>
+                  <div *ngIf="password.invalid && password.dirty" class="invalid" translate>
+                    login.required
+                  </div>
+                </div>
+                <button
+                  [disabled]="!loginForm.valid"
+                  class="btn btn-lg btn-primary btn-block"
+                  translate
+                  type="submit"
+                >
+                  login.submit
+                </button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <img
+                alt="delivery"
+                class="img-fluid p-4"
+                src="../../assets/img/delivery.jpg"
+                style="margin-top: 1px;"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #content let-modal>
+  <img
+    src="../../assets/img/fin.jpg"
+    style="max-width: 500px; max-height:300px;"
+  />
+</ng-template>

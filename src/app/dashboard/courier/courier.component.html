@@ -1,0 +1,766 @@
+<div id="wrapper">
+  <app-sidebar></app-sidebar>
+  <div class="d-flex flex-column" id="content-wrapper">
+    <!-- Main Content -->
+    <div id="content">
+      <app-dashboard-nav></app-dashboard-nav>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="card-body">
+            <div class="text-right">
+              <!-- <button (click)="openLg(noPackageCourierModal, 'lg')" class="btn btn-outline-primary btn-md mr-1"
+                type="button">
+                <i class="fa fa-plus"></i> Rayonlar üçün kuryer istə
+              </button> -->
+              <button (click)="openLg(courierModal, 'lg')" class="btn btn-outline-primary btn-md mx-1" type="button">
+                <i class="fa fa-handshake-o"></i> Kuryer istə
+              </button>
+            </div>
+            <hr />
+            <div *ngIf="couriers.length !== 0; else notCouriers">
+              <div class="row">
+                <div *ngFor="let courier of couriers" [attr.class]="
+                    couriers.indexOf(courier) > 3
+                      ? 'col-lg-3 mt-lg-4 mt-2'
+                      : 'col-lg-3 mt-lg-2 mt-2'
+                  ">
+                  <div class="card border-left-primary shadow h-100 pb-0 user-card">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                      <h6 class="m-0 font-weight-bold text-primary">
+                        <span *ngIf="courier.current_state.toString() === 'Created'">Sorğu göndərildi</span>
+                        <span *ngIf="
+                            courier.current_state.toString() === 'PickedUp'
+                          ">Kuryer təyin edildi</span>
+
+                        <button (click)="open(courierStatesModel, courier)" class="btn btn-outline-warning btn-sm"
+                          style="
+                            position: absolute;
+                            right: 51px;
+                            top: 12px;
+                            cursor: pointer;
+                            padding: 2px 6px 2px 6px;
+                            border-radius: 5px;
+                          ">
+                          <i class="fa fa-calendar" style="font-size: 12px"></i>
+                        </button>
+                        <button (click)="open(packagesModal, courier)" class="btn btn-outline-info btn-sm" style="
+                            position: absolute;
+                            right: 20px;
+                            top: 12px;
+                            cursor: pointer;
+                            padding: 2px 6px 2px 6px;
+                            border-radius: 5px;
+                          ">
+                          <i class="fa fa-archive" style="font-size: 12px"></i>
+                        </button>
+                      </h6>
+                    </div>
+                    <div class="card-body">
+                      <small class="text-primary">ID<br /></small>
+                      {{ courier.id }}
+                      <!-- <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Ad<br /></small>
+                          <span>{{ courier.first_name }}</span>
+                          <span *ngIf="courier.first_name == undefined"
+                            >--</span
+                          >
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Soyad<br /></small>
+                          <span>{{ courier.last_name }}</span>
+                          <span *ngIf="courier.last_name == undefined">--</span>
+                        </div>
+                      </div> -->
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Məbləğ<br /></small>
+                          {{ courier.amount | currency }}
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Tarix<br /></small>
+                          {{
+                          courier.created_date
+                          | date: "dd MMMM yyyy":"+4":"az-Latn"
+                          }}
+                        </div>
+                      </div>
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Ödəniş (
+                            <span *ngIf="courier.payment_method === 'cash'">Nağd</span>
+                            <span *ngIf="courier.payment_method === 'wallet'">Balans</span>
+                            )<br /></small>
+                          <span *ngIf="courier.is_paid">Ödənilib</span>
+                          <span *ngIf="!courier.is_paid">Ödənilməyib</span>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Rayon<br /></small>
+                          <span> {{ courier.district }}</span>
+                        </div>
+                      </div>
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Qəsəbə<br /></small>
+                          <span>{{ courier.town }}</span>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Rayon<br /></small>
+                          <span>{{ courier.district }}</span>
+                        </div>
+                      </div>
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Küçə<br /></small>
+                          <span> {{ courier.street }}</span>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Ev<br /></small>
+                          <span>{{ courier.house }}</span>
+                        </div>
+                      </div>
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Alıcı əlaqə no<br /></small>
+                          <span> {{ courier.user_mobile_number }}</span>
+                        </div>
+                        <div class="col-6">
+                          <small class="text-primary">Kuryer əlaqə no<br /></small>
+                          <span>{{ courier.mobile_number }}</span>
+                          <span *ngIf="courier.mobile_number == undefined">--</span>
+                        </div>
+                      </div>
+                      <hr style="margin: 1px" />
+                      <div class="row">
+                        <div class="col-6">
+                          <small class="text-primary">Əlavə qeydlər<br /></small>
+                          <span> {{ courier.comment }}</span>
+                          <span *ngIf="courier.comment == undefined">--</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!--                  <div class="modal-footer">-->
+                    <!--                    <button class="btn btn-primary btn-sm btn-block" routerLink="/dashboard/tracks/222">Ətraflı</button>-->
+                    <!--                  </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ng-template #notCouriers>
+              <div class="alert alert-primary">
+                Hələki heçbir kuryer sifarişi verməmisiniz. Sifariş vermək üçün
+                zəhmət olmasa sağ küncdəki Kuryer istə düyməsini sıxın.
+              </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal to update courier -->
+<ng-template #courierUpdateModal let-modal>
+  <form #courierUpdateForm="ngForm" (ngSubmit)="updateCourier(courierUpdateForm)">
+    <div class="modal-header">
+      <h5 class="modal-title text-primary" id="modal-update-basic-title">
+        <i class="fa fa-handshake-o"></i>
+        Kuryer tənzimlə
+      </h5>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="addressForUpdate">Ünvan</label>
+        <textarea #addressForUpdate="ngModel" [(ngModel)]="courierForUpdate.address"
+          class="form-control form-control-sm" id="addressForUpdate" name="addressForUpdate" required
+          rows="4"></textarea>
+        <small *ngIf="
+            addressForUpdate.invalid &&
+            (addressForUpdate.dirty || addressForUpdate.touched)
+          " class="form-text text-danger">
+          Ünvanı düzgün qeyd edin.
+        </small>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button (click)="modal.dismiss()" aria-label="Close" class="btn btn-outline-primary btn-sm" type="button">
+        <span>Bağla</span>
+      </button>
+      <button [disabled]="courierUpdateForm.invalid" class="btn btn-primary btn-sm" type="submit">
+        <span>Təsdiqlə</span>
+      </button>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #noPackageCourierModal let-modal>
+  <form #courierForm="ngForm" (ngSubmit)="addNoPackageCourier(courierForm)">
+    <div class="modal-header">
+      <h5 class="modal-title text-primary" id="modal-basic-title">
+        <i class="fa fa-handshake-o"></i>
+        Rayonlar üçün kuryer istə
+      </h5>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <div class="col-md-7">
+          <div>
+            <div class="form-group">
+              <label for="tracking_numbers">Zonalar</label>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="custom-control custom-radio">
+                    <input #amount="ngModel" (change)="calculatePaymentAmountForNoPackage()"
+                      [(ngModel)]="courier.amount" class="custom-control-input" id="zone_exbir" name="amount" required
+                      type="radio" value="{{ 10 / usdToAzn }}" />
+                    <label class="custom-control-label" for="zone_exbir">Zona 1 | {{ 10 | currency: "₼" }}
+                    </label>
+                    <i [autoClose]="'outside'" class="fa fa-info-circle ml-1" ngbPopover="Gəncə, Tovuz"
+                      popoverTitle="Zona 1 | {{ 10 | currency: '₼' }}" type="button">
+                    </i>
+                  </div>
+                </div>
+              </div>
+              <small *ngIf="amount.invalid && (amount.dirty || amount.touched)" class="form-text text-danger">
+                Zonanı düzgün qeyd edin.
+              </small>
+            </div>
+            <div class="form-row mb-3">
+              <div class="col-md-6">
+                <label for="district">Alıcı rayon</label>
+                <input #district="ngModel" [(ngModel)]="courier.district" class="form-control form-control-sm"
+                  id="district" name="district" required />
+                <small *ngIf="
+                    district.invalid && (district.dirty || district.touched)
+                  " class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+              <div class="col-md-6 mt-md-0 mt-3">
+                <label for="town">Alıcının şəxsiyyət vəsiqəsi</label>
+                <input #town="ngModel" [(ngModel)]="courier.town" class="form-control form-control-sm" id="town"
+                  name="town" required />
+                <small *ngIf="town.invalid && (town.dirty || town.touched)" class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+            </div>
+            <div class="form-row mb-3">
+              <div class="col-md-12">
+                <label for="street">Alıcının adı və soyadı</label>
+                <input #street="ngModel" [(ngModel)]="courier.street" class="form-control form-control-sm" id="street"
+                  name="street" required />
+                <small *ngIf="street.invalid && (street.dirty || street.touched)" class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+            </div>
+            <div class="form-row mb-3">
+              <div class="col-md-12 mt-md-0 mt-3">
+                <label for="house">Ünvan</label>
+                <input #house="ngModel" [(ngModel)]="courier.house" class="form-control form-control-sm" id="house"
+                  name="house" required />
+                <small *ngIf="house.invalid && (house.dirty || house.touched)" class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+            </div>
+            <div class="form-row mb-3">
+              <div class="col-4">
+                <label for="user_mobile_number">Alıcının telefon nömrəsi</label>
+                <select [(ngModel)]="mobileCode" class="form-control form-control-sm" name="mobileCode">
+                  <option value="99450">99450</option>
+                  <option value="99451">99451</option>
+                  <option value="99455">99455</option>
+                  <option value="99470">99470</option>
+                  <option value="99477">99477</option>
+                  <option value="99499">99499</option>
+                  <option value="99499">99410</option>
+                </select>
+              </div>
+              <div class="col-8 align-self-end">
+                <input #user_mobile_number="ngModel" [(ngModel)]="courier.user_mobile_number"
+                  class="form-control form-control-sm" id="user_mobile_number" name="user_mobile_number" required />
+              </div>
+              <div class="col-12">
+                <small *ngIf="
+                    user_mobile_number.invalid &&
+                    (user_mobile_number.dirty || user_mobile_number.touched)
+                  " class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-12">
+                <label for="weight">Çəki</label>
+              </div>
+              <div class="col-12">
+                <input class="form-control form-control-sm" id="weight" name="weight" [(ngModel)]="weight"
+                  (input)="calculatePaymentAmountForNoPackage()" required />
+              </div>
+              <!-- <div class="col-12">
+                <small *ngIf="weight.invalid && (weight.dirty || weight.touched)" class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div> -->
+            </div>
+
+            <div class="form-group mt-3">
+              <label for="comment">Əlavə qeydlər</label>
+              <textarea [(ngModel)]="courier.comment" class="form-control form-control-sm" id="comment" name="comment"
+                rows="4"></textarea>
+            </div>
+          </div>
+          <ng-template #notCouriersInModal>
+            <div class="alert alert-primary">
+              <i class="fa fa-info-circle"></i> Kuryer sifarişi üçün uyğun
+              bağlama tapılmadı.
+            </div>
+          </ng-template>
+        </div>
+        <div class="col-md-5" style="border-left: 1px solid #ddd">
+          <div class="alert alert-primary" style="font-size: 14px">
+            <i class="fa fa-info-circle"></i> 1 kg üçün xidmət haqqı 10 AZN-dir.
+            Növbəti 0.5 kg üçün 2.5 AZN xidmət haqqı hesablanır.
+          </div>
+          <hr />
+          <div class="alert alert-primary" style="font-size: 14px">
+            <i class="fa fa-info-circle"></i> Maximum 5 kg qəbul olunur.
+          </div>
+          <hr />
+          <div class="alert alert-primary" style="font-size: 14px">
+            USD Balans:
+            <strong>{{ wallet | currency }}</strong>
+          </div>
+          <hr />
+          <div *ngIf="courierForm.valid" class="alert alert-primary">
+            Toplam xidmət haqqı<br />
+            <hr />
+            <h3 style="color: white">
+              {{ paymentToSend.amount | currency }} |
+              {{ paymentToSend.amount * usdToAzn | currency: "₼" }}
+            </h3>
+          </div>
+          <hr />
+          <div *ngIf="courierForm.valid" class="alert alert-primary">
+            <span class="mr-2">Ödəniş üsulu</span>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input [(ngModel)]="paymentMethod" class="custom-control-input" id="wallet" name="payment_method"
+                type="radio" value="wallet" />
+              <label class="custom-control-label" for="wallet">Balans</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input [(ngModel)]="paymentMethod" class="custom-control-input" id="cash" name="payment_method"
+                type="radio" value="cash" />
+              <label class="custom-control-label" for="cash">Nağd</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button (click)="modal.dismiss()" aria-label="Close" class="btn btn-outline-primary btn-sm" type="button">
+        <span>Bağla</span>
+      </button>
+      <button [disabled]="courierForm.invalid" class="btn btn-primary btn-sm" type="submit">
+        <span>Təsdiqlə</span>
+      </button>
+    </div>
+  </form>
+</ng-template>
+
+<!-- Modal to request courier -->
+<ng-template #courierModal let-modal>
+  <form #courierForm="ngForm" (ngSubmit)="addCourier(courierForm)">
+    <div class="modal-header">
+      <h5 class="modal-title text-primary" id="modal-basic-title">
+        <i class="fa fa-handshake-o"></i>
+        Kuryer istə
+      </h5>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <div class="col-md-7">
+          <div>
+            <div class="form-group">
+              <label for="tracking_numbers">Bağlamalar</label>
+              <select #tracking_numbers="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="selectedPackages"
+                class="form-control form-control-sm selectpicker" data-actions-box="true"
+                data-deselect-all-text="Seçimləri ləğv et" data-none-selected-text="Heç nə seçilmədi"
+                data-select-all-text="Hamısını seç" data-selected-text-format="count > 1" id="tracking_numbers" multiple
+                name="tracking_numbers" required>
+                <option *ngFor="let track of packagesForPayment" [attr.value]="track.tracking_number">
+                  {{ track.tracking_number }}
+                </option>
+              </select>
+              <small *ngIf="
+                  tracking_numbers.invalid &&
+                  (tracking_numbers.dirty || tracking_numbers.touched)
+                " class="form-text text-danger">
+                Tracking nömrələrini qeyd edin.
+              </small>
+            </div>
+            <div class="form-group">
+              <label for="tracking_numbers">Zonalar</label>
+              <!--          <select class="form-control form-control-sm selectpicker"-->
+              <!--                  id="amount"-->
+              <!--                  name="amount"-->
+              <!--                  #amount="ngModel"-->
+              <!--                  [(ngModel)]=courier.amount-->
+              <!--                  required>-->
+              <!--            <option value="2">Zone 1 - {{2 | currency}}</option>-->
+              <!--            <option value="3">Zone 2 - {{3 | currency}}</option>-->
+              <!--            <option value="4">Zone 3 - {{4 | currency}}</option>-->
+              <!--            <option value="5">Zone 4 - {{5 | currency}}</option>-->
+              <!--          </select>-->
+              <!--          <small class="form-text text-danger"-->
+              <!--                 *ngIf="amount.invalid && (amount.dirty || amount.touched)">-->
+              <!--            Zonanı düzgün qeyd edin.-->
+              <!--          </small>-->
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="custom-control custom-radio">
+                    <input #amount="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="courier.amount"
+                      class="custom-control-input" id="zone_exbir" name="amount" required type="radio"
+                      value="{{ 0 }}" />
+                    <label class="custom-control-label" for="zone_exbir">Zona Xətai | {{ 0 | currency: "₼" }}
+                    </label>
+                    <i [autoClose]="'outside'" class="fa fa-info-circle ml-1"
+                      ngbPopover="Xətai metro stansiyasının 2 km traektoriyası ətrafı"
+                      popoverTitle="Zona Exbir | {{ 0 | currency: '₼' }}" type="button">
+                    </i>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input #amount="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="courier.amount"
+                      class="custom-control-input" id="zone_1" name="amount" required type="radio"
+                      value="{{ 4 / usdToAzn }}" />
+                    <label class="custom-control-label" for="zone_1">Zona 1 | {{ 4 | currency: "₼" }}
+                    </label>
+                    <i [autoClose]="'outside'" class="fa fa-info-circle ml-1" ngbPopover="Bayıl (Bayraq Meydanı, 5 nömrəli doğum evinə kimi),
+              Şəhidlər xiyabanı, Milli məclis, Müdafiə Nazirliyi, FHN, Mətbuat pr,
+              Yasamal, Yeni Yasamal, Alatava 1, Alatava 2, Şamaxinka, Mikrorayonlar,
+              Dərnəgül pr, Koroğlu m/s, Q.Qarayev, Vərəm dispanseri, Start idman kompleksi,
+              8 km bazar arxayolu, Su tikinti xəstəxanasının yanı (villalar xaric),
+              Telnov küçəsi (Neapol dairəsi istiqamətində), G.Şıxlınski küçəsi, Nəsrəddin Tusi küç, Gəncə pr,
+              Naxçıvanski dairəsi və bu yarımdairə içərisində qalan ünvanlara"
+                      popoverTitle="Zona 1 | {{ 4 | currency: '₼' }}" type="button">
+                    </i>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input #amount="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="courier.amount"
+                      class="custom-control-input" id="zone_2" name="amount" required type="radio"
+                      value="{{ 5 / usdToAzn }}" />
+                    <label class="custom-control-label" for="zone_2">Zona 2 | {{ 5 | currency: "₼" }}
+                    </label>
+                    <i [autoClose]="'outside'" class="fa fa-info-circle ml-1" ngbPopover="20-ci Sahə, Bayıl Polis idarəsi və
+              DYP ərazisi, Badamdar, Qurd Qapısı,
+              Şəhər YPX, Maşın bazarı, Avtovağzal ərazisi, Biləcəri, Rəsulzadə qəs (Kirov),
+              Binəqədi, Baksol, Balaxanı, Sabunçu, köhnə Komsomol dairəsi, Köhnə Ramana
+              (Aeroport yoluna çıxan hissəyə kimi), Bülbülə, Əmircan, Bakıxanov, Bakıxanov Çay fabriki,
+              Bakıxanov Villalar (Qarayev istiqamətində qalxan yol), Arablinka, Qaraçuxur, Dərə Qaraçuxur,
+               Yeni Günəşli, Köhnə Günəşli, G.Mehmandarov küç,
+              Zığ kəndi, Naxımov küçəsi və Zona 1 sərhədləri ilə arada qalan hissələr"
+                      popoverTitle="Zona 2 | {{ 5 | currency: '₼' }}" type="button">
+                    </i>
+                  </div>
+
+                  <div class="custom-control custom-radio">
+                    <input #amount="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="courier.amount"
+                      class="custom-control-input" id="zone_3" name="amount" required type="radio"
+                      value="{{ 8 / usdToAzn }}" />
+                    <label class="custom-control-label" for="zone_3">Zona 3 | {{ 8 | currency: "₼" }}
+                    </label>
+                    <i [autoClose]="'outside'" class="fa fa-info-circle ml-1" ngbPopover="Binə t/m və dairəsi, Lökbatan qəs, Xocasən, Sulutəpə, Xırdalan,
+              Masazır, Saray, Ceyranbatan, Sumqayıt, Novxanı, Fatmayı, Pirşağı, Kürdəxanı, Mehdiabad, Digah, Məhəmmədi,
+              Zabrat 1, Zabrat 2, Maştağa, Gülçülük Ramana, Şuşa Ramana, Yeni suraxanı, Köhnə Suraxanı, Bahar qəs,
+              Dədəqorqud qəs, Binə Atçılıq,
+              Binə qəs, Binə Savxoz qəs, Hövsan, Qum adası" popoverTitle="Zona 3 | {{ 8 | currency: '₼' }}"
+                      type="button">
+                    </i>
+                  </div>
+
+
+
+                </div>
+                <div class="col-md-6">
+
+                  <div class="custom-control custom-radio">
+                    <input #amount="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="courier.amount"
+                      class="custom-control-input" id="zone_4" name="amount" required type="radio"
+                      value="{{ 9 / usdToAzn }}" />
+                    <label class="custom-control-label" for="zone_4">Zona 4 | {{ 9 | currency: "₼" }}
+                    </label>
+                    <i [autoClose]="'outside'" class="fa fa-info-circle ml-1" ngbPopover="Sahil qəs, Qobu, Atyalı, Nübar, Müşfiq, Güzdək, Nasosnu, Zaqulba, Albalılıq,
+              Buzovna, Nardaran, Mərdəkan, Şağan, Qala" popoverTitle="Zona 4 | {{ 9 | currency: '₼' }}" type="button">
+                    </i>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input #amount="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="courier.amount"
+                      class="custom-control-input" id="zone_5" name="amount" required type="radio"
+                      value="{{ 10 / usdToAzn }}" />
+                    <label class="custom-control-label" for="zone_5">Zona 5 | {{ 10 | currency: "₼" }}
+                    </label>
+                    <i [autoClose]="'outside'" class="fa fa-info-circle ml-1" ngbPopover="Ələt qəs, Sənqəçal qəs, Ümid qəs, Şüvəlan, Qress, Türkan, Zirə,
+              Dübəndi, Pirallahı," popoverTitle="Zona 5 | {{ 10 | currency: '₼' }}" type="button">
+                    </i>
+                  </div>
+
+
+                  <!-- rayon1 -->
+                  <div class="custom-control custom-radio">
+                    <input #amount="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="courier.amount"
+                      class="custom-control-input" id="zone_6" name="amount" required type="radio"
+                      value="{{ 0 + 0.00001 }}" />
+                    <label class="custom-control-label" for="zone_6">Zona 6 | Rayon | {{ 0 | currency: "₼" }}
+                    </label>
+                    <i [autoClose]="'outside'" class="fa fa-info-circle ml-1" ngbPopover="Gəncə, Tovuz, Ağstafa"
+                      popoverTitle="Zona 6 | {{ 0 | currency: '₼' }}" type="button">
+                    </i>
+                  </div>
+
+
+                  <!-- rayon2 -->
+                  <div class="custom-control custom-radio">
+                    <input #amount="ngModel" (change)="calculatePaymentAmount()" [(ngModel)]="courier.amount"
+                      class="custom-control-input" id="zone_7" name="amount" required type="radio"
+                      value="{{ ( 10 / usdToAzn ) + 0.00001 }}" />
+                    <label class="custom-control-label" for="zone_7">Zona 7 | Rayon | {{ 10 | currency: "₼" }}
+                    </label>
+                    <i [autoClose]="'outside'" class="fa fa-info-circle ml-1" ngbPopover="Digər rayonlar"
+                      popoverTitle="Zona 7 | {{ 10 | currency: '₼' }}" type="button">
+                    </i>
+                  </div>
+
+                </div>
+
+
+              </div>
+              <small *ngIf="amount.invalid && (amount.dirty || amount.touched)" class="form-text text-danger">
+                Zonanı düzgün qeyd edin.
+              </small>
+            </div>
+            <div class="form-row mb-3">
+              <div class="col-md-6">
+                <label for="district">Rayon</label>
+                <input #district="ngModel" [(ngModel)]="courier.district" class="form-control form-control-sm"
+                  id="district" name="district" required />
+                <small *ngIf="
+                    district.invalid && (district.dirty || district.touched)
+                  " class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+              <div class="col-md-6 mt-md-0 mt-3">
+                <label for="town">Qəsəbə</label>
+                <input #town="ngModel" [(ngModel)]="courier.town" class="form-control form-control-sm" id="town"
+                  name="town" required />
+                <small *ngIf="town.invalid && (town.dirty || town.touched)" class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+            </div>
+            <div class="form-row mb-3">
+              <div class="col-md-6">
+                <label for="street">Küçə</label>
+                <input #street="ngModel" [(ngModel)]="courier.street" class="form-control form-control-sm" id="street"
+                  name="street" required />
+                <small *ngIf="street.invalid && (street.dirty || street.touched)" class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+              <div class="col-md-6 mt-md-0 mt-3">
+                <label for="house">Ev</label>
+                <input #house="ngModel" [(ngModel)]="courier.house" class="form-control form-control-sm" id="house"
+                  name="house" required />
+                <small *ngIf="house.invalid && (house.dirty || house.touched)" class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-4">
+                <label for="user_mobile_number">Telefon nömrəsi</label>
+                <select [(ngModel)]="mobileCode" class="form-control form-control-sm" name="mobileCode">
+                  <option value="99450">99450</option>
+                  <option value="99451">99451</option>
+                  <option value="99455">99455</option>
+                  <option value="99470">99470</option>
+                  <option value="99477">99477</option>
+                  <option value="99499">99499</option>
+                </select>
+              </div>
+              <div class="col-8 align-self-end">
+                <input #user_mobile_number="ngModel" [(ngModel)]="courier.user_mobile_number"
+                  class="form-control form-control-sm" id="user_mobile_number" name="user_mobile_number" required />
+              </div>
+              <div class="col-12">
+                <small *ngIf="
+                    user_mobile_number.invalid &&
+                    (user_mobile_number.dirty || user_mobile_number.touched)
+                  " class="form-text text-danger">
+                  Düzgün qeyd edin.
+                </small>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <label for="comment">Əlavə qeydlər</label>
+              <textarea [(ngModel)]="courier.comment" class="form-control form-control-sm" id="comment" name="comment"
+                rows="4"></textarea>
+            </div>
+          </div>
+          <ng-template #notCouriersInModal>
+            <div class="alert alert-primary">
+              <i class="fa fa-info-circle"></i> Kuryer sifarişi üçün uyğun
+              bağlama tapılmadı.
+            </div>
+          </ng-template>
+        </div>
+        <div class="col-md-5" style="border-left: 1px solid #ddd">
+          <div class="alert alert-primary">
+            <i class="fa fa-info-circle"></i>
+            <small>
+              Seçim qutusunda Bakı ofisindəki bağlamalarınızın trekinq nömrələri
+              list edilmişdir. Kuryer tələb etdiyiniz trekinq nömrələrini
+              seçməklə və lazimi xanaları doldurmaqla sorğunuzu tamamlaya
+              bilərsiniz.
+            </small>
+          </div>
+
+          <hr />
+          <div class="alert alert-primary">
+            <i class="fa fa-info-circle"></i><small>
+              Çəkisi 3-dən artıq olan bağlamalarda hər əlavə kiloqrama görə 1
+              azn xidmət haqqı hesablanır.</small>
+          </div>
+          <hr />
+          <div class="alert alert-primary" style="color: white; font-size: 14px">
+            USD Balans:
+            <strong>{{ wallet | currency }}</strong>
+          </div>
+          <hr />
+          <div *ngIf="courierForm.valid" class="alert alert-primary">
+            Toplam xidmət haqqı<br />
+            <hr />
+            <h3 style="color: white">
+              {{ paymentToSend.amount | currency }} |
+              {{ paymentToSend.amount * usdToAzn | currency: "₼" }}
+            </h3>
+          </div>
+          <hr />
+          <div *ngIf="courierForm.valid" class="alert alert-primary">
+            <span class="mr-2">Ödəniş üsulu</span>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input [(ngModel)]="paymentMethod" class="custom-control-input" id="wallet" name="payment_method"
+                type="radio" value="wallet" />
+              <label class="custom-control-label" for="wallet">Balans</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input [(ngModel)]="paymentMethod" class="custom-control-input" id="cash" name="payment_method"
+                type="radio" value="cash" />
+              <label class="custom-control-label" for="cash">Nağd</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button (click)="modal.dismiss()" aria-label="Close" class="btn btn-outline-primary btn-sm" type="button">
+        <span>Bağla</span>
+      </button>
+      <button [disabled]="courierForm.invalid" class="btn btn-primary btn-sm" type="submit">
+        <span>Təsdiqlə</span>
+      </button>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #courierStatesModel let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title text-primary">
+      <i class="fa fa-calendar"></i>
+      <span translate> Kuryer hərəkətləri</span>
+    </h5>
+  </div>
+  <div class="modal-body">
+    <span translate>Kuryer</span> : #{{ courierSelected.id }} <br />
+    <span translate>Tarix</span>
+    : {{ courierSelected.created_date | date: "dd MMMM yyyy":"+4":"az-Latn" }}
+    <hr />
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered table-striped table-hover">
+        <caption translate>
+          Kuryer hərəkətləri
+        </caption>
+        <thead class="bg-primary text-white">
+          <tr>
+            <th scope="col" translate>№</th>
+            <th scope="col" translate>Status</th>
+            <th scope="col" translate>Tarix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let state of courierSelected.states">
+            <td>{{ courierSelected.id }}</td>
+            <td>
+              <span *ngIf="state.state.toString() === 'Created'">Sorğu göndərildi</span>
+              <span *ngIf="state.state.toString() === 'PickedUp'">Kuryer təyin edildi</span>
+            </td>
+            <td>
+              {{ state.created_date | date: "dd MMMM yyyy":"+4":"az-Latn" }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button (click)="modal.dismiss()" aria-label="Close" class="btn btn-outline-primary btn-sm" type="button">
+      <span translate>Bağla</span>
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #packagesModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title text-primary">
+      <i class="fa fa-calendar"></i>
+      <span translate> Bağlamalar</span>
+    </h5>
+  </div>
+  <div class="modal-body">
+    <span translate>Kuryer</span> : #{{ courierSelected.id }} <br />
+    <span translate>Tarix</span>
+    : {{ courierSelected.created_date | date: "dd MMMM yyyy":"+4":"az-Latn" }}
+    <hr />
+    <div class="table-responsive">
+      <table class="table table-sm table-bordered table-striped table-hover">
+        <caption translate>
+          Bağlamalar
+        </caption>
+        <thead class="bg-primary text-white">
+          <tr>
+            <th scope="col" translate>Tracking nömrəsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let package of courierSelected.packages">
+            <td>{{ package.tracking_number }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button (click)="modal.dismiss()" aria-label="Close" class="btn btn-outline-primary btn-sm" type="button">
+      <span translate>Bağla</span>
+    </button>
+  </div>
+</ng-template>

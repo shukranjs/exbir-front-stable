@@ -1,0 +1,99 @@
+<ul
+  [class]="sidebarService.isCollapsed?
+  'navbar-nav bg-purple sidebar sidebar-dark accordion d-md-block d-none':
+  'navbar-nav bg-purple sidebar sidebar-dark accordion'"
+  id="accordionSidebar"
+>
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0"/>
+
+  <!-- Nav Item - Dashboard -->
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+      <i class="fa fa-home"></i>
+      <span translate> Ünvanlarım</span></a
+    >
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0"/>
+
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="/dashboard/orders"
+      routerLinkActive="active"
+    >
+      <i class="fa fa-shopping-bag"></i>
+      <span translate> Sifarişlərim</span></a
+    >
+  </li>
+
+  <hr class="sidebar-divider my-0"/>
+
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="/dashboard/baskets"
+      routerLinkActive="active"
+    >
+      <i class="fa fa-shopping-basket"></i>
+      <span translate> Səbətlərim</span></a
+    >
+  </li>
+
+  <hr class="sidebar-divider my-0"/>
+
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="/dashboard/tracks"
+      routerLinkActive="active"
+    >
+      <i class="fa fa-truck"></i>
+      <span translate> Bağlamalarım</span></a
+    >
+  </li>
+
+  <hr class="sidebar-divider my-0"/>
+
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="/dashboard/couriers"
+      routerLinkActive="active"
+    >
+      <i class="fa fa-handshake-o"></i>
+      <span translate> Kuryer</span></a
+    >
+  </li>
+
+  <hr class="sidebar-divider my-0"/>
+
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="/dashboard/transactions"
+      routerLinkActive="active"
+    >
+      <i class="fa fa-credit-card"></i>
+      <span translate> Əməliyyatlarım</span></a
+    >
+  </li>
+
+  <hr class="sidebar-divider my-0"/>
+
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="/dashboard/settings"
+      routerLinkActive="active"
+    >
+      <i class="fa fa-gear"></i>
+      <span translate> Tənzimləmələr</span></a
+    >
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider d-none d-md-block"/>
+</ul>

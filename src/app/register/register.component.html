@@ -1,0 +1,404 @@
+<section class="block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading mt-md-0 mt-3">
+          <h2 translate>register.heading</h2>
+        </div>
+        <div class="top-margin">
+          <form (ngSubmit)="register()" [formGroup]="registerForm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="text-center">
+                  <i
+                    class="fa fa-user-circle text-primary"
+                    style="font-size: 73px"
+                  ></i>
+                </div>
+                <p class="callus text-center">
+                  <i class="fa fa-phone"></i>
+                  <span translate> register.call_us</span>
+                  <a class="text-primary" href="tel:{{ telnumber }}"
+                    >: {{ telnumber }}</a
+                  >
+                </p>
+                <p class="infoText text-center" translate>
+                  <a routerLink="/our-services/rules" target="_blank" translate
+                    >register.rules</a
+                  >
+                </p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label translate>register.form.fields.first_name</label>
+                      <input
+                        autofocus
+                        class="form-control"
+                        formControlName="first_name"
+                        name="first_name"
+                        pattern="[a-zA-Z0-9. ]*"
+                        type="text"
+                      />
+                      <span
+                        *ngIf="
+                          (registerForm
+                            .get('first_name')
+                            .hasError('required') ||
+                            registerForm
+                              .get('first_name')
+                              .hasError('pattern')) &&
+                          registerForm.get('first_name').touched
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.required
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label translate>register.form.fields.last_name</label>
+                      <input
+                        class="form-control"
+                        formControlName="last_name"
+                        name="last_name"
+                        pattern="[a-zA-Z0-9. ]*"
+                        type="text"
+                      />
+
+                      <span
+                        *ngIf="
+                          (registerForm.get('last_name').hasError('required') ||
+                            registerForm
+                              .get('last_name')
+                              .hasError('pattern')) &&
+                          registerForm.get('last_name').touched
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.required
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label translate
+                        >register.form.fields.email_address</label
+                      >
+                      <input
+                        class="form-control"
+                        formControlName="email_address"
+                        name="email_address"
+                        type="email"
+                      />
+
+                      <span
+                        *ngIf="
+                          (registerForm
+                            .get('email_address')
+                            .hasError('required') ||
+                            registerForm
+                              .get('email_address')
+                              .hasError('email')) &&
+                          registerForm.get('email_address').touched
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.required
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label translate>register.form.fields.identity1</label>
+                      <input
+                        class="form-control"
+                        formControlName="identity1"
+                        name="identity1"
+                        pattern="[a-zA-Z0-9. ]*"
+                        type="text"
+                      />
+
+                      <span
+                        *ngIf="
+                          (registerForm.get('identity1').hasError('required') ||
+                            registerForm
+                              .get('identity1')
+                              .hasError('pattern')) &&
+                          registerForm.get('identity1').touched
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.required
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label translate>register.form.fields.identity2</label>
+                      <!--                      <i class="fa fa-question-circle ml-1" (click)="open(content)"></i>-->
+                      <input
+                        #identity22
+                        class="form-control"
+                        formControlName="identity2"
+                        name="identity2"
+                        pattern="[a-zA-Z0-9. ]*"
+                        type="text"
+                      />
+
+                      <span
+                        *ngIf="
+                          (registerForm.get('identity2').hasError('required') ||
+                            registerForm
+                              .get('identity2')
+                              .hasError('pattern')) &&
+                          registerForm.get('identity2').touched
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.required
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 align-self-end" style="margin-bottom: 16px">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label translate>register.form.fields.phone_number</label>
+                      <div class="row">
+                        <div class="col-4">
+                          <select
+                            class="form-control"
+                            formControlName="telCode"
+                            name="telCode"
+                          >
+                            <option value="99410">99410</option>
+                            <option value="99450">99450</option>
+                            <option value="99451">99451</option>
+                            <option value="99455">99455</option>
+                            <option value="99470">99470</option>
+                            <option value="99477">99477</option>
+                            <option value="99499">99499</option>
+                          </select>
+                          <span
+                            *ngIf="
+                              registerForm
+                                .get('telCode')
+                                .hasError('required') &&
+                              registerForm.get('telCode').touched
+                            "
+                            class="help-block"
+                            translate
+                          >
+                            register.form.required
+                          </span>
+                        </div>
+                        <div class="col-8">
+                          <input
+                            #mobile_number2
+                            class="form-control"
+                            formControlName="mobile_number"
+                            name="mobile_number"
+                            type="number"
+                          />
+
+                          <span
+                            *ngIf="
+                              mobile_number2.value.length != 7 &&
+                              registerForm.get('mobile_number').touched
+                            "
+                            class="help-block"
+                            translate
+                          >
+                            register.form.required
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label translate>register.form.fields.birthday</label>
+                      <div class="input-group">
+                        <input
+                          #birthday="ngbDatepicker"
+                          (focus)="birthday.toggle()"
+                          [maxDate]="{ year: 2004, month: 1, day: 1 }"
+                          [minDate]="{ year: 1920, month: 1, day: 1 }"
+                          class="form-control"
+                          formControlName="birthday"
+                          id="dateOfBirth"
+                          name="birthday"
+                          ngbDatepicker
+                          placeholder="{{
+                            'register.form.fields.birthday' | translate
+                          }}"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            (click)="birthday.toggle()"
+                            class="btn btn-secondary calendar"
+                            type="button"
+                          ></button>
+                        </div>
+                      </div>
+                      <span
+                        *ngIf="
+                          registerForm.get('birthday').hasError('required') &&
+                          registerForm.get('birthday').touched
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.required
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label translate
+                        >register.form.fields.address<br />
+                        Təhvil məntəqəniz Bakı şəhəri deyilsə mötərizə içində
+                        qeyd etməyiniz xahiş olunur</label
+                      >
+
+                      <input
+                        class="form-control"
+                        formControlName="address"
+                        name="address"
+                      />
+
+                      <span
+                        *ngIf="
+                          registerForm.get('address').hasError('required') &&
+                          registerForm.get('address').touched
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.required
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label translate>register.form.fields.password</label>
+                      <input
+                        #password2
+                        class="form-control"
+                        formControlName="password"
+                        name="password"
+                        type="password"
+                      />
+                      <span
+                        *ngIf="
+                          registerForm.get('password').hasError('required') &&
+                          registerForm.get('password').touched
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.required
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label translate>register.form.fields.confirm</label>
+                      <input
+                        #confirm2
+                        class="form-control"
+                        formControlName="confirm"
+                        name="confirm"
+                        type="password"
+                      />
+                      <span
+                        *ngIf="
+                          confirm2.value != password2.value &&
+                          registerForm.get('confirm').touched
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.confirm_text
+                      </span>
+                      <span
+                        *ngIf="
+                          registerForm.get('confirm').touched &&
+                          registerForm.hasError('mismatch')
+                        "
+                        class="help-block"
+                        translate
+                      >
+                        register.form.confirm_text
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" style="margin-bottom: 30px">
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        formControlName="qaydaCheck"
+                        name="qaydaCheck"
+                        id="qaydaCheck"
+                      />
+                      <label class="form-check-label" for="qaydaCheck">
+                        <a
+                          routerLink="/our-services/rules"
+                          target="_blank"
+                          translate
+                          >register.rules</a
+                        >
+                        ilə razıyam</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <button
+                      [disabled]="registerForm.invalid"
+                      class="btn btn-outline-primary btn-block mb-0"
+                      translate
+                      type="submit"
+                    >
+                      register.form.register
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #content let-modal>
+  <img
+    src="../../assets/img/fin.jpg"
+    style="max-width: 500px; max-height: 300px"
+  />
+</ng-template>
