@@ -15,9 +15,9 @@ export class ApiService {
 		private httpClient: HttpClient
 	) {}
 
-	// baseUrl = 'http://localhost:5000';
+	baseUrl = 'http://localhost:5000';
 	// baseUrl = 'https://api.exbir.az';
-	baseUrl = 'https://exbir.herokuapp.com/'
+	// baseUrl = 'https://exbir.herokuapp.com/'
 
 	postData: any;
 
